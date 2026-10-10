@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "repository": "iddunk/AstraStaff-product-progress",
+  "kind": "DECISION",
+  "action": "opened",
+  "issue_number": 3,
+  "entity_id": 5793648470,
+  "author": "iddunk",
+  "actor": "iddunk",
+  "created_at": "2026-10-10T17:31:25Z",
+  "occurred_at": "2026-10-10T17:31:25Z",
+  "body_sha256": "edd4e7e7cd27bf451fca14b9b43264981be0fccbdfe2df9969c32e3ec40aaee1",
+  "event_id": "github-2eca5a9d4f0fb55893a1ef4bd4dc59ed892f262d74273d3416bb8c7c81d3e91f",
+  "payload": {
+    "schema_version": 1,
+    "page": "product-experience-review",
+    "module_id": "operations-onboarding",
+    "page_revision": 83,
+    "proposal_revision": 3,
+    "decision": "ACCEPT",
+    "comment": "Product Owner在2026-10-11本会话明确决定：“没问题，默认直接去掉审核，除非这个员工用了某些必须要审核的能力或者依赖等等特殊情况，但这毕竟不是happy path，在当前阶段，我理解是没必要的。后面如果真的需要，再补也完全ok。朝着这个方向继续”。本记录由共享产品经理按该明确指令代为归档，不是页面点击记录，也不代表实现或生产验收完成。",
+    "expected_latest_decision_id": null,
+    "client_request_id": "2a9eb2bc-0d98-47f0-8347-9be3e16db03b"
+  },
+  "config_snapshot": {
+    "page": "product-experience-review",
+    "page_revision": 83,
+    "module_id": "operations-onboarding",
+    "proposal_revision": 3
+  },
+  "sequence": 4
+}

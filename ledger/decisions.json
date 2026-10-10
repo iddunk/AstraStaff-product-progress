@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-10T10:20:37Z",
+  "generated_at": "2026-10-10T17:31:25Z",
   "repository": "iddunk/AstraStaff-product-progress",
   "page": "product-experience-review",
-  "page_revision": 82,
+  "page_revision": 83,
   "modules": [
     {
       "panelId": "A",
@@ -99,9 +99,9 @@
     {
       "panelId": "F",
       "moduleId": "operations-onboarding",
-      "title": "员工启用与版本验收的分工",
-      "recommendation": "已发布标准员工由客户确认工作范围后启用；新版本由平台运营按真实业务样例验收；技术风险交系统运营；业务例外才找有决策权的人审批。",
-      "proposalRevision": 2
+      "title": "默认上岗无需人工审核",
+      "recommendation": "默认移除人工审核。员工通过自动检查、确认必要工作范围与访问授权后直接启用；当前不预建例外审批，明确必须审核的能力或依赖单独处理。",
+      "proposalRevision": 3
     }
   ],
   "entries": [
@@ -186,6 +186,31 @@
       "comment": "Codex 产品经理已读取并记录：首次没有成果时，提供三个可交办的业务例子，并说明真实可用的数据来源。该方向已由 Owner 接受，后续体验调整与验收以此共享记录为准；此回执不代表功能已经上线。",
       "evidence_url": "https://iddunk.github.io/AstraStaff-product-progress/product-experience-review.html",
       "outcome": "ACCEPTED"
+    },
+    {
+      "event_id": "github-2eca5a9d4f0fb55893a1ef4bd4dc59ed892f262d74273d3416bb8c7c81d3e91f",
+      "sequence": 4,
+      "kind": "DECISION",
+      "action": "opened",
+      "issue_number": 3,
+      "author": "iddunk",
+      "actor": "iddunk",
+      "created_at": "2026-10-10T17:31:25Z",
+      "occurred_at": "2026-10-10T17:31:25Z",
+      "schema_version": 1,
+      "page": "product-experience-review",
+      "module_id": "operations-onboarding",
+      "page_revision": 83,
+      "proposal_revision": 3,
+      "decision": "ACCEPT",
+      "comment": "Product Owner在2026-10-11本会话明确决定：“没问题，默认直接去掉审核，除非这个员工用了某些必须要审核的能力或者依赖等等特殊情况，但这毕竟不是happy path，在当前阶段，我理解是没必要的。后面如果真的需要，再补也完全ok。朝着这个方向继续”。本记录由共享产品经理按该明确指令代为归档，不是页面点击记录，也不代表实现或生产验收完成。",
+      "expected_latest_decision_id": null,
+      "client_request_id": "2a9eb2bc-0d98-47f0-8347-9be3e16db03b",
+      "decision_id": "github-issue:3",
+      "outcome": "ACCEPTED",
+      "status": "OPEN",
+      "processing": [],
+      "stale": false
     }
   ],
   "history": [
@@ -270,6 +295,31 @@
       "comment": "Codex 产品经理已读取并记录：首次没有成果时，提供三个可交办的业务例子，并说明真实可用的数据来源。该方向已由 Owner 接受，后续体验调整与验收以此共享记录为准；此回执不代表功能已经上线。",
       "evidence_url": "https://iddunk.github.io/AstraStaff-product-progress/product-experience-review.html",
       "outcome": "ACCEPTED"
+    },
+    {
+      "event_id": "github-2eca5a9d4f0fb55893a1ef4bd4dc59ed892f262d74273d3416bb8c7c81d3e91f",
+      "sequence": 4,
+      "kind": "DECISION",
+      "action": "opened",
+      "issue_number": 3,
+      "author": "iddunk",
+      "actor": "iddunk",
+      "created_at": "2026-10-10T17:31:25Z",
+      "occurred_at": "2026-10-10T17:31:25Z",
+      "schema_version": 1,
+      "page": "product-experience-review",
+      "module_id": "operations-onboarding",
+      "page_revision": 83,
+      "proposal_revision": 3,
+      "decision": "ACCEPT",
+      "comment": "Product Owner在2026-10-11本会话明确决定：“没问题，默认直接去掉审核，除非这个员工用了某些必须要审核的能力或者依赖等等特殊情况，但这毕竟不是happy path，在当前阶段，我理解是没必要的。后面如果真的需要，再补也完全ok。朝着这个方向继续”。本记录由共享产品经理按该明确指令代为归档，不是页面点击记录，也不代表实现或生产验收完成。",
+      "expected_latest_decision_id": null,
+      "client_request_id": "2a9eb2bc-0d98-47f0-8347-9be3e16db03b",
+      "decision_id": "github-issue:3",
+      "outcome": "ACCEPTED",
+      "status": "OPEN",
+      "processing": [],
+      "stale": false
     }
   ],
   "current": [
@@ -313,6 +363,31 @@
           "outcome": "ACCEPTED"
         }
       ],
+      "stale": false
+    },
+    {
+      "event_id": "github-2eca5a9d4f0fb55893a1ef4bd4dc59ed892f262d74273d3416bb8c7c81d3e91f",
+      "sequence": 4,
+      "kind": "DECISION",
+      "action": "opened",
+      "issue_number": 3,
+      "author": "iddunk",
+      "actor": "iddunk",
+      "created_at": "2026-10-10T17:31:25Z",
+      "occurred_at": "2026-10-10T17:31:25Z",
+      "schema_version": 1,
+      "page": "product-experience-review",
+      "module_id": "operations-onboarding",
+      "page_revision": 83,
+      "proposal_revision": 3,
+      "decision": "ACCEPT",
+      "comment": "Product Owner在2026-10-11本会话明确决定：“没问题，默认直接去掉审核，除非这个员工用了某些必须要审核的能力或者依赖等等特殊情况，但这毕竟不是happy path，在当前阶段，我理解是没必要的。后面如果真的需要，再补也完全ok。朝着这个方向继续”。本记录由共享产品经理按该明确指令代为归档，不是页面点击记录，也不代表实现或生产验收完成。",
+      "expected_latest_decision_id": null,
+      "client_request_id": "2a9eb2bc-0d98-47f0-8347-9be3e16db03b",
+      "decision_id": "github-issue:3",
+      "outcome": "ACCEPTED",
+      "status": "OPEN",
+      "processing": [],
       "stale": false
     }
   ],
