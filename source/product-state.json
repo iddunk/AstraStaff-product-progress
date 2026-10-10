@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 94,
+  "revision": 95,
   "experienceReviewRevision": 84,
-  "updatedAt": "2026-10-11T02:47:48+08:00",
+  "updatedAt": "2026-10-11T03:06:35+08:00",
   "baselineLastVerifiedAt": "2026-10-10T13:50:58+08:00",
-  "headline": "默认无人工审核本地验证完成；抖音有限期间代码复审通过；生产门禁仍未完成",
+  "headline": "默认无人工审核目标基线已薄组合；目标分支L3与真实发布门禁待完成",
   "customerAcceptance": {
     "passed": 0,
     "total": 2,
@@ -276,14 +276,14 @@
       "name": "业务运营与系统运营的P0流程",
       "group": "员工发布与运营",
       "status": "live",
-      "currentnode": "默认无人工审核：本地后端准入与页面路径通过验证，等待独立复审",
-      "doing": "自动准入不写人工批准记录；负责人只确认必要门店读取范围。父页面已去掉旧审核升级引导，ACTIVE/READY刷新恢复修复已提交。",
-      "blocker": "正式L3审阅、迁移与生产真实读回未完成；本地身份、门店和Brain为合成/Recording。",
-      "next": "完成独立delta复审后，在目标base薄组合，真实企业登录读取员工状态并交办第一件工作。",
-      "lastVerifiedAt": "2026-10-11T02:40:34+08:00",
-      "evidenceLevel": "LOCAL_VALIDATED_OWNER_DIRECTION_IMPLEMENTED",
+      "currentnode": "生产基线薄组合已完成，等待L3与Web目标组合复核",
+      "doing": "自动准入与最小门店摘要已在production-release基线组成本地目标树2117f3b5；Web无审核路径保持独立复审通过。",
+      "blocker": "目标树尚未合入正式分支；L3 Authority、迁移、真实登录与生产读回未完成。",
+      "next": "完成目标树Control/Web组合复核，再走正常发布和真实小碑第一件工作。",
+      "lastVerifiedAt": "2026-10-11T03:06:35+08:00",
+      "evidenceLevel": "TARGET_BASE_COMPOSED_L3_REQUIRED",
       "evidenceSummary": "默认自动准入后真实本地ACTIVE读回：Employee人工决定0、派生evaluation_runs0；Web桌面/手机走查与55 focused tests通过。不是生产或客户验收。",
-      "sourceRevision": "5b3debd4"
+      "sourceRevision": "2117f3b5"
     }
   ],
   "links": {
