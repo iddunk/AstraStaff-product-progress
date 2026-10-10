@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "revision": 83,
+  "revision": 84,
   "experienceReviewRevision": 80,
-  "updatedAt": "2026-10-10T18:26:18+08:00",
+  "updatedAt": "2026-10-10T18:38:51+08:00",
   "baselineLastVerifiedAt": "2026-10-10T13:50:58+08:00",
   "headline": "首单等待正常发布；共享能力已有新证据，完整客户验收仍未通过",
   "customerAcceptance": {
@@ -19,7 +19,7 @@
   "ownerControl": {
     "pageRevision": 80,
     "status": "REAL_OWNER_FEEDBACK_ROUNDTRIP_VERIFIED",
-    "verification": "真实闭环已验证：Owner 使用 GitHub 登录，在本页保存“首次成果引导：接受建议”；记录 #2 已自动归档，Codex 已读取并写回“团队已收到”。",
+    "verification": "真实操作已验证：Owner 使用 GitHub 登录，在本页保存“首次成果引导：接受建议”；记录 #2 已自动归档，Codex 已读取并写回“团队已收到”。",
     "limitation": "这条产品方向已确认；不代表对应员工体验已上线，也不改变餐饮两条线的客户验收状态。",
     "decisionId": "github-issue:2",
     "decision": "ACCEPT",
@@ -92,13 +92,20 @@
       "status": "local",
       "currentnode": "正常准备入口已在真实数据库验证，封存待人工审阅",
       "doing": "评论准备入口返回201，计划入口返回200；资料与工作计划进入正常持久化路径。",
-      "blocker": "封存状态为PENDING_REVIEW；尚未激活，真实评论读取和回复未验收。",
-      "next": "沿正常发布与启用流程，让员工读取真实评论并生成可追溯回复草稿。",
+      "blocker": "18:37线上只读核对：运营员工仍未上岗，没有运行实例或未撤销授权；正常发布与真实评论／套餐业务验收待完成。",
+      "next": "完成独立发布材料和正常审阅启用，再从员工对话验真实评论草稿及套餐预览。",
       "lastVerifiedAt": "2026-10-10",
       "evidenceLevel": "REAL_PG_PENDING_REVIEW",
       "evidenceSummary": "248个真实PostgreSQL检查通过；不是运营员工激活或真实平台动作。",
       "sourceRevision": "ea85d64a",
-      "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证"
+      "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证",
+      "productionObservation": {
+        "at": "2026-10-10T18:37:39+08:00",
+        "employeeStatus": "DRAFT",
+        "activeBrainCount": 0,
+        "unrevokedGrantCount": 0,
+        "currentHumanAuthority": "UNKNOWN"
+      }
     },
     {
       "id": "reviewpolicy",
@@ -107,11 +114,18 @@
       "status": "local",
       "currentnode": "正常发布与启用",
       "doing": "正在接通已有能力草稿的正常发布动作，让运营员工能启用。",
-      "blocker": "线上运营员工仍未启用，真实自动回复尚未验收。",
-      "next": "从正常入口发布并启用准确员工版本。",
+      "blocker": "18:37线上只读核对：运营员工仍未上岗，没有运行实例或未撤销授权；正常发布与真实评论／套餐业务验收待完成。",
+      "next": "完成独立发布材料和正常审阅启用，再从员工对话验真实评论草稿及套餐预览。",
       "lastVerifiedAt": "2026-10-10T13:50:58+08:00",
       "evidenceLevel": "BASELINE_LAST_VERIFIED",
-      "evidenceSummary": "保留13:50核验记录，本次未重新检查生产。"
+      "evidenceSummary": "保留13:50核验记录，本次未重新检查生产。",
+      "productionObservation": {
+        "at": "2026-10-10T18:37:39+08:00",
+        "employeeStatus": "DRAFT",
+        "activeBrainCount": 0,
+        "unrevokedGrantCount": 0,
+        "currentHumanAuthority": "UNKNOWN"
+      }
     },
     {
       "id": "approval",
@@ -133,13 +147,20 @@
       "status": "local",
       "currentnode": "正常准备入口与计划已在真实数据库验证，待正常发布",
       "doing": "已确认套餐资料可沿正常准备入口生成计划，审阅材料已封存。",
-      "blocker": "尚未激活；预览不等于已上架，真实提交与回执未验收。",
-      "next": "正常发布后，先取得真实套餐预览，再按确认授权提交并核对平台读回。",
+      "blocker": "18:37线上只读核对：运营员工仍未上岗，没有运行实例或未撤销授权；正常发布与真实评论／套餐业务验收待完成。",
+      "next": "完成独立发布材料和正常审阅启用，再从员工对话验真实评论草稿及套餐预览。",
       "lastVerifiedAt": "2026-10-10",
       "evidenceLevel": "REAL_PG_PENDING_REVIEW",
       "evidenceSummary": "与评论准备共用248项数据库证据，不重复累计。",
       "sourceRevision": "ea85d64a",
-      "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证"
+      "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证",
+      "productionObservation": {
+        "at": "2026-10-10T18:37:39+08:00",
+        "employeeStatus": "DRAFT",
+        "activeBrainCount": 0,
+        "unrevokedGrantCount": 0,
+        "currentHumanAuthority": "UNKNOWN"
+      }
     },
     {
       "id": "routines",
@@ -213,14 +234,14 @@
       "name": "钉钉扫码接入",
       "group": "共享能力",
       "status": "local",
-      "currentnode": "正式扫码与同员工链路候选已交付，正式接入尚未验收",
-      "doing": "正常应用、正式回调、本人绑定与当前员工读取已形成完整可审阅候选。",
-      "blocker": "仍缺两项正常迁移的数据库实证、正式回调发布、官方企业配置及真人扫码与收发。",
-      "next": "完成正常迁移与正式配置后，真人扫码并核对当前本人、当前员工的真实欢迎和回复回执。",
-      "lastVerifiedAt": "2026-10-10",
-      "evidenceLevel": "FOUNDATION_RELEASE_CANDIDATE",
-      "evidenceSummary": "175个唯一聚焦检查及正常构建通过；尚未部署、迁移或完成正式接入验收。",
-      "sourceRevision": "684d603a",
+      "currentnode": "扫码与接入状态整合完成，正在验证数据库和并发行为",
+      "doing": "重新扫码不会误用旧回调；仅在当前员工确实可用且收到标准欢迎回执后显示已接入。",
+      "blocker": "正式数据库门槛、管理员配置、真人扫码与同员工收发尚未完成。",
+      "next": "先通过绑定和撤销的数据库验证，再安排一次真人扫码和当前员工私聊收发。",
+      "lastVerifiedAt": "2026-10-10T18:38:51+08:00",
+      "evidenceLevel": "CODE_INTEGRATION_VALIDATED",
+      "evidenceSummary": "最终整合180项不同检查通过；当前源码类型检查通过。正常数据库与真实平台仍是独立门槛。",
+      "sourceRevision": "3241f5db",
       "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证"
     },
     {
