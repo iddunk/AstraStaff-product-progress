@@ -743,7 +743,13 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <div class="am-grid" style="--cols: 2">
 <section class="am-panel am-span-wide" id="panel-A" style="grid-column: span 2" data-span="2">
 <header class="am-panel-head"><span class="am-panel-id">A</span><h2>Owner 判断</h2></header>
-<div class="am-panel-body"><div class="am-callout am-callout--warn" role="note"><div class="am-callout-title">方向正确，但还没到“好用、易用、爱用”</div><div class="am-callout-body am-md"><p>产品心智已经像“数字员工”：团队、员工、对话、连接和审批都在正确位置。当前主要问题是员工状态、对话能力、工作记录和成果之间没有形成一致的可信体验。完整客户业务验收仍是 0／2。</p>
+<div class="am-panel-body">
+<!-- live-product-progress-20261010-2005 -->
+<aside data-live-product-progress="20261010-2005" style="margin:0 0 18px;padding:14px 16px;border:1px solid rgba(14,165,233,.28);border-radius:12px;background:rgba(14,165,233,.08)">
+  <div style="font-weight:700;margin-bottom:6px">实时研发进展 · 2026-10-10 20:05</div>
+  <div class="am-md"><p>首个真实 Outcome 已推进到 <code>capability publication truth</code> 收口。19:56 已提交 <code>c5dce658 fix(capability): align publication truth</code>，覆盖 migration 0181、canonical Skill reference 与 sealed evaluation readback truth；20:05 主产品线程已把“企业登录会话过期”降级为不阻塞，选择“稍后登录，先继续其他工作”，新的 deployment / validation 已启动。</p><p><strong>当前仍按 doing 计</strong>：尚未完成 merge、三项 capability 实际发布、<code>Employee1.0.2</code> 注册/评估/复核、首份真实月报和 2 位内部客户验收；Customer acceptance 仍为 <strong>0 / 2</strong>。</p><p><strong>下一步：</strong>deploy/verify → merge → publish Metrics1.0.1 / Office1.0.8 / operations-reporting0.2.0 → Employee1.0.2 → 首份真实 Outcome → 2/2 验收。</p></div>
+</aside>
+<div class="am-callout am-callout--warn" role="note"><div class="am-callout-title">方向正确，但还没到“好用、易用、爱用”</div><div class="am-callout-body am-md"><p>产品心智已经像“数字员工”：团队、员工、对话、连接和审批都在正确位置。当前主要问题是员工状态、对话能力、工作记录和成果之间没有形成一致的可信体验。完整客户业务验收仍是 0／2。</p>
 </div></div>
 <dl class="am-kv" style="--kv-cols: 3"><div class="am-kv-cell"><dt>产品方向</dt><dd>✓ Employee-first 已成立</dd></div><div class="am-kv-cell"><dt>报表员工</dt><dd>! 已上岗，但能力回答和成果不可信</dd></div><div class="am-kv-cell"><dt>运营员工</dt><dd>! 能力候选很多，生产仍未上岗</dd></div><div class="am-kv-cell"><dt>需要你</dt><dd>✓ 审批中心保持干净</dd></div><div class="am-kv-cell"><dt>最大体验风险</dt><dd>已上岗 ≠ 真的会干活</dd></div><div class="am-kv-cell"><dt>最大研发风险</dt><dd>局部能力继续扩，首个 Outcome 仍未出现</dd></div></dl></div>
 </section>
@@ -988,6 +994,11 @@ mode: light
 ---
 
 ## A Owner 判断 {span=2}
+
+> **实时研发进展（2026-10-10 20:05）**：首个真实 Outcome 已推进到 `capability publication truth` 收口。19:56 已提交 `c5dce658 fix(capability): align publication truth`，覆盖 migration 0181、canonical Skill reference 与 sealed evaluation readback truth；20:05 主产品线程已把“企业登录会话过期”降级为不阻塞，选择“稍后登录，先继续其他工作”，新的 deployment / validation 已启动。当前仍按 **doing** 计：尚未完成 merge、三项 capability 实际发布、`Employee1.0.2` 注册/评估/复核、首份真实月报和 2 位内部客户验收；Customer acceptance 仍为 **0 / 2**。
+>
+> **下一步顺序**：deploy/verify → merge → publish `Metrics1.0.1` / `Office1.0.8` / `operations-reporting0.2.0` → `Employee1.0.2` → first real Outcome → 2/2 acceptance。
+
 ```callout warn 方向正确，但还没到“好用、易用、爱用”
 产品心智已经像“数字员工”：团队、员工、对话、连接和审批都在正确位置。当前主要问题是员工状态、对话能力、工作记录和成果之间没有形成一致的可信体验。完整客户业务验收仍是 0／2。
 ```
