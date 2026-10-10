@@ -1,6 +1,6 @@
 ---
 title: AstraStaff 产品控制塔
-subtitle: Control v4.2 · 看方向、架构、落地与偏航风险 · 全局第82版 · 首单生产事实最后核验2026-10-10 13:50
+subtitle: Control v4.2 · 看方向、架构、落地与偏航风险 · 全局第83版 · 首单生产事实最后核验2026-10-10 13:50
 template: sheet
 theme: blueprint
 lang: zh
@@ -134,6 +134,6 @@ Work -> *Outcome: 可验证业务结果
 - 抖音：最终本地审阅候选可进入正常发布；真实平台取数与客户下载尚未运行。
 - 钉钉：完整正式接入候选已交付；两项正常迁移、官方配置、真人扫码与回复仍是正式验收边界。
 - Office1.0.9：保留原模板部分证明；没有完整客户报表验收。
-- GitHub Owner反馈：Owner 已通过 GitHub 登录，页面显示 iddunk；公网健康读回 ready。共享账本 Action 已成功运行，测试反馈已保留为 VALIDATION，不进入 Owner 当前决定。 尚无真实 Owner 意见；最后一步是页面内保存一条真实意见并核对共享读回。
+- GitHub Owner反馈：真实闭环已验证：Owner 使用 GitHub 登录，在本页保存“首次成果引导：接受建议”；记录 #2 已自动归档，Codex 已读取并写回“团队已收到”。 这条产品方向已确认；不代表对应员工体验已上线，也不改变餐饮两条线的客户验收状态。
 
 [查看全部16个模块的同一公开状态](./source/product-state.json)

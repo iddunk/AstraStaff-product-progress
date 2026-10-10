@@ -41,6 +41,10 @@ export async function bootstrap(request,env,{credentialPath='/run/secrets/owner-
     ...(settings&&request.headers.get('origin')===settings.page.origin?{'Access-Control-Allow-Origin':settings.page.origin,Vary:'Origin'}:{}),...headers}});
   try{
     settings=config(env);if(url.origin!==settings.callback.origin)throw failure('SETUP_ORIGIN_INVALID',403);
+    if(request.method==='OPTIONS'){
+      if(request.headers.get('origin')!==settings.page.origin)throw failure('SETUP_ORIGIN_INVALID',403);
+      return response({},200,{'Access-Control-Allow-Methods':'GET,POST,OPTIONS','Access-Control-Allow-Headers':'Authorization,Content-Type','Access-Control-Max-Age':'600'});
+    }
     const stored=await credentials(credentialPath);if(stored)enable(env,stored);
     const configured=Boolean(env.GITHUB_CLIENT_ID&&env.GITHUB_CLIENT_SECRET);
     if((env.GITHUB_CLIENT_ID||env.GITHUB_CLIENT_SECRET)&&!configured)throw failure('SETUP_CONFIG_INVALID',503);

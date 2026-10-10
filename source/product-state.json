@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "revision": 82,
+  "revision": 83,
   "experienceReviewRevision": 80,
-  "updatedAt": "2026-10-10T18:13:33+08:00",
+  "updatedAt": "2026-10-10T18:26:18+08:00",
   "baselineLastVerifiedAt": "2026-10-10T13:50:58+08:00",
   "headline": "首单等待正常发布；共享能力已有新证据，完整客户验收仍未通过",
   "customerAcceptance": {
@@ -18,9 +18,13 @@
   },
   "ownerControl": {
     "pageRevision": 80,
-    "status": "GITHUB_OWNER_LOGIN_VERIFIED",
-    "verification": "Owner 已通过 GitHub 登录，页面显示 iddunk；公网健康读回 ready。共享账本 Action 已成功运行，测试反馈已保留为 VALIDATION，不进入 Owner 当前决定。",
-    "limitation": "尚无真实 Owner 意见；最后一步是页面内保存一条真实意见并核对共享读回。"
+    "status": "REAL_OWNER_FEEDBACK_ROUNDTRIP_VERIFIED",
+    "verification": "真实闭环已验证：Owner 使用 GitHub 登录，在本页保存“首次成果引导：接受建议”；记录 #2 已自动归档，Codex 已读取并写回“团队已收到”。",
+    "limitation": "这条产品方向已确认；不代表对应员工体验已上线，也不改变餐饮两条线的客户验收状态。",
+    "decisionId": "github-issue:2",
+    "decision": "ACCEPT",
+    "processingStatus": "ACKNOWLEDGED",
+    "evidenceUrl": "https://github.com/iddunk/AstraStaff-product-progress/issues/2"
   },
   "modules": [
     {

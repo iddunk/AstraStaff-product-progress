@@ -32,3 +32,6 @@ test('installation redirect rejects provider open redirects, mismatched slug and
   const h=await harness(),s=await start(h);h.options.fetch=async()=>Response.json({...app(),...invalid},{status:201});const result=await bootstrap(callback(s),h.env,h.options);assert.equal(result.status,502);assert.deepEqual(await result.json(),{error:'SETUP_INSTALL_TARGET_INVALID'});assert.equal(result.headers.get('location'),null);await assert.rejects(readFile(h.path),{code:'ENOENT'});assert.equal(h.env.GITHUB_CLIENT_ID,undefined);
  }
 });
+
+
+test('anonymous CORS preflight succeeds before first App connection; wrong origin rejected',async()=>{const h=await harness();for(const path of ['/health','/feedback']){const result=await bootstrap(request(path,{method:'OPTIONS',headers:{origin:new URL(page).origin,'access-control-request-method':'GET','access-control-request-headers':'content-type'}}),h.env,h.options);assert.equal(result.status,200);assert.equal(result.headers.get('access-control-allow-origin'),new URL(page).origin);assert.match(result.headers.get('access-control-allow-headers'),/Content-Type/);}const bad=await bootstrap(request('/health',{method:'OPTIONS',headers:{origin:'https://attacker.example'}}),h.env,h.options);assert.equal(bad.status,403);assert.equal(bad.headers.get('access-control-allow-origin'),null);assert.equal(h.calls.length,0);});

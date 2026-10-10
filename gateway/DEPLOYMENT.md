@@ -3,7 +3,7 @@
 The only product review surface is this GitHub Pages repository. The browser saves feedback through the standalone gateway; GitHub Issues and append-only ledger events own the records. Local copies are source checkouts or disposable QA evidence, not another product state.
 
 Current endpoint: https://chenqitengsheng.com/owner-review-api
-Public health was read back HTTP 200 / SETUP_REQUIRED on 2026-10-10 Asia/Shanghai. It means first GitHub App connection is still required, not that a real Owner submission was accepted.
+Public health is HTTP 200 / ready. On 2026-10-10 the Owner completed GitHub connection and sign-in, then saved real feedback in the page: issue #2 / employee-outcome / ACCEPT. The GitHub Action archived it; Codex read it and appended ACKNOWLEDGED. GitHub Contents API confirms the processing receipt. A fresh public mobile browser read back the accepted decision and its issue link. This verifies the collaboration loop, not restaurant employee customer acceptance.
 
 One-time connection: open product-experience-review.html, choose 首次连接 GitHub, confirm the GitHub App, install it only on iddunk/AstraStaff-product-progress, return to Pages and sign in. Subsequent feedback is saved in the page; no Issue-form navigation or credential copying is required.
 
@@ -17,3 +17,5 @@ Validation performed: 42 Node contract tests and real Chromium desktop 1440/mobi
 
 Before any product work or release, read authoritative Control + GitHub ledger/current feedback + shared current State + current Goal. ACCEPT permits the proposal, KEEP_CURRENT forbids the suggested change, ADJUST_PROPOSAL stops propagation and requires a new proposal, UNDECIDED remains unconfirmed. A Control change requires CONTROL_CHANGE_PROPOSAL and explicit authority. Active agents poll at 60-second boundaries; idle chat wakeup is not provided by a static page.
 Route continuity fix, 2026-10-10: the existing business deployment regenerated Caddy at 17:42 and removed the gateway route. A root-owned, fixed-path ExecStartPre hook now preserves only the reviewed /owner-review-api loopback route when the proxy starts. Its systemd drop-in survives main-unit rewrites. Public health returned 200 after installation. The actual host Python 3.6.8 and Caddy 2.10.2 verified restoration from a route-less temporary generated config and an idempotent second run; the live config bytes stayed unchanged during that proof. Source and seven focused tests are in gateway/deploy/. No generic background monitor or workflow engine was added.
+
+Source-only hardening: bootstrap.mjs now accepts strict-origin CORS preflight before first-time configuration. This additional defense has 43 local contract tests passing and is not part of the earlier deployed gateway bundle; the production login fix uses a simple health GET and was verified by the real Owner flow.
