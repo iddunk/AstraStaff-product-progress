@@ -60,7 +60,7 @@
       state.latest.append(label);
       if (current.comment) state.latest.append(el('p','owner-current-comment',current.comment));
       state.latest.append(linkToIssue(current,'查看 GitHub 记录 #' + current.issue_number));
-      if (current.stale || current.page_revision !== config.pageRevision || current.proposal_revision !== state.module.proposalRevision) state.latest.append(el('p','owner-error','这是旧页面或方案的意见；当前方案需要重新确认。'));
+      if (current.proposal_revision !== state.module.proposalRevision) state.latest.append(el('p','owner-error','这一模块的方案已更新，需要重新确认。'));
     }
     if(state.receipt)state.latest.append(linkToIssue(state.receipt,(pending?'已保存至 GitHub #':'上一版意见已保存至 GitHub #')+state.receipt.issue_number));
     state.error.textContent = [refreshError,stale ? '另一设备已有新意见，或方案已更新。核对后再提交，原草稿保留。' : '', rejected ? 'GitHub 已收到，但这条反馈存在冲突，尚未替换当前决定。' : '',storageError ? '此浏览器无法保留草稿，请保持页面打开。' : '',state.failure||''].filter(Boolean).join(' ');

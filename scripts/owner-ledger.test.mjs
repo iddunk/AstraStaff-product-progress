@@ -178,7 +178,16 @@ test('wrong repository, pull request and unrelated issue are not ingested', () =
   assert.equal(eventFromGitHub(input, 'issues', config), null);
 });
 
-test('projection retains accepted past revisions when page config changes', () => {
+test('projection keeps an accepted unchanged proposal current after an unrelated page update', () => {
+  const old = event(1);
+  const result = projectEvents([old], { ...config, pageRevision: 4 });
+  assert.equal(result.current[0].decision, 'ACCEPT');
+  assert.equal(result.current[0].page_revision, 3);
+  assert.equal(result.current[0].stale, false);
+  assert.deepEqual(old, event(1));
+});
+
+test('projection retains past decisions but marks a changed module proposal stale', () => {
   const old = event(1);
   const result = projectEvents([old], { ...config, pageRevision: 4, modules: [{ ...config.modules[0], proposalRevision: 3 }] });
   assert.equal(result.current[0].page_revision, 3);

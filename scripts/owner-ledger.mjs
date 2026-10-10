@@ -187,7 +187,10 @@ export function projectEvents(events, config) {
   projection.current = config.modules.flatMap((module) => {
     const entry = current.get(module.moduleId);
     if (!entry) return [];
-    entry.stale = entry.page_revision !== config.pageRevision || entry.proposal_revision !== module.proposalRevision;
+    // A delivery update elsewhere on the page does not revoke the Owner's
+    // decision about this unchanged module proposal. New submissions still
+    // require the current page revision at ingestion.
+    entry.stale = entry.proposal_revision !== module.proposalRevision;
     return [entry];
   });
   // Both names are intentionally supported for the public client contract.

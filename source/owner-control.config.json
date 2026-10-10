@@ -6,7 +6,7 @@
     "iddunk"
   ],
   "pageId": "product-experience-review",
-  "pageRevision": 81,
+  "pageRevision": 82,
   "ledgerUrl": "https://raw.githubusercontent.com/iddunk/AstraStaff-product-progress/gh-pages/ledger/decisions.json",
   "modules": [
     {
@@ -103,9 +103,9 @@
     {
       "panelId": "F",
       "moduleId": "operations-onboarding",
-      "title": "运营让小碑上岗",
-      "recommendation": "保留客户与员工上下文，自动读取当前状态，每阶段一个主操作；独立审核、负责人上岗和开始工作可顺畅接手。",
-      "proposalRevision": 1
+      "title": "员工启用与版本验收的分工",
+      "recommendation": "已发布标准员工由客户确认工作范围后启用；新版本由平台运营按真实业务样例验收；技术风险交系统运营；业务例外才找有决策权的人审批。",
+      "proposalRevision": 2
     }
   ],
   "gatewayUrl": "https://chenqitengsheng.com/owner-review-api"
