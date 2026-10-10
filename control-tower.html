@@ -708,7 +708,7 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <button class="am-btn" type="button" data-am="copy" data-done="已复制 ✓">复制源稿</button>
 </div>
 <main class="am-sheet">
-<header class="am-head"><h1>AstraStaff 产品控制塔</h1><p class="am-sub">Control v4 · 看方向、架构、落地与偏航风险 · 产品状态截至第77版</p></header>
+<header class="am-head"><h1>AstraStaff 产品控制塔</h1><p class="am-sub">Control v4.2 · 看方向、架构、落地与偏航风险 · 生产现场截至 2026-10-10 13:45</p></header>
 <div class="am-frame">
 <div class="am-ruler am-ruler--top" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div class="am-ruler am-ruler--bottom" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div class="am-ruler am-ruler--left" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div><div class="am-ruler am-ruler--right" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div>
 <div class="am-grid" style="--cols: 2">
@@ -718,7 +718,7 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 当前最大的缺口不是再造平台，而是让两位餐饮员工完成真实业务结果。
 完整客户业务验收仍为 0／2。</p>
 </div></div>
-<dl class="am-kv" style="--kv-cols: 2"><div class="am-kv-cell"><dt>Control</dt><dd>v4 · Employee-centered</dd></div><div class="am-kv-cell"><dt>产品驱动</dt><dd>Responsibility-driven</dd></div><div class="am-kv-cell"><dt>完成标准</dt><dd>Outcome-verified</dd></div><div class="am-kv-cell"><dt>企业语义</dt><dd>Ontology-backed</dd></div><div class="am-kv-cell"><dt>当前首要成果</dt><dd>美团＋点评真实原模板部分月报</dd></div><div class="am-kv-cell"><dt>首单目标</dt><dd>10月11日 20:00 · 风险上升，剩余估算待重新核定</dd></div></dl>
+<dl class="am-kv" style="--kv-cols: 2"><div class="am-kv-cell"><dt>Control</dt><dd>v4.2 · Employee-centered</dd></div><div class="am-kv-cell"><dt>产品驱动</dt><dd>Responsibility-driven</dd></div><div class="am-kv-cell"><dt>完成标准</dt><dd>Outcome-verified</dd></div><div class="am-kv-cell"><dt>企业语义</dt><dd>Ontology-backed</dd></div><div class="am-kv-cell"><dt>当前首要成果</dt><dd>美团＋点评真实原模板部分月报</dd></div><div class="am-kv-cell"><dt>首单目标</dt><dd>10月11日 20:00 · 风险上升，剩余估算待重新核定</dd></div></dl>
 <div class="am-md"><p><strong>Owner判断：</strong> 继续推进真实员工结果，不启动新的平台型大工程。</p>
 <p><a href="./">查看详细交付进度</a></p>
 </div></div>
@@ -814,8 +814,8 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <tr>
 <td>Work / Journal</td>
 <td>V3 Work Journal 与真实美团证据已证明</td>
-<td><span class="am-status am-status--ok"><span class="am-status-icon" aria-hidden="true">✓</span>已实现底座</span></td>
-<td>用户只看安全业务进度，不看内部事件</td>
+<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span>底座已实现，但内部诊断进入客户待办并阻塞升级</span></td>
+<td>#791 清客户投影；历史诊断按 safe-close 收口</td>
 </tr>
 <tr>
 <td>Outcome</td>
@@ -843,9 +843,9 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 </tr>
 <tr>
 <td>Employee Release</td>
-<td>能力评测、版本升级、回退已有设施</td>
-<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span>在实现</span></td>
-<td>对业务运营收敛成“员工版本与能力”</td>
+<td>正常候选读取已恢复；1.0.8/1.0.1/0.2.0 三项候选生产可见</td>
+<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span>候选可读但尚无真实评测/CapabilityVersion/激活，小账仍1.0.1</span></td>
+<td>发布三能力 → 注册评测1.0.2 → 清理BUSY后升级</td>
 </tr>
 <tr>
 <td>DingTalk Channel</td>
@@ -896,7 +896,7 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <tbody><tr>
 <td>能力发布体系比员工结果更吸引研发注意</td>
 <td>平台越来越完整，客户仍拿不到结果</td>
-<td>先完成 Employee Outcome，再优化发布体验</td>
+<td>当前只完成三项首单能力的正常发布，不扩1.0.9/Memory110</td>
 </tr>
 <tr>
 <td>把 XLSX 当报表员工终点</td>
@@ -923,6 +923,11 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <td>最近的问题会吞掉核心路线</td>
 <td>只修阻塞当前真实 E2E 的最小范围</td>
 </tr>
+<tr>
+<td>内部工程 Work 占用客户生命周期</td>
+<td>诊断记录既污染“需要你”，又让员工版本一直 BUSY</td>
+<td>Control 4.2：内部 Work 独立诊断或证据化 safe-close，不能让客户清理工程状态</td>
+</tr>
 </tbody></table></div>
 </div></div>
 </section>
@@ -938,36 +943,41 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 </thead>
 <tbody><tr>
 <td>1</td>
-<td>当前报表员工获得正确能力，并从正常入口可用</td>
-<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span>发布读取修复已合入，生产复验尚未核实</span></td>
+<td>正常发布首单三项能力：metrics1.0.1 + Office1.0.8 + Skill0.2.0</td>
+<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span>生产 CURRENT 候选已可读；三项仍“材料待复核”，无真实评测/CapabilityVersion/激活</span></td>
 </tr>
 <tr>
 <td>2</td>
-<td>任意可查询月份取得美团＋点评真实来源</td>
-<td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>尚未形成本轮真实首单</span></td>
+<td>Employee1.0.2 完成登记、评测、审核并升级小账</td>
+<td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>当前小账1.0.1；registration plan=SETUP_REQUIRED；内部 WAIT 使版本状态 BUSY</span></td>
 </tr>
 <tr>
 <td>3</td>
-<td>用户原模板生成部分月报并正常下载</td>
-<td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>客户正常下载未验收</span></td>
+<td>任意可查询月份取得美团＋点评真实来源</td>
+<td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>当前员工仅 sales4.0.0/Skill0.1.0 已发布，首单真实月度组合取数未验</span></td>
 </tr>
 <tr>
 <td>4</td>
-<td>用户在聊天中修改同一份成果</td>
-<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span>本地能力已有，真实首单未验</span></td>
+<td>用户原模板生成部分月报并正常下载</td>
+<td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>Office1.0.8 本地真实模板链已证明；生产客户下载未验收</span></td>
 </tr>
 <tr>
 <td>5</td>
+<td>用户在聊天中修改同一份成果</td>
+<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span>本地同会话不可变修订已有，真实首单未验</span></td>
+</tr>
+<tr>
+<td>6</td>
 <td>运营员工读取真实评论并给出可追溯草稿</td>
 <td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>真实生产评论未验收</span></td>
 </tr>
 <tr>
-<td>6</td>
+<td>7</td>
 <td>常规回复按已确认政策自动，例外进入审批</td>
 <td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>真实自动动作与平台读回未验收</span></td>
 </tr>
 <tr>
-<td>7</td>
+<td>8</td>
 <td>套餐从资料到预览，再到受控真实上架</td>
 <td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>真实提交未验收</span></td>
 </tr>
@@ -1001,10 +1011,10 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <div class="am-lightbox-canvas am-diagram"></div>
 </div>
 </div>
-<footer class="am-colophon">Generated by <a href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">Answer me with HTML</a> 0.4.15 · 2026-10-10 12:36</footer>
+<footer class="am-colophon">Generated by <a href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">Answer me with HTML</a> 0.4.15 · 2026-10-10 13:48</footer>
 <textarea id="am-source" hidden readonly aria-hidden="true">---
 title: AstraStaff 产品控制塔
-subtitle: Control v4 · 看方向、架构、落地与偏航风险 · 产品状态截至第77版
+subtitle: Control v4.2 · 看方向、架构、落地与偏航风险 · 生产现场截至 2026-10-10 13:45
 template: sheet
 theme: blueprint
 lang: zh
@@ -1021,7 +1031,7 @@ V3 的 Employee、Conversation、Thin Waist、权限和可验证证据方向正�
 ```
 
 ```kv cols=2
-Control: v4 · Employee-centered
+Control: v4.2 · Employee-centered
 产品驱动: Responsibility-driven
 完成标准: Outcome-verified
 企业语义: Ontology-backed
@@ -1070,12 +1080,12 @@ Work -&gt; *Outcome: 可验证业务结果
 | Employee | 团队首页、员工侧栏、真实账号切换已上线验证 | ok 已实现核心身份与工作区 | 两位员工完整业务验收 |
 | Conversation | 主聊天存在；定时同记录语义已本地闭合 | warn 在实现 | 报表与运营主要动作都能从聊天完成 |
 | Responsibility | Routine、Schedule、轮询底座已有 | no 尚未产品化 | 统一成“长期职责”，页面与聊天读同一对象 |
-| Work / Journal | V3 Work Journal 与真实美团证据已证明 | ok 已实现底座 | 用户只看安全业务进度，不看内部事件 |
+| Work / Journal | V3 Work Journal 与真实美团证据已证明 | warn 底座已实现，但内部诊断进入客户待办并阻塞升级 | #791 清客户投影；历史诊断按 safe-close 收口 |
 | Outcome | Artifact、下载、平台读回能力分散存在 | warn 在实现 | 报表、回复、上架都用同一结果语义 |
 | Memory | 格式保存独立包已部署 | warn 在实现 | 当前员工启用，并证明下一期自动复用 |
 | Connection | 持久浏览器与真实美团读取已证明 | ok 核心已实现 | 抖音、钉钉和恢复体验完成真实验收 |
 | Policy / Approval | 回复规则、审批、批量决定已有本地候选 | warn 在实现 | 普通自动、例外审批、真实平台读回 |
-| Employee Release | 能力评测、版本升级、回退已有设施 | warn 在实现 | 对业务运营收敛成“员工版本与能力” |
+| Employee Release | 正常候选读取已恢复；1.0.8/1.0.1/0.2.0 三项候选生产可见 | warn 候选可读但尚无真实评测/CapabilityVersion/激活，小账仍1.0.1 | 发布三能力 → 注册评测1.0.2 → 清理BUSY后升级 |
 | DingTalk Channel | 同员工绑定候选已有 | no 未验收 | 官方配置、真人扫码、真实收发 |
 
 ## E 两位餐饮员工：离“真员工”还差什么 {span=2}
@@ -1089,23 +1099,25 @@ Work -&gt; *Outcome: 可验证业务结果
 ## F 当前最需要防的偏航 {span=2}
 | 偏航信号 | 为什么危险 | Control动作 |
 | --- | --- | --- |
-| 能力发布体系比员工结果更吸引研发注意 | 平台越来越完整，客户仍拿不到结果 | 先完成 Employee Outcome，再优化发布体验 |
+| 能力发布体系比员工结果更吸引研发注意 | 平台越来越完整，客户仍拿不到结果 | 当前只完成三项首单能力的正常发布，不扩1.0.9/Memory110 |
 | 把 XLSX 当报表员工终点 | 用户买的是经营汇报，不是文件生成器 | 文件只作为 Outcome 的 Artifact |
 | 把预览当成运营完成 | 草稿和套餐预览没有产生平台业务结果 | 必须有实际动作或明确等待审批状态 |
 | Routine / Schedule 独立成配置产品 | 用户心智会重新变成软件配置 | 产品层统一成 Responsibility |
 | 本地候选和测试数量替代产品进展 | 容易产生“代码很多，用户没得到东西” | 看真实来源、真实结果、真实读回、真实送达 |
 | Browser / CI 问题扩散成长期平台工程 | 最近的问题会吞掉核心路线 | 只修阻塞当前真实 E2E 的最小范围 |
+| 内部工程 Work 占用客户生命周期 | 诊断记录既污染“需要你”，又让员工版本一直 BUSY | Control 4.2：内部 Work 独立诊断或证据化 safe-close，不能让客户清理工程状态 |
 
 ## G 现在应该看到的下一批成果 {span=2}
 | 顺序 | 可验收成果 | 当前状态 |
 | --- | --- | --- |
-| 1 | 当前报表员工获得正确能力，并从正常入口可用 | warn 发布读取修复已合入，生产复验尚未核实 |
-| 2 | 任意可查询月份取得美团＋点评真实来源 | no 尚未形成本轮真实首单 |
-| 3 | 用户原模板生成部分月报并正常下载 | no 客户正常下载未验收 |
-| 4 | 用户在聊天中修改同一份成果 | warn 本地能力已有，真实首单未验 |
-| 5 | 运营员工读取真实评论并给出可追溯草稿 | no 真实生产评论未验收 |
-| 6 | 常规回复按已确认政策自动，例外进入审批 | no 真实自动动作与平台读回未验收 |
-| 7 | 套餐从资料到预览，再到受控真实上架 | no 真实提交未验收 |
+| 1 | 正常发布首单三项能力：metrics1.0.1 + Office1.0.8 + Skill0.2.0 | warn 生产 CURRENT 候选已可读；三项仍“材料待复核”，无真实评测/CapabilityVersion/激活 |
+| 2 | Employee1.0.2 完成登记、评测、审核并升级小账 | no 当前小账1.0.1；registration plan=SETUP_REQUIRED；内部 WAIT 使版本状态 BUSY |
+| 3 | 任意可查询月份取得美团＋点评真实来源 | no 当前员工仅 sales4.0.0/Skill0.1.0 已发布，首单真实月度组合取数未验 |
+| 4 | 用户原模板生成部分月报并正常下载 | no Office1.0.8 本地真实模板链已证明；生产客户下载未验收 |
+| 5 | 用户在聊天中修改同一份成果 | warn 本地同会话不可变修订已有，真实首单未验 |
+| 6 | 运营员工读取真实评论并给出可追溯草稿 | no 真实生产评论未验收 |
+| 7 | 常规回复按已确认政策自动，例外进入审批 | no 真实自动动作与平台读回未验收 |
+| 8 | 套餐从资料到预览，再到受控真实上架 | no 真实提交未验收 |
 
 **排期提醒：** 10月11日20:00首单目标暂不变。旧 9／18 小时估算已废弃，新的剩余工时等待共享产品经理重新核定。
 
