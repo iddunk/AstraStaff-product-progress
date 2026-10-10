@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": null,
+  "generated_at": "2026-10-10T10:01:28Z",
   "repository": "iddunk/AstraStaff-product-progress",
   "page": "product-experience-review",
   "page_revision": 80,
@@ -97,8 +97,58 @@
       "proposalRevision": 1
     }
   ],
-  "entries": [],
-  "history": [],
+  "entries": [
+    {
+      "event_id": "github-e6bb69346bc03fe64645bf10513cc361b610eca97f03dc7a523c8ac9a903259e",
+      "sequence": 1,
+      "kind": "DECISION",
+      "action": "opened",
+      "issue_number": 1,
+      "author": "iddunk",
+      "actor": "iddunk",
+      "created_at": "2026-10-10T10:01:28Z",
+      "occurred_at": "2026-10-10T10:01:28Z",
+      "schema_version": 1,
+      "page": "product-experience-review",
+      "module_id": "product-direction",
+      "page_revision": 80,
+      "proposal_revision": 1,
+      "decision": "UNDECIDED",
+      "comment": "自动接线验证：仅验证 GitHub 接收、历史保存和页面读回，不代表 Owner 产品意见。",
+      "expected_latest_decision_id": null,
+      "client_request_id": "c2adb60b-7496-4c3d-bf41-e80bd2125c85",
+      "validation_only": true,
+      "outcome": "VALIDATION",
+      "code": "VALIDATION_ONLY",
+      "decision_id": "github-issue:1"
+    }
+  ],
+  "history": [
+    {
+      "event_id": "github-e6bb69346bc03fe64645bf10513cc361b610eca97f03dc7a523c8ac9a903259e",
+      "sequence": 1,
+      "kind": "DECISION",
+      "action": "opened",
+      "issue_number": 1,
+      "author": "iddunk",
+      "actor": "iddunk",
+      "created_at": "2026-10-10T10:01:28Z",
+      "occurred_at": "2026-10-10T10:01:28Z",
+      "schema_version": 1,
+      "page": "product-experience-review",
+      "module_id": "product-direction",
+      "page_revision": 80,
+      "proposal_revision": 1,
+      "decision": "UNDECIDED",
+      "comment": "自动接线验证：仅验证 GitHub 接收、历史保存和页面读回，不代表 Owner 产品意见。",
+      "expected_latest_decision_id": null,
+      "client_request_id": "c2adb60b-7496-4c3d-bf41-e80bd2125c85",
+      "validation_only": true,
+      "outcome": "VALIDATION",
+      "code": "VALIDATION_ONLY",
+      "decision_id": "github-issue:1"
+    }
+  ],
   "current": [],
   "conflicts": []
 }
