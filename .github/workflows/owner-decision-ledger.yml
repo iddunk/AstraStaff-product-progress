@@ -1,0 +1,45 @@
+name: Owner Decision Ledger
+
+on:
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created, edited]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: read
+
+# An ordinary shared concurrency group replaces older pending runs even when
+# cancel-in-progress is false. Keep each delivery, and serialize append commits
+# with normal Git push compare-and-swap + fresh worktree retry instead.
+concurrency:
+  group: owner-ledger-${{ github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  ledger:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      OWNER_LEDGER_BRANCH: gh-pages
+    steps:
+      - name: Checkout trusted default branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+      - name: Select pinned Node runtime
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22.22.2
+      - name: Test contract
+        run: node --test scripts/owner-ledger.test.mjs
+      - name: Append and publish projection
+        run: node scripts/publish-owner-ledger.mjs
+
+# GITHUB_TOKEN commits do not trigger another push workflow/Pages build. The
+# HTML client must fetch raw.githubusercontent.com/<repo>/gh-pages/ledger/
+# decisions.json with a cachebuster; ledger updates then need no HTML rebuild.

@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "repository": "iddunk/AstraStaff-product-progress",
+  "branch": "gh-pages",
+  "ownerLogins": [
+    "iddunk"
+  ],
+  "pageId": "product-experience-review",
+  "pageRevision": 80,
+  "ledgerUrl": "https://raw.githubusercontent.com/iddunk/AstraStaff-product-progress/gh-pages/ledger/decisions.json",
+  "modules": [
+    {
+      "panelId": "A",
+      "moduleId": "product-direction",
+      "title": "产品整体方向",
+      "recommendation": "继续围绕长期数字员工交付可验证成果，先解决状态与真实能力不一致。",
+      "proposalRevision": 1
+    },
+    {
+      "panelId": "B",
+      "moduleId": "employee-journey",
+      "title": "员工交办路径",
+      "recommendation": "从同一员工对话交办、查看成果、修改要求和安排长期职责。",
+      "proposalRevision": 1
+    },
+    {
+      "panelId": "C",
+      "moduleId": "employee-team",
+      "title": "员工展示与切换",
+      "recommendation": "团队页展示员工岗位、当前工作和真实成果，直接进入对应员工。",
+      "proposalRevision": 1
+    },
+    {
+      "panelId": "D",
+      "moduleId": "employee-conversation",
+      "title": "员工对话",
+      "recommendation": "员工按当前真实能力说明职责，再接收自然语言交办。",
+      "proposalRevision": 1
+    },
+    {
+      "panelId": "E",
+      "moduleId": "employee-work",
+      "title": "工作与需要你",
+      "recommendation": "客户工作只展示业务进展和真实需要决定的事项，内部诊断进入运营。",
+      "proposalRevision": 1
+    },
+    {
+      "panelId": "F",
+      "moduleId": "employee-connections",
+      "title": "员工连接",
+      "recommendation": "按业务系统展示账号、访问范围和当前接入状态，测试成功与正式接入分开。",
+      "proposalRevision": 1
+    },
+    {
+      "panelId": "F",
+      "moduleId": "operations-employee",
+      "title": "餐饮运营员工",
+      "recommendation": "先贯通评论和菜品工作；按已确认策略自动执行普通事项，例外才审批。",
+      "proposalRevision": 1
+    },
+    {
+      "panelId": "G",
+      "moduleId": "report-employee",
+      "title": "经营报表员工",
+      "recommendation": "任意可查询月份取数、使用原模板交付并支持自然修改；各扩展线独立推进。",
+      "proposalRevision": 1
+    },
+    {
+      "panelId": "G",
+      "moduleId": "approval-experience",
+      "title": "审批体验",
+      "recommendation": "把真实例外和高风险动作交给人，支持按策略自动处理常规工作。",
+      "proposalRevision": 1
+    },
+    {
+      "panelId": "G",
+      "moduleId": "control-alignment",
+      "title": "Control 一致性",
+      "recommendation": "验收 Employee → Responsibility → Work → Outcome，区分本地通过、生产上线和客户验收。",
+      "proposalRevision": 1
+    },
+    {
+      "panelId": "H",
+      "moduleId": "navigation-information-architecture",
+      "title": "一级导航",
+      "recommendation": "将任务与计划收敛为工作，包含正在做、需要你、长期职责和已完成。",
+      "proposalRevision": 1
+    },
+    {
+      "panelId": "H",
+      "moduleId": "employee-outcome",
+      "title": "首次成果引导",
+      "recommendation": "没有成果时给出三个可交办的业务例子和真实可用来源。",
+      "proposalRevision": 1
+    },
+    {
+      "panelId": "H",
+      "moduleId": "employee-context",
+      "title": "资料与记忆",
+      "recommendation": "资料承载门店、口径、模板和记忆；连接负责账号与访问范围。",
+      "proposalRevision": 1
+    }
+  ],
+  "gatewayUrl": "https://chenqitengsheng.com/owner-review-api"
+}

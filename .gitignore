@@ -1,0 +1,7 @@
+.qa/
+.env
+*.secret
+*.pem
+node_modules/
+.test-tmp/
+gateway/test-evidence/
