@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 89,
-  "experienceReviewRevision": 80,
-  "updatedAt": "2026-10-10T20:12:48+08:00",
+  "revision": 90,
+  "experienceReviewRevision": 81,
+  "updatedAt": "2026-10-11T00:39:29+08:00",
   "baselineLastVerifiedAt": "2026-10-10T13:50:58+08:00",
-  "headline": "首单等待正常发布；共享能力已有新证据，完整客户验收仍未通过",
+  "headline": "本轮打透小碑上岗体验；完整本地上岗链通过，生产与客户业务仍待验收",
   "customerAcceptance": {
     "passed": 0,
     "total": 2,
@@ -17,7 +17,7 @@
     "next": "由首单责任方继续正常发布、员工1.0.2升级，再验任意月份真实原模板下载与修改。"
   },
   "ownerControl": {
-    "pageRevision": 80,
+    "pageRevision": 81,
     "status": "REAL_OWNER_FEEDBACK_ROUNDTRIP_VERIFIED",
     "verification": "真实操作已验证：Owner 使用 GitHub 登录，在本页保存“首次成果引导：接受建议”；记录 #2 已自动归档，Codex 已读取并写回“团队已收到”。",
     "limitation": "这条产品方向已确认；不代表对应员工体验已上线，也不改变餐饮两条线的客户验收状态。",
@@ -45,15 +45,15 @@
       "name": "抖音与多渠道报表",
       "group": "餐饮报表",
       "status": "local",
-      "currentnode": "独立报表候选已整合，待正常发布与真实来源验收",
-      "doing": "抖音读取与独立报表已与当前记忆和运营能力共同整合；查询月份可变、全部导出明细保留。",
-      "blocker": "真实平台取数、门店确认和正常客户下载尚未运行。",
-      "next": "正常发布后，以真实账号查询任意可查询月份，取得正式来源和可下载报表。",
-      "lastVerifiedAt": "2026-10-10",
-      "evidenceLevel": "CODE_INTEGRATION_VALIDATED",
-      "evidenceSummary": "整合后54项服务端与29项页面检查通过，来源校验通过；真实抖音取数和客户下载未验收。",
+      "currentnode": "独立报表本地下载已验证，正在完成发布材料复核",
+      "doing": "独立报表本地链已验证本人门店确认、报表下载与摘要；既有原模板共享文件已恢复兼容，当前复核新发布材料。",
+      "blocker": "候选来源一致性复核和真实平台取数、门店确认、客户下载尚未完成。",
+      "next": "完成独立发布稿复核后，从正常入口确认门店、取真实月份数据并下载抖音独立报表。",
+      "lastVerifiedAt": "2026-10-11T00:39:29+08:00",
+      "evidenceLevel": "ISOLATED_RELEASE_COMPATIBILITY_REVIEW",
+      "evidenceSummary": "真实本地数据库和下载授权负例通过；身份、模型与浏览器数据为合成环境。没有真实抖音来源或客户验收。",
       "sourceRevision": "0737eaa4",
-      "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证"
+      "verificationBoundary": "并行责任方当前回报；生产真实抖音取数未验收"
     },
     {
       "id": "templates",
@@ -63,12 +63,12 @@
       "currentnode": "原模板1.0.9新版候选通过固定评测，待独立发布",
       "doing": "沿用用户原模板结构，保留五张表和十二个公式证明；当前修改与记忆读取的依赖已补齐。",
       "blocker": "完整客户下载、自然修改和格式记忆的真实组合验收未完成。",
-      "next": "正常发布1.0.9后，用原模板完成一次自然修改和确认记忆，再验后续复用；独立于首单。",
+      "next": "正在独立验证原模板修改后正常保存、替换、忘记，并核对聊天与定时读取同一偏好；之后推进生产发布。",
       "lastVerifiedAt": "2026-10-10T19:00:13+08:00",
       "evidenceLevel": "CURRENT_CANDIDATE_FIXED_RUNNER_VALIDATED",
       "evidenceSummary": "12个独立候选引用已通过现有固定评测入口；三组实际执行分别为95／119／141项且零失败，组间可能重叠，不累计为客户验收。未生成正式生产审批或发布记录。",
       "sourceRevision": "7dd0dfa2",
-      "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证"
+      "verificationBoundary": "新版候选评测证据保留；全新正式迁移数据库的正向生命周期验证正在运行，不提前记为通过。"
     },
     {
       "id": "memory",
@@ -78,27 +78,27 @@
       "currentnode": "新版格式记忆候选已通过既有固定评测，待正常审阅启用",
       "doing": "聊天与定时共享格式记忆的接线已验证；原模板、记忆、定时的新发布材料已接入同一正常候选入口。",
       "blocker": "正常发布和首次真实保存、替换、忘记仍待完成。",
-      "next": "以当前本人正常审阅发布后，在聊天确认记住原模板修改，再验证替换和忘记。",
+      "next": "正在独立验证原模板修改后正常保存、替换、忘记，并核对聊天与定时读取同一偏好；之后推进生产发布。",
       "lastVerifiedAt": "2026-10-10T19:00:13+08:00",
       "evidenceLevel": "CURRENT_CANDIDATE_FIXED_RUNNER_VALIDATED",
       "evidenceSummary": "12个独立候选引用已通过现有固定评测入口；三组实际执行分别为95／119／141项且零失败，组间可能重叠，不累计为客户验收。未生成正式生产审批或发布记录。",
       "sourceRevision": "7dd0dfa2",
-      "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证"
+      "verificationBoundary": "新版候选评测证据保留；全新正式迁移数据库的正向生命周期验证正在运行，不提前记为通过。"
     },
     {
       "id": "reviews",
       "name": "真实评论、常规自动回复与例外",
       "group": "餐饮运营",
       "status": "local",
-      "currentnode": "六项必需能力已通过真实本地正常发布，员工上岗链继续验证",
-      "doing": "能力准备、实际评测、独立审阅与发布已在真实测试数据库全部走通；员工登记也已成功。正在修复员工评测的参数不匹配。",
-      "blocker": "完整员工评测、审阅和上岗读回尚未通过。原发布稿需合入本轮修复后重新审查，不能沿用旧通过结论。",
-      "next": "完成员工评测与独立审阅，再验证独立运行实例、本人授权、上岗状态和真实评论／套餐预览。",
-      "lastVerifiedAt": "2026-10-10T20:12:48+08:00",
-      "evidenceLevel": "REAL_LOCAL_CAPABILITY_PUBLICATION_EMPLOYEE_GATE_IN_PROGRESS",
-      "evidenceSummary": "六个Registry版本由正常服务创建，无直接补种；真实数据库、模拟身份与平台/运行时环境。不是生产或客户验收。",
-      "sourceRevision": "9da55173",
-      "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证",
+      "currentnode": "小碑上岗体验已有可审查预览；真实负责人门店读取被权限规则阻挡",
+      "doing": "准备、实际评测、独立审核、发布、运行实例及本人授权已在真实本地数据库走通。当前将这些步骤整理成运营能接续完成的员工上岗页。",
+      "blocker": "真实负责人上岗所需门店目录只允许运营读取，角色权限不匹配。页面现已停止显示未核实的上岗操作。生产发布边界也待复核。",
+      "next": "先修复负责人可核对门店范围的最小权限缺口并复验真实服务，再生产上岗；随后交付首份真实评论草稿或套餐预览。",
+      "lastVerifiedAt": "2026-10-11T00:39:29+08:00",
+      "evidenceLevel": "REAL_LOCAL_LIFECYCLE_VALIDATED_UX_PREVIEW_IN_PROGRESS",
+      "evidenceSummary": "真实本地数据库生命周期通过；角色走查又发现门店目录权限不匹配。该测试边界不能证明真实负责人上岗。界面49项检查及桌面/手机预览通过，未生产验收。",
+      "sourceRevision": "e00585ae",
+      "verificationBoundary": "生产尚未部署本轮UX；组件预览为合成数据。真实门店目录权限阻塞明确保留。",
       "productionObservation": {
         "at": "2026-10-10T18:37:39+08:00",
         "employeeStatus": "DRAFT",
@@ -113,13 +113,13 @@
       "name": "自动回复规则与暂停",
       "group": "餐饮运营",
       "status": "local",
-      "currentnode": "六项必需能力已通过真实本地正常发布，员工上岗链继续验证",
-      "doing": "能力准备、实际评测、独立审阅与发布已在真实测试数据库全部走通；员工登记也已成功。正在修复员工评测的参数不匹配。",
-      "blocker": "完整员工评测、审阅和上岗读回尚未通过。原发布稿需合入本轮修复后重新审查，不能沿用旧通过结论。",
-      "next": "完成员工评测与独立审阅，再验证独立运行实例、本人授权、上岗状态和真实评论／套餐预览。",
-      "lastVerifiedAt": "2026-10-10T20:12:48+08:00",
-      "evidenceLevel": "REAL_LOCAL_CAPABILITY_PUBLICATION_EMPLOYEE_GATE_IN_PROGRESS",
-      "evidenceSummary": "六个Registry版本由正常服务创建，无直接补种；真实数据库、模拟身份与平台/运行时环境。不是生产或客户验收。",
+      "currentnode": "小碑上岗体验已有可审查预览；真实负责人门店读取被权限规则阻挡",
+      "doing": "准备、实际评测、独立审核、发布、运行实例及本人授权已在真实本地数据库走通。当前将这些步骤整理成运营能接续完成的员工上岗页。",
+      "blocker": "真实负责人上岗所需门店目录只允许运营读取，角色权限不匹配。页面现已停止显示未核实的上岗操作。生产发布边界也待复核。",
+      "next": "先修复负责人可核对门店范围的最小权限缺口并复验真实服务，再生产上岗；随后交付首份真实评论草稿或套餐预览。",
+      "lastVerifiedAt": "2026-10-11T00:39:29+08:00",
+      "evidenceLevel": "REAL_LOCAL_LIFECYCLE_VALIDATED_UX_PREVIEW_IN_PROGRESS",
+      "evidenceSummary": "真实本地数据库生命周期通过；角色走查又发现门店目录权限不匹配。该测试边界不能证明真实负责人上岗。界面49项检查及桌面/手机预览通过，未生产验收。",
       "productionObservation": {
         "at": "2026-10-10T18:37:39+08:00",
         "employeeStatus": "DRAFT",
@@ -127,8 +127,9 @@
         "unrevokedGrantCount": 0,
         "currentHumanAuthority": "UNKNOWN"
       },
-      "sourceRevision": "9da55173",
-      "reviewUrl": "https://github.com/iddunk/AstraStaff/pull/798"
+      "sourceRevision": "e00585ae",
+      "reviewUrl": "https://github.com/iddunk/AstraStaff/pull/798",
+      "verificationBoundary": "生产尚未部署本轮UX；组件预览为合成数据。真实门店目录权限阻塞明确保留。"
     },
     {
       "id": "approval",
@@ -148,15 +149,15 @@
       "name": "菜品 / 套餐上架",
       "group": "餐饮运营",
       "status": "local",
-      "currentnode": "六项必需能力已通过真实本地正常发布，员工上岗链继续验证",
-      "doing": "能力准备、实际评测、独立审阅与发布已在真实测试数据库全部走通；员工登记也已成功。正在修复员工评测的参数不匹配。",
-      "blocker": "完整员工评测、审阅和上岗读回尚未通过。原发布稿需合入本轮修复后重新审查，不能沿用旧通过结论。",
-      "next": "完成员工评测与独立审阅，再验证独立运行实例、本人授权、上岗状态和真实评论／套餐预览。",
-      "lastVerifiedAt": "2026-10-10T20:12:48+08:00",
-      "evidenceLevel": "REAL_LOCAL_CAPABILITY_PUBLICATION_EMPLOYEE_GATE_IN_PROGRESS",
-      "evidenceSummary": "六个Registry版本由正常服务创建，无直接补种；真实数据库、模拟身份与平台/运行时环境。不是生产或客户验收。",
-      "sourceRevision": "9da55173",
-      "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证",
+      "currentnode": "小碑上岗体验已有可审查预览；真实负责人门店读取被权限规则阻挡",
+      "doing": "准备、实际评测、独立审核、发布、运行实例及本人授权已在真实本地数据库走通。当前将这些步骤整理成运营能接续完成的员工上岗页。",
+      "blocker": "真实负责人上岗所需门店目录只允许运营读取，角色权限不匹配。页面现已停止显示未核实的上岗操作。生产发布边界也待复核。",
+      "next": "先修复负责人可核对门店范围的最小权限缺口并复验真实服务，再生产上岗；随后交付首份真实评论草稿或套餐预览。",
+      "lastVerifiedAt": "2026-10-11T00:39:29+08:00",
+      "evidenceLevel": "REAL_LOCAL_LIFECYCLE_VALIDATED_UX_PREVIEW_IN_PROGRESS",
+      "evidenceSummary": "真实本地数据库生命周期通过；角色走查又发现门店目录权限不匹配。该测试边界不能证明真实负责人上岗。界面49项检查及桌面/手机预览通过，未生产验收。",
+      "sourceRevision": "e00585ae",
+      "verificationBoundary": "生产尚未部署本轮UX；组件预览为合成数据。真实门店目录权限阻塞明确保留。",
       "productionObservation": {
         "at": "2026-10-10T18:37:39+08:00",
         "employeeStatus": "DRAFT",
@@ -174,12 +175,12 @@
       "currentnode": "记忆模板与定时职责的新版候选已通过固定评测",
       "doing": "职责可读取确认的格式；过期或被遗忘的格式不会继续自动使用。生产到点成果仍待验证。",
       "blocker": "生产到点生成、正常下载和外部送达尚未验收。",
-      "next": "启用已评测版本后，从聊天安排定时报告，再核对页面安排和真实到点成果。",
+      "next": "正在独立验证原模板修改后正常保存、替换、忘记，并核对聊天与定时读取同一偏好；之后推进生产发布。",
       "lastVerifiedAt": "2026-10-10T19:00:13+08:00",
       "evidenceLevel": "CURRENT_CANDIDATE_FIXED_RUNNER_VALIDATED",
       "evidenceSummary": "12个独立候选引用已通过现有固定评测入口；三组实际执行分别为95／119／141项且零失败，组间可能重叠，不累计为客户验收。未生成正式生产审批或发布记录。",
       "sourceRevision": "7dd0dfa2",
-      "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证"
+      "verificationBoundary": "新版候选评测证据保留；全新正式迁移数据库的正向生命周期验证正在运行，不提前记为通过。"
     },
     {
       "id": "employeeux",
@@ -238,21 +239,21 @@
       "name": "钉钉扫码接入",
       "group": "共享能力",
       "status": "local",
-      "currentnode": "独立发布稿工程复核通过，正式环境准备条件已核实",
-      "doing": "生产只读核对确认两项扫码迁移尚未应用，正式扫码未启用；旧身份和接收方绑定仍保留。",
-      "blocker": "待正式批准、两项迁移和官方配置；现有绑定已有加密记录，必须确认兼容原密钥，不能直接替换。",
-      "next": "确认原密钥和官方应用配置后，按正式发布流程接入；随后由本人扫码验证同员工真实收发。",
-      "lastVerifiedAt": "2026-10-10T20:12:48+08:00",
+      "currentnode": "独立发布稿工程复核通过，等待正式审批与运行配置",
+      "doing": "已确认旧正式应用配置和原绑定密钥存在；扫码开关、密钥挂载及两项迁移尚未在生产完成。",
+      "blocker": "需要正式架构审核；随后按既有发布流程注入原密钥和扫码配置、应用两项迁移。",
+      "next": "正式审核通过后发布，再由本人扫码验证同员工真实收发。",
+      "lastVerifiedAt": "2026-10-11T00:39:29+08:00",
       "evidenceLevel": "DRAFT_RELEASE_ENGINEERING_REVIEW_PASSED",
-      "evidenceSummary": "独立工程复核通过；新增6项实际发布校验测试与13项Linux配置探针通过。正式Architecture Authority批准和真实平台验收单列。",
-      "sourceRevision": "972b9684",
+      "evidenceSummary": "工程独立复核与合入当前生产分支后的定向验证通过；正式审批和真人扫码验收未完成。",
+      "sourceRevision": "4218ba92",
       "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证",
       "reviewUrl": "https://github.com/iddunk/AstraStaff/pull/797",
       "productionObservation": {
         "at": "2026-10-10T20:11:55+08:00",
         "requiredMigrationApplied": false,
         "oauthEnabled": false,
-        "compatibleRecipientKeyConfirmed": false,
+        "compatibleRecipientKeyConfirmed": true,
         "existingBindingPresent": true
       }
     },
@@ -274,13 +275,14 @@
       "name": "业务运营与系统运营的P0流程",
       "group": "员工发布与运营",
       "status": "live",
-      "currentnode": "已上线，真实账号操作待验",
-      "doing": "能力缺项、责任人和版本改进页已上线，可进入正常升级与回退。",
-      "blocker": "需要正常登录；没有真实评测目标或员工仍忙碌时会阻止升级。",
-      "next": "核对真实版本和评测，正常结束旧工作后升级。",
-      "lastVerifiedAt": "2026-10-10T13:50:58+08:00",
-      "evidenceLevel": "BASELINE_LAST_VERIFIED",
-      "evidenceSummary": "保留13:50核验记录，本次未重新检查生产。"
+      "currentnode": "上岗流程预览可审查；真实角色权限断点已暴露",
+      "doing": "真实组件预览已有。独立审查发现普通运营入口、登录后客户上下文、部分上岗后的继续操作仍需修复。",
+      "blocker": "真实负责人门店读取权限尚未贯通；本地组件预览不代表生产可上岗。",
+      "next": "修复三个角色和恢复断点，再复验；负责人门店目录权限修正另行正式审查。",
+      "lastVerifiedAt": "2026-10-11T00:39:29+08:00",
+      "evidenceLevel": "UX_PREVIEW_INDEPENDENT_REVIEW_CHANGES_REQUIRED",
+      "evidenceSummary": "企业登录已恢复并实际读取生产运营入口；当前组件预览使用合成数据，不等于生产验收。",
+      "sourceRevision": "a8c68c51"
     }
   ],
   "links": {
@@ -291,12 +293,20 @@
   "execution": {
     "coordinator": "shared-product-manager",
     "parallelOwners": {
-      "dingtalk": "正式批准、迁移与兼容原密钥／官方配置准备",
-      "memory-office-routine": "当前源码新候选已通过固定评测，正常发布与首次保存待验",
-      "operations": "6项能力正常本地发布已通过；员工评测参数修复与完整上岗验证",
-      "douyin": "独立报表已整合，真实取数与下载待验"
+      "dingtalk": "工程复核完成；等待正式审批后执行既有发布与配置",
+      "memory-office-routine": "新正式迁移数据库的正常出版与记忆正向生命周期正在执行",
+      "operations": "主会话：打透小碑上岗的运营故事与预览；生产发布边界独立复核",
+      "douyin": "隔离独立报表发布稿并保持现有原模板能力兼容"
     },
-    "enterpriseLogin": "OWNER_WILL_LOGIN_LATER_INDEPENDENT_WORK_CONTINUES",
-    "blocksIndependentEngineering": false
+    "enterpriseLogin": "AUTHENTICATED_PRODUCTION_OPERATOR_READ_VERIFIED",
+    "blocksIndependentEngineering": false,
+    "currentSlice": {
+      "moduleId": "operations-onboarding",
+      "goal": "运营找到客户与小碑，准备并交接独立审核，由负责人确认上岗后开始第一件工作",
+      "acceptance": "保留上下文；每阶段主操作明确；缺项可恢复；接手入口清楚；刷新读回真实状态；最后有可用对话入口",
+      "productionComplete": false,
+      "blocker": "负责人无法读取待确认门店，尚不能真实上岗；必须修复并重新按角色验收。",
+      "review": "独立审查要求修复：普通运营入口、登录接手保留客户、部分上岗可继续。"
+    }
   }
 }

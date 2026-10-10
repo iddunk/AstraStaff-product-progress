@@ -6,7 +6,7 @@
     "iddunk"
   ],
   "pageId": "product-experience-review",
-  "pageRevision": 80,
+  "pageRevision": 81,
   "ledgerUrl": "https://raw.githubusercontent.com/iddunk/AstraStaff-product-progress/gh-pages/ledger/decisions.json",
   "modules": [
     {
@@ -98,6 +98,13 @@
       "moduleId": "employee-context",
       "title": "资料与记忆",
       "recommendation": "资料承载门店、口径、模板和记忆；连接负责账号与访问范围。",
+      "proposalRevision": 1
+    },
+    {
+      "panelId": "F",
+      "moduleId": "operations-onboarding",
+      "title": "运营让小碑上岗",
+      "recommendation": "保留客户与员工上下文，自动读取当前状态，每阶段一个主操作；独立审核、负责人上岗和开始工作可顺畅接手。",
       "proposalRevision": 1
     }
   ],
