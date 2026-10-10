@@ -708,15 +708,15 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <button class="am-btn" type="button" data-am="copy" data-done="已复制 ✓">复制源稿</button>
 </div>
 <main class="am-sheet">
-<header class="am-head"><h1>交付排期与剩余工作</h1><p class="am-sub">2026年10月10日10:57核对 · 北京时间 · 第77版</p></header>
+<header class="am-head"><h1>交付排期与剩余工作</h1><p class="am-sub">2026年10月10日13:50核对 · 北京时间 · 第78版</p></header>
 <div class="am-frame">
 <div class="am-ruler am-ruler--top" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div class="am-ruler am-ruler--bottom" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div class="am-ruler am-ruler--left" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div><div class="am-ruler am-ruler--right" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div>
 <div class="am-grid" style="--cols: 2">
 <section class="am-panel am-span-wide" id="panel-A" style="grid-column: span 2" data-span="2">
 <header class="am-panel-head"><span class="am-panel-id">A</span><h2>Owner先看结论</h2></header>
-<div class="am-panel-body"><div class="am-callout am-callout--warn" role="note"><div class="am-callout-title">当前完整客户业务验收仍为 0／2</div><div class="am-callout-body am-md"><p>最近可验收成果仍是：美团＋点评真实来源 → 用户原模板部分月报 → 正常下载 → 一次自然修改，目标10月11日20:00。
-10:40检查点只证明“读取修复包已封装并合入生产发布分支”，尚无它已部署并从正常页面复验成功的证据。
-旧9／18小时及15／28小时估算已停用；当前剩余工时等待共享产品经理重新核定，目标日期暂不自行调整，延期风险已上升。</p>
+<div class="am-panel-body"><div class="am-callout am-callout--warn" role="note"><div class="am-callout-title">当前完整客户业务验收仍为 0／2</div><div class="am-callout-body am-md"><p>首单主线已经收敛到正常发布与员工升级。生产 CURRENT 候选读取已真实恢复，metrics 1.0.1、Office 1.0.8、Skill 0.2.0 均可读。
+三项仍是“材料待复核”，没有真实评测批准、不可变 CapabilityVersion 或生产激活。小账仍是1.0.1，历史内部 WAITING 工作让版本页处于 BUSY。
+10月11日20:00目标暂不改；旧工时估算继续停用，新的剩余估算尚未核实。</p>
 </div></div>
 <div class="am-md"><div class="am-table-wrap"><table>
 <thead>
@@ -727,35 +727,37 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 </tr>
 </thead>
 <tbody><tr>
-<td>现在是否已有一个可完整使用的V3员工</td>
-<td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>还没有，完整客户验收0／2</span></td>
-<td>从当前员工完成真实委派、真实来源、可下载成果及业务修改</td>
+<td>正常发布入口是否恢复</td>
+<td><span class="am-status am-status--ok"><span class="am-status-icon" aria-hidden="true">✓</span>已恢复；生产登录态“读取当前候选”可正常读出三个首单 CURRENT 候选</span></td>
+<td>不再投入读取修复；直接完成三项能力的正常冻结、评测、人工审阅与发布</td>
 </tr>
 <tr>
-<td>原模板与格式记忆是否已上线</td>
-<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span>独立包已部署，但生产报表员工仍是1.0.1，正常对话也未启用</span></td>
-<td>正常发布新能力、升级同一员工，再做真实保存／复用</td>
+<td>为什么小账还不能做原模板首单</td>
+<td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>小账仍1.0.1；当前没有已评测审核的升级目标</span></td>
+<td>三项能力发布后，Employee1.0.2登记计划从SETUP_REQUIRED变为AVAILABLE</td>
 </tr>
 <tr>
-<td>主聊天定时是否已经能用</td>
-<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span>本地真实PG／Tool／Temporal链已闭合；模型仍是Recording工程替身</span></td>
-<td>正常能力发布＋真实模型＋生产计划到点与真实送达</td>
+<td>为什么员工升级仍被挡</td>
+<td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>版本页显示“先处理未完成工作”；历史内部诊断 WAITING 同时污染客户待办并触发 BUSY</span></td>
+<td>只对通过现有safe-close安全校验的内部只读诊断做WITHDRAWN；真实业务等待继续保留</td>
 </tr>
 <tr>
-<td>正常能力发布入口是否恢复</td>
-<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span><code>9182fdde</code>修复包10:38封装完成且已合入production-release；实际部署与正常页面复验尚未核实</span></td>
-<td>真实生产版本读回＋登录态下候选读取／发布页面复验</td>
+<td>是否还要等Office1.0.9／Memory110</td>
+<td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>首单不等；production-release现有Office1.0.8＋Skill0.2.0＋Employee1.0.2准备包已覆盖首单语义</span></td>
+<td>先完成真实月报Outcome；以后按这个格式、1.0.9、钉钉与抖音随后接入</td>
 </tr>
 <tr>
 <td>是否需要Owner现在做决定</td>
-<td><span class="am-status am-status--ok"><span class="am-status-icon" aria-hidden="true">✓</span>暂无新的产品范围决策；不要重新登录，也不要固定某个月</span></td>
-<td>12:00若发布仍未复验或首单前置未闭合，再由共享产品经理提交是否调整10月11日目标</td>
+<td><span class="am-status am-status--ok"><span class="am-status-icon" aria-hidden="true">✓</span>暂无新的范围或权限决策</span></td>
+<td>只有正常发布/升级遇到产品范围或高风险授权选择时再提交Owner</td>
 </tr>
 </tbody></table></div>
+<p><strong>Owner当前只看一条线：</strong> 先 safe-close 旧内部诊断，再发布三项首单能力。
+随后登记、评测、审核 Employee1.0.2 并升级小账，最后跑任意真实月份 → 原模板下载 → 同会话自然修改。</p>
 </div></div>
 </section>
 <section class="am-panel am-span-wide" id="panel-B" style="grid-column: span 2" data-span="2">
-<header class="am-panel-head"><span class="am-panel-id">B</span><h2>10:40检查点实际发生了什么</h2></header>
+<header class="am-panel-head"><span class="am-panel-id">B</span><h2>12:00后生产现场复核</h2></header>
 <div class="am-panel-body"><div class="am-md"><div class="am-table-wrap"><table>
 <thead>
 <tr>
@@ -766,45 +768,57 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 </tr>
 </thead>
 <tbody><tr>
-<td>正常发布读取修复</td>
-<td><code>9182fdde</code>的Control/Web候选在10:38完成封装；随后通过PR #787合入production-release</td>
-<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span>包已就绪并合入；尚不能写“线上已修复”</span></td>
-<td>共享产品经理／发布负责人核实实际部署和正常页面读回</td>
+<td>正常发布候选读取</td>
+<td>生产登录态已能正常“读取当前候选”；旧BLOCKED候选不会拖垮CURRENT候选</td>
+<td><span class="am-status am-status--ok"><span class="am-status-icon" aria-hidden="true">✓</span>读取恢复真实生效</span></td>
+<td>停止继续修读取链，进入正常发布动作</td>
 </tr>
 <tr>
-<td>原模板格式记忆独立包</td>
-<td>生产部署读回PASS；员工仍为1.0.1，normal Conversation=false</td>
-<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span>基础包在线，客户路径未启用</span></td>
-<td>报表发布负责人完成正常能力发布与员工升级</td>
+<td>首单三项能力</td>
+<td>operations-reporting 0.2.0、office.render-report-template 1.0.8、platform-data-fetch-template-metrics 1.0.1 均可见</td>
+<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span>都仍是“材料待复核”，无真实评测批准、不可变版本和激活</span></td>
+<td>共享产品经理／发布负责人按正常治理链完成发布</td>
 </tr>
 <tr>
-<td>主聊天计划</td>
-<td>10:42根整合复验：9点→待确认10点仍答9点→确认后答10点→暂停后答已暂停</td>
-<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span>本地业务语义闭合；晚于10:40，且非生产验收</span></td>
-<td>共享能力负责人完成正式发布、真实模型与生产到点交付</td>
+<td>报表员工版本</td>
+<td>生产小账当前版本1.0.1；没有已评测审核的升级目标</td>
+<td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>Employee1.0.2尚未成为可升级版本</span></td>
+<td>三项能力发布后重新跑1.0.2登记计划、评测、审核</td>
 </tr>
 <tr>
-<td>真实首单</td>
-<td>没有新证据证明任意可查询月份的真实原模板月报已从当前员工下载</td>
-<td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>未达成</span></td>
-<td>报表交付负责人继续首单主线</td>
+<td>版本升级就绪</td>
+<td>生产版本页显示“先处理未完成工作”</td>
+<td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>BUSY</span></td>
+<td>用既有safe-close逐条安全收口内部只读诊断；受保护／真实业务工作继续阻塞</td>
+</tr>
+<tr>
+<td>Employee1.0.2登记计划</td>
+<td>正常GET返回SETUP_REQUIRED，明确要求先完成能力发布和评测准备</td>
+<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span>路径存在，前置未齐</span></td>
+<td>发布三项能力后复读，应转AVAILABLE</td>
+</tr>
+<tr>
+<td>Employee1.0.2评测计划</td>
+<td>当前GET返回503 REPORT_EVALUATION_UNAVAILABLE</td>
+<td><span class="am-status am-status--warn"><span class="am-status-icon" aria-hidden="true">!</span>当前是前置canonical candidate／registry／suite未成立的结果</span></td>
+<td>不另起评测平台修复；先按顺序完成能力发布和Employee登记</td>
 </tr>
 <tr>
 <td>完整客户验收</td>
 <td>仍为0／2</td>
 <td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>未变化</span></td>
-<td>两条业务线分别取得真实客户验收证据</td>
+<td>报表、运营两条线分别取得真实客户Outcome</td>
 </tr>
 </tbody></table></div>
-<p>**10:40节点结论：**不是“没有进展”，而是交付入口的读取修复包已经准备到发布边界；真正影响Owner的结果——当前员工可发布新能力并完成真实首单——尚未被证据证明。</p>
-<p><strong>12:00前应看到：</strong></p>
+<p><strong>13:50节点结论：</strong> 首单的“研发能力不足”已不是主要问题。现在主要是正常发布、历史内部工作收口、Employee1.0.2评测升级，以及随后的一次真实客户月报。</p>
+<p><strong>下一次应该看到：</strong></p>
 <ul>
-<li><code>9182fdde</code>实际部署与正常页面复验。</li>
-<li>当前员工是否已获新能力。</li>
-<li>美团首单剩余产品工作包。</li>
-<li>共享产品经理给出新的剩余估算依据。</li>
+<li>#791／#792完成评审并进入一次薄Control API发布；</li>
+<li>内部诊断WAIT只在通过safe-close时安全收口，版本状态从BUSY回到可升级；</li>
+<li>三项首单能力进入真实评测／审阅／发布；</li>
+<li>Employee1.0.2成为可评测、可升级目标。</li>
 </ul>
-<p>缺任一项都如实记为未闭合。</p>
+<p>缺任一项都不写成“首单已就绪”。</p>
 </div></div>
 </section>
 <section class="am-panel am-span-wide" id="panel-C" style="grid-column: span 2" data-span="2">
@@ -823,26 +837,32 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 </thead>
 <tbody><tr>
 <td>正常发布入口</td>
-<td>两个候选读取问题已有修复；修复包已封装并合入发布分支</td>
-<td>实际生产部署＋登录态正常页面复验；另一个权限／身份读回矛盾仍需定位</td>
+<td>生产候选读取已真实恢复；CURRENT候选可见</td>
+<td>三项首单能力完成冻结／真实评测／人工审阅／发布</td>
 <td>共享产品经理协调发布负责人</td>
 </tr>
 <tr>
+<td>员工升级</td>
+<td>production-release已有Employee1.0.2准备包；生产版本页与登记plan均可访问</td>
+<td>safe-close内部诊断WAIT；三能力先发布；再登记／评测／审核1.0.2并升级</td>
+<td>共享产品经理＋员工发布负责人</td>
+</tr>
+<tr>
 <td>美团＋点评真实来源</td>
-<td>历史真实采集与Browser能力可复用</td>
-<td>当前员工、任意可查询月份的真实来源文件及期间／门店核对</td>
+<td>历史真实采集、sales4.0.0、门店授权和美团连接已有真实证明</td>
+<td>升级后由当前员工按任意可查询月份取得本轮真实来源并核对门店／期间</td>
 <td>报表交付负责人</td>
 </tr>
 <tr>
 <td>原模板部分月报</td>
-<td>原模板生成、Office与下载资产已存在；格式记忆独立包已部署</td>
-<td>当前员工拿到新能力；真实来源进入模板；明确真实缺项，不能把部分报表标完整</td>
+<td>Office1.0.8本地真实模板链已证明保留五张表、十二个公式和自然修改；不需要等1.0.9</td>
+<td>当前Employee1.0.2用真实来源生成；真实缺项保持未知，不能把部分报表标完整</td>
 <td>报表＋Office负责人</td>
 </tr>
 <tr>
 <td>正常下载和一次修改</td>
-<td>页面与下载入口已有产品基础</td>
-<td>Owner从当前员工拿到真实文件，并通过对话修改同一成果</td>
+<td>authenticated download和同会话不可变修订已有工程证据</td>
+<td>Owner从生产当前员工拿到真实文件，并通过对话修改同一成果后再次下载</td>
 <td>root产品验收</td>
 </tr>
 <tr>
@@ -851,16 +871,10 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <td>正常生产启用、真实门店确认、真实导出与正式报表验收</td>
 <td>抖音交付负责人</td>
 </tr>
-<tr>
-<td>双渠道整合</td>
-<td>产品范围和口径原则已明确</td>
-<td>两边都先取得真实来源；同店同期间，成交／核销／结算口径不能混算</td>
-<td>报表负责人</td>
-</tr>
 </tbody></table></div>
-<p><strong>当前不是登录阻塞。</strong> 用户已经完成正常登录；除非最新真实页面明确失效，不再要求重新登录。</p>
-<p><strong>10月11日20:00目标暂不改。</strong>
-当前没有共享产品经理的新剩余工时核定。10:40也还没有生产页面复验和真实首单，因此风险高于第76版。</p>
+<p><strong>当前不是登录阻塞，也不再是publication-read阻塞。</strong> 用户已正常登录；候选读取已在生产复验成功。</p>
+<p><strong>首单明确不等待：</strong> Office1.0.9、Memory110、定时、钉钉、抖音。它们在首份真实原模板月报Outcome后继续。</p>
+<p><strong>10月11日20:00目标暂不改。</strong> 当前仍没有共享产品经理重新核定的剩余专注工时，风险保持高位。</p>
 </div></div>
 </section>
 <section class="am-panel am-span-wide" id="panel-D" style="grid-column: span 2">
@@ -970,8 +984,8 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <tbody><tr>
 <td>美团＋点评真实来源 → 原模板部分月报 → 下载＋一次修改</td>
 <td>10月11日20:00</td>
-<td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>尚未交付；10:40只到发布修复包合入</span></td>
-<td><strong>风险上升</strong>；剩余工时待共享产品经理重估</td>
+<td><span class="am-status am-status--no"><span class="am-status-icon" aria-hidden="true">✗</span>尚未交付；候选读取已恢复，卡在三能力正常发布、内部WAIT收口和Employee1.0.2升级</span></td>
+<td><strong>高</strong>；路径已收敛但剩余工时仍待共享产品经理重估</td>
 </tr>
 <tr>
 <td>评论原文、回复草稿、套餐预览</td>
@@ -1018,7 +1032,7 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 </tbody></table></div>
 <p>**估算规则：**第76版的“美团剩余9／18个专注小时”和结构化状态中的15／28小时均不再作为当前估算。没有共享产品经理重新核定的剩余包和依据时，看板只写“尚未核实”，不会按时间流逝自动扣减。</p>
 <p>**排期规则：**上述目标日期保持用户确认的基准，本看板不自行改期。
-若12:00仍缺生产复验、员工升级路径或新估算，共享产品经理应向Owner提交延期风险与是否重基线。</p>
+12:00检查已过：生产复验和员工升级路径已经明确，但新剩余工时仍未核定。若正常发布／升级实际耗时使10月11日20:00不可守，共享产品经理应提交延期风险与是否重基线。</p>
 </div></div>
 </section>
 <section class="am-panel am-span-wide" id="panel-G" style="grid-column: span 2" data-span="2">
@@ -1049,7 +1063,7 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <tr>
 <td>生产待复验</td>
 <td>已到发布边界或合入发布分支，但缺实际部署／页面／客户读回</td>
-<td><code>9182fdde</code>发布读取恢复包</td>
+<td>#791／#792：已验证最小修复，尚未合入／部署</td>
 </tr>
 <tr>
 <td>客户验收通过</td>
@@ -1062,7 +1076,9 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <ul>
 <li>模板记忆生产读回：目标源<code>2d8bf977</code>已部署；员工仍1.0.1；normal Conversation未启用；customerAcceptance=false。</li>
 <li>主聊天定时：10:42根整合本地复验通过；Recording模型明确是工程替身；没有真实报表生成、Artifact送达或外部消息。</li>
-<li>发布读取恢复：目标源<code>9182fdde</code>的Control/Web包10:38封装完成，随后合入production-release；本看板尚未找到生产部署＋正常页面复验证据。</li>
+<li>发布读取恢复：生产正常登录态已能读取CURRENT候选；旧BLOCKED候选没有再拖垮可用候选。读取恢复真实生效。</li>
+<li>首单发布状态：metrics1.0.1、Office1.0.8、Skill0.2.0均在生产可见但仍“材料待复核”，没有真实评测批准、不可变CapabilityVersion或生产激活。</li>
+<li>小账版本：生产当前1.0.1；没有已评测审核的升级目标；历史内部诊断WAIT使升级状态BUSY。</li>
 <li>钉钉正式就绪核查：历史绑定属于旧暂停员工，当前员工扫码与真实收发未验。</li>
 </ul>
 <p><a href="http://127.0.0.1:4493/harness-reference.html">开源借鉴专题：模板、记忆、资料与员工能力</a></p>
@@ -1081,7 +1097,7 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <tbody><tr>
 <td>美团首单</td>
 <td><strong>现在无需操作</strong>；已登录，不要重复登录；月份保持“任意可查询月份”</td>
-<td>12:00若首单前置仍未闭合，由共享产品经理提交风险／改期判断</td>
+<td>正常发布／升级遇到范围、权限或目标日期变化时再由共享产品经理提交</td>
 </tr>
 <tr>
 <td>当前剩余工时</td>
@@ -1089,9 +1105,9 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <td>等共享产品经理基于最新剩余包重新核定</td>
 </tr>
 <tr>
-<td>正常发布权限矛盾</td>
-<td>无需Owner自行排查</td>
-<td>共享产品经理协调定位；只有需要产品权限选择时再升级给Owner</td>
+<td>正常发布</td>
+<td>无需Owner操作；读取入口已恢复</td>
+<td>三项能力发布和1.0.2评测升级走既有正常治理链；只有高风险权限选择时升级给Owner</td>
 </tr>
 <tr>
 <td>钉钉</td>
@@ -1104,8 +1120,8 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <td>到真实提交前，确认经营规则、例外审批范围和允许动作</td>
 </tr>
 </tbody></table></div>
-<p><strong>下一检查点：12:00。</strong> 看板只在有真实产品节点变化时更新；状态不变不会制造新的进度。</p>
-<p>当前Owner最应关注的三件事：<strong>①10月11日20:00首单是否仍可守住；②正常发布入口是否已经真实部署并复验；③共享产品经理是否给出新的剩余包与估算。</strong></p>
+<p><strong>下一检查点：首单三能力完成正常发布，或Employee1.0.2登记计划从SETUP_REQUIRED转为AVAILABLE。</strong> 看板只在真实产品节点变化时更新。</p>
+<p>当前Owner最应关注的三件事：<strong>①三项首单能力何时从“材料待复核”进入真实发布；②小账何时从1.0.1升级到1.0.2并跑出第一份真实Outcome；③共享产品经理是否给出新的剩余包与估算。</strong></p>
 <p><a href="./control-tower.html">产品控制塔：Control、架构与落地状态</a></p>
 <p><a href="./product-experience-review.html">生产真实体验共创：截图、用户故事与产品定调</a></p>
 </div></div>
@@ -1113,10 +1129,10 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 </div>
 </div>
 </main>
-<footer class="am-colophon">Generated by <a href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">Answer me with HTML</a> 0.4.15 · 2026-10-10 12:35</footer>
+<footer class="am-colophon">Generated by <a href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">Answer me with HTML</a> 0.4.15 · 2026-10-10 13:52</footer>
 <textarea id="am-source" hidden readonly aria-hidden="true">---
 title: 交付排期与剩余工作
-subtitle: 2026年10月10日10:57核对 · 北京时间 · 第77版
+subtitle: 2026年10月10日13:50核对 · 北京时间 · 第78版
 template: sheet
 theme: shadcn
 lang: zh
@@ -1127,37 +1143,41 @@ mode: light
 
 ## A Owner先看结论 {span=2}
 ```callout warn 当前完整客户业务验收仍为 0／2
-最近可验收成果仍是：美团＋点评真实来源 → 用户原模板部分月报 → 正常下载 → 一次自然修改，目标10月11日20:00。
-10:40检查点只证明“读取修复包已封装并合入生产发布分支”，尚无它已部署并从正常页面复验成功的证据。
-旧9／18小时及15／28小时估算已停用；当前剩余工时等待共享产品经理重新核定，目标日期暂不自行调整，延期风险已上升。
+首单主线已经收敛到正常发布与员工升级。生产 CURRENT 候选读取已真实恢复，metrics 1.0.1、Office 1.0.8、Skill 0.2.0 均可读。
+三项仍是“材料待复核”，没有真实评测批准、不可变 CapabilityVersion 或生产激活。小账仍是1.0.1，历史内部 WAITING 工作让版本页处于 BUSY。
+10月11日20:00目标暂不改；旧工时估算继续停用，新的剩余估算尚未核实。
 ```
 
 | Owner要判断 | 当前事实 | 下一次能改变状态的证据 |
 | --- | --- | --- |
-| 现在是否已有一个可完整使用的V3员工 | no 还没有，完整客户验收0／2 | 从当前员工完成真实委派、真实来源、可下载成果及业务修改 |
-| 原模板与格式记忆是否已上线 | warn 独立包已部署，但生产报表员工仍是1.0.1，正常对话也未启用 | 正常发布新能力、升级同一员工，再做真实保存／复用 |
-| 主聊天定时是否已经能用 | warn 本地真实PG／Tool／Temporal链已闭合；模型仍是Recording工程替身 | 正常能力发布＋真实模型＋生产计划到点与真实送达 |
-| 正常能力发布入口是否恢复 | warn `9182fdde`修复包10:38封装完成且已合入production-release；实际部署与正常页面复验尚未核实 | 真实生产版本读回＋登录态下候选读取／发布页面复验 |
-| 是否需要Owner现在做决定 | ok 暂无新的产品范围决策；不要重新登录，也不要固定某个月 | 12:00若发布仍未复验或首单前置未闭合，再由共享产品经理提交是否调整10月11日目标 |
+| 正常发布入口是否恢复 | ok 已恢复；生产登录态“读取当前候选”可正常读出三个首单 CURRENT 候选 | 不再投入读取修复；直接完成三项能力的正常冻结、评测、人工审阅与发布 |
+| 为什么小账还不能做原模板首单 | no 小账仍1.0.1；当前没有已评测审核的升级目标 | 三项能力发布后，Employee1.0.2登记计划从SETUP_REQUIRED变为AVAILABLE |
+| 为什么员工升级仍被挡 | no 版本页显示“先处理未完成工作”；历史内部诊断 WAITING 同时污染客户待办并触发 BUSY | 只对通过现有safe-close安全校验的内部只读诊断做WITHDRAWN；真实业务等待继续保留 |
+| 是否还要等Office1.0.9／Memory110 | no 首单不等；production-release现有Office1.0.8＋Skill0.2.0＋Employee1.0.2准备包已覆盖首单语义 | 先完成真实月报Outcome；以后按这个格式、1.0.9、钉钉与抖音随后接入 |
+| 是否需要Owner现在做决定 | ok 暂无新的范围或权限决策 | 只有正常发布/升级遇到产品范围或高风险授权选择时再提交Owner |
 
-## B 10:40检查点实际发生了什么 {span=2}
+**Owner当前只看一条线：** 先 safe-close 旧内部诊断，再发布三项首单能力。
+随后登记、评测、审核 Employee1.0.2 并升级小账，最后跑任意真实月份 → 原模板下载 → 同会话自然修改。
+## B 12:00后生产现场复核 {span=2}
 | 检查项 | 实际结果 | 判定 | 责任方／下一步 |
 | --- | --- | --- | --- |
-| 正常发布读取修复 | `9182fdde`的Control/Web候选在10:38完成封装；随后通过PR #787合入production-release | warn 包已就绪并合入；尚不能写“线上已修复” | 共享产品经理／发布负责人核实实际部署和正常页面读回 |
-| 原模板格式记忆独立包 | 生产部署读回PASS；员工仍为1.0.1，normal Conversation=false | warn 基础包在线，客户路径未启用 | 报表发布负责人完成正常能力发布与员工升级 |
-| 主聊天计划 | 10:42根整合复验：9点→待确认10点仍答9点→确认后答10点→暂停后答已暂停 | warn 本地业务语义闭合；晚于10:40，且非生产验收 | 共享能力负责人完成正式发布、真实模型与生产到点交付 |
-| 真实首单 | 没有新证据证明任意可查询月份的真实原模板月报已从当前员工下载 | no 未达成 | 报表交付负责人继续首单主线 |
-| 完整客户验收 | 仍为0／2 | no 未变化 | 两条业务线分别取得真实客户验收证据 |
+| 正常发布候选读取 | 生产登录态已能正常“读取当前候选”；旧BLOCKED候选不会拖垮CURRENT候选 | ok 读取恢复真实生效 | 停止继续修读取链，进入正常发布动作 |
+| 首单三项能力 | operations-reporting 0.2.0、office.render-report-template 1.0.8、platform-data-fetch-template-metrics 1.0.1 均可见 | warn 都仍是“材料待复核”，无真实评测批准、不可变版本和激活 | 共享产品经理／发布负责人按正常治理链完成发布 |
+| 报表员工版本 | 生产小账当前版本1.0.1；没有已评测审核的升级目标 | no Employee1.0.2尚未成为可升级版本 | 三项能力发布后重新跑1.0.2登记计划、评测、审核 |
+| 版本升级就绪 | 生产版本页显示“先处理未完成工作” | no BUSY | 用既有safe-close逐条安全收口内部只读诊断；受保护／真实业务工作继续阻塞 |
+| Employee1.0.2登记计划 | 正常GET返回SETUP_REQUIRED，明确要求先完成能力发布和评测准备 | warn 路径存在，前置未齐 | 发布三项能力后复读，应转AVAILABLE |
+| Employee1.0.2评测计划 | 当前GET返回503 REPORT_EVALUATION_UNAVAILABLE | warn 当前是前置canonical candidate／registry／suite未成立的结果 | 不另起评测平台修复；先按顺序完成能力发布和Employee登记 |
+| 完整客户验收 | 仍为0／2 | no 未变化 | 报表、运营两条线分别取得真实客户Outcome |
 
-**10:40节点结论：**不是“没有进展”，而是交付入口的读取修复包已经准备到发布边界；真正影响Owner的结果——当前员工可发布新能力并完成真实首单——尚未被证据证明。
+**13:50节点结论：** 首单的“研发能力不足”已不是主要问题。现在主要是正常发布、历史内部工作收口、Employee1.0.2评测升级，以及随后的一次真实客户月报。
 
-**12:00前应看到：**
-- `9182fdde`实际部署与正常页面复验。
-- 当前员工是否已获新能力。
-- 美团首单剩余产品工作包。
-- 共享产品经理给出新的剩余估算依据。
+**下一次应该看到：**
+- #791／#792完成评审并进入一次薄Control API发布；
+- 内部诊断WAIT只在通过safe-close时安全收口，版本状态从BUSY回到可升级；
+- 三项首单能力进入真实评测／审阅／发布；
+- Employee1.0.2成为可评测、可升级目标。
 
-缺任一项都如实记为未闭合。
+缺任一项都不写成“首单已就绪”。
 ## C 报表员工：下一次可验收什么 {span=2}
 **当前用户场景：任选一个平台可查询月份。**
 从真实美团＋点评来源取数，按用户原始月报模板生成部分月报。
@@ -1165,17 +1185,18 @@ mode: light
 
 | 子场景 | 已经具备 | 离可验收还差什么 | 当前处理方 |
 | --- | --- | --- | --- |
-| 正常发布入口 | 两个候选读取问题已有修复；修复包已封装并合入发布分支 | 实际生产部署＋登录态正常页面复验；另一个权限／身份读回矛盾仍需定位 | 共享产品经理协调发布负责人 |
-| 美团＋点评真实来源 | 历史真实采集与Browser能力可复用 | 当前员工、任意可查询月份的真实来源文件及期间／门店核对 | 报表交付负责人 |
-| 原模板部分月报 | 原模板生成、Office与下载资产已存在；格式记忆独立包已部署 | 当前员工拿到新能力；真实来源进入模板；明确真实缺项，不能把部分报表标完整 | 报表＋Office负责人 |
-| 正常下载和一次修改 | 页面与下载入口已有产品基础 | Owner从当前员工拿到真实文件，并通过对话修改同一成果 | root产品验收 |
+| 正常发布入口 | 生产候选读取已真实恢复；CURRENT候选可见 | 三项首单能力完成冻结／真实评测／人工审阅／发布 | 共享产品经理协调发布负责人 |
+| 员工升级 | production-release已有Employee1.0.2准备包；生产版本页与登记plan均可访问 | safe-close内部诊断WAIT；三能力先发布；再登记／评测／审核1.0.2并升级 | 共享产品经理＋员工发布负责人 |
+| 美团＋点评真实来源 | 历史真实采集、sales4.0.0、门店授权和美团连接已有真实证明 | 升级后由当前员工按任意可查询月份取得本轮真实来源并核对门店／期间 | 报表交付负责人 |
+| 原模板部分月报 | Office1.0.8本地真实模板链已证明保留五张表、十二个公式和自然修改；不需要等1.0.9 | 当前Employee1.0.2用真实来源生成；真实缺项保持未知，不能把部分报表标完整 | 报表＋Office负责人 |
+| 正常下载和一次修改 | authenticated download和同会话不可变修订已有工程证据 | Owner从生产当前员工拿到真实文件，并通过对话修改同一成果后再次下载 | root产品验收 |
 | 抖音独立报表 | 门店确认、来源校验、读取升级和候选均已有本地实现 | 正常生产启用、真实门店确认、真实导出与正式报表验收 | 抖音交付负责人 |
-| 双渠道整合 | 产品范围和口径原则已明确 | 两边都先取得真实来源；同店同期间，成交／核销／结算口径不能混算 | 报表负责人 |
 
-**当前不是登录阻塞。** 用户已经完成正常登录；除非最新真实页面明确失效，不再要求重新登录。
+**当前不是登录阻塞，也不再是publication-read阻塞。** 用户已正常登录；候选读取已在生产复验成功。
 
-**10月11日20:00目标暂不改。**
-当前没有共享产品经理的新剩余工时核定。10:40也还没有生产页面复验和真实首单，因此风险高于第76版。
+**首单明确不等待：** Office1.0.9、Memory110、定时、钉钉、抖音。它们在首份真实原模板月报Outcome后继续。
+
+**10月11日20:00目标暂不改。** 当前仍没有共享产品经理重新核定的剩余专注工时，风险保持高位。
 ## D 运营员工：评论与套餐线
 **当前用户场景：真实评论原文 → 回复草稿／风险提示；已有确认资料 → 套餐待确认预览。预览不是已回复，也不是已上架。**
 
@@ -1210,7 +1231,7 @@ mode: light
 ## F 目标日期、剩余估算与风险 {span=2}
 | 里程碑 | 目标日期 | 当前状态 | 风险判断 |
 | --- | --- | --- | --- |
-| 美团＋点评真实来源 → 原模板部分月报 → 下载＋一次修改 | 10月11日20:00 | no 尚未交付；10:40只到发布修复包合入 | **风险上升**；剩余工时待共享产品经理重估 |
+| 美团＋点评真实来源 → 原模板部分月报 → 下载＋一次修改 | 10月11日20:00 | no 尚未交付；候选读取已恢复，卡在三能力正常发布、内部WAIT收口和Employee1.0.2升级 | **高**；路径已收敛但剩余工时仍待共享产品经理重估 |
 | 评论原文、回复草稿、套餐预览 | 10月13日 | warn 本地只读候选与恢复动作已就绪，生产启用／真实评论未验 | 中 |
 | 抖音真实来源与独立报表 | 10月15日 | warn 本地候选完成，真实门店确认和正式导出未验 | 中高 |
 | 自动回复／例外审批、模型用量诊断 | 10月20日 | warn 多项基础存在，真实行为与回执未闭合 | 中高 |
@@ -1222,14 +1243,15 @@ mode: light
 **估算规则：**第76版的“美团剩余9／18个专注小时”和结构化状态中的15／28小时均不再作为当前估算。没有共享产品经理重新核定的剩余包和依据时，看板只写“尚未核实”，不会按时间流逝自动扣减。
 
 **排期规则：**上述目标日期保持用户确认的基准，本看板不自行改期。
-若12:00仍缺生产复验、员工升级路径或新估算，共享产品经理应向Owner提交延期风险与是否重基线。
+12:00检查已过：生产复验和员工升级路径已经明确，但新剩余工时仍未核定。若正常发布／升级实际耗时使10月11日20:00不可守，共享产品经理应提交延期风险与是否重基线。
+
 ## G 证据分级：什么才算“完成” {span=2}
 | 看板标签 | 含义 | 当前例子 |
 | --- | --- | --- |
 | 生产已部署 | 代码／能力包真实进入生产，但不等于客户已能用 | 模板格式记忆独立包，生产读回PASS |
 | 本地业务链闭合 | 使用真实本地数据库／Temporal等证明产品语义，但不是生产客户验收 | 主聊天9点→10点确认语义、暂停语义 |
 | 本地候选 | 功能与回归证据存在，尚未正常生产启用 | 抖音读取升级；评论／草稿／套餐预览 |
-| 生产待复验 | 已到发布边界或合入发布分支，但缺实际部署／页面／客户读回 | `9182fdde`发布读取恢复包 |
+| 生产待复验 | 已到发布边界或合入发布分支，但缺实际部署／页面／客户读回 | #791／#792：已验证最小修复，尚未合入／部署 |
 | 客户验收通过 | 当前真实账号、当前员工、真实来源／动作、可核对结果全部通过 | **当前仍无，0／2** |
 
 本版依据优先使用：当前计划、今天的执行证据、真实生产读回和正常发布回执。整合工作区存在未提交改动，因此**文件存在、HEAD、测试数量或候选构建本身都不作为“已上线”依据**。
@@ -1237,7 +1259,9 @@ mode: light
 已核实的关键依据：
 - 模板记忆生产读回：目标源`2d8bf977`已部署；员工仍1.0.1；normal Conversation未启用；customerAcceptance=false。
 - 主聊天定时：10:42根整合本地复验通过；Recording模型明确是工程替身；没有真实报表生成、Artifact送达或外部消息。
-- 发布读取恢复：目标源`9182fdde`的Control/Web包10:38封装完成，随后合入production-release；本看板尚未找到生产部署＋正常页面复验证据。
+- 发布读取恢复：生产正常登录态已能读取CURRENT候选；旧BLOCKED候选没有再拖垮可用候选。读取恢复真实生效。
+- 首单发布状态：metrics1.0.1、Office1.0.8、Skill0.2.0均在生产可见但仍“材料待复核”，没有真实评测批准、不可变CapabilityVersion或生产激活。
+- 小账版本：生产当前1.0.1；没有已评测审核的升级目标；历史内部诊断WAIT使升级状态BUSY。
 - 钉钉正式就绪核查：历史绑定属于旧暂停员工，当前员工扫码与真实收发未验。
 
 [开源借鉴专题：模板、记忆、资料与员工能力](http://127.0.0.1:4493/harness-reference.html)
@@ -1245,19 +1269,20 @@ mode: light
 ## H 现在需要Owner处理什么 {span=2}
 | 事项 | Owner现在要做什么 | 何时需要决定 |
 | --- | --- | --- |
-| 美团首单 | **现在无需操作**；已登录，不要重复登录；月份保持“任意可查询月份” | 12:00若首单前置仍未闭合，由共享产品经理提交风险／改期判断 |
+| 美团首单 | **现在无需操作**；已登录，不要重复登录；月份保持“任意可查询月份” | 正常发布／升级遇到范围、权限或目标日期变化时再由共享产品经理提交 |
 | 当前剩余工时 | 不接受旧9／18小时作为新依据 | 等共享产品经理基于最新剩余包重新核定 |
-| 正常发布权限矛盾 | 无需Owner自行排查 | 共享产品经理协调定位；只有需要产品权限选择时再升级给Owner |
+| 正常发布 | 无需Owner操作；读取入口已恢复 | 三项能力发布和1.0.2评测升级走既有正常治理链；只有高风险权限选择时升级给Owner |
 | 钉钉 | 当前无需扫码；正式链未发布 | 回调上线并核准企业配置后，再由企业管理员／Owner完成正式扫码验收 |
 | 自动回复与上架 | 暂不把预览当真实动作 | 到真实提交前，确认经营规则、例外审批范围和允许动作 |
 
-**下一检查点：12:00。** 看板只在有真实产品节点变化时更新；状态不变不会制造新的进度。
+**下一检查点：首单三能力完成正常发布，或Employee1.0.2登记计划从SETUP_REQUIRED转为AVAILABLE。** 看板只在真实产品节点变化时更新。
 
-当前Owner最应关注的三件事：**①10月11日20:00首单是否仍可守住；②正常发布入口是否已经真实部署并复验；③共享产品经理是否给出新的剩余包与估算。**
+当前Owner最应关注的三件事：**①三项首单能力何时从“材料待复核”进入真实发布；②小账何时从1.0.1升级到1.0.2并跑出第一份真实Outcome；③共享产品经理是否给出新的剩余包与估算。**
 
 [产品控制塔：Control、架构与落地状态](./control-tower.html)
 
-[生产真实体验共创：截图、用户故事与产品定调](./product-experience-review.html)</textarea>
+[生产真实体验共创：截图、用户故事与产品定调](./product-experience-review.html)
+</textarea>
 <script>
 (() => {
   const root = document.documentElement;
