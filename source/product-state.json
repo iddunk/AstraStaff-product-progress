@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 92,
-  "experienceReviewRevision": 83,
-  "updatedAt": "2026-10-11T01:25:19+08:00",
+  "revision": 93,
+  "experienceReviewRevision": 84,
+  "updatedAt": "2026-10-11T02:40:34+08:00",
   "baselineLastVerifiedAt": "2026-10-10T13:50:58+08:00",
-  "headline": "Owner已确认：默认上岗无需人工审核；前后端正在接通正常路径",
+  "headline": "默认无人工审核路径已完成本地验证；正在准备真实角色验收",
   "customerAcceptance": {
     "passed": 0,
     "total": 2,
@@ -17,7 +17,7 @@
     "next": "由首单责任方继续正常发布、员工1.0.2升级，再验任意月份真实原模板下载与修改。"
   },
   "ownerControl": {
-    "pageRevision": 83,
+    "pageRevision": 84,
     "status": "REAL_OWNER_FEEDBACK_ROUNDTRIP_VERIFIED",
     "verification": "真实操作已验证：Owner 使用 GitHub 登录，在本页保存“首次成果引导：接受建议”；记录 #2 已自动归档，Codex 已读取并写回“团队已收到”。",
     "limitation": "这条产品方向已确认；不代表对应员工体验已上线，也不改变餐饮两条线的客户验收状态。",
@@ -91,10 +91,10 @@
       "name": "真实评论、常规自动回复与例外",
       "group": "餐饮运营",
       "status": "local",
-      "currentnode": "按Owner决定移除默认上岗人工审核",
-      "doing": "已有实现和验证保留。正在让小碑通过自动检查后直接进入必要范围确认与启用。",
+      "currentnode": "默认无人工审核路径已进入本地验证",
+      "doing": "评论与套餐员工沿自动准入准备；业务动作仍按策略决定是否需要具体例外审批。",
       "blocker": "真实负责人上岗所需门店目录只允许运营读取，角色权限不匹配。页面现已停止显示未核实的上岗操作。生产发布边界也待复核。",
-      "next": "完成无人工审核的真实上岗验证，再从真实评论与套餐资料交付草稿和预览。",
+      "next": "真实上岗后先读取评论和套餐资料，交付第一份草稿或预览。",
       "lastVerifiedAt": "2026-10-11T00:39:29+08:00",
       "evidenceLevel": "REAL_LOCAL_LIFECYCLE_VALIDATED_UX_PREVIEW_IN_PROGRESS",
       "evidenceSummary": "真实本地数据库生命周期通过；角色走查又发现门店目录权限不匹配。该测试边界不能证明真实负责人上岗。界面49项检查及桌面/手机预览通过，未生产验收。",
@@ -114,10 +114,10 @@
       "name": "自动回复规则与暂停",
       "group": "餐饮运营",
       "status": "local",
-      "currentnode": "按Owner决定移除默认上岗人工审核",
-      "doing": "已有实现和验证保留。正在让小碑通过自动检查后直接进入必要范围确认与启用。",
+      "currentnode": "默认无人工审核路径已进入本地验证",
+      "doing": "评论与套餐员工沿自动准入准备；业务动作仍按策略决定是否需要具体例外审批。",
       "blocker": "真实负责人上岗所需门店目录只允许运营读取，角色权限不匹配。页面现已停止显示未核实的上岗操作。生产发布边界也待复核。",
-      "next": "完成无人工审核的真实上岗验证，再从真实评论与套餐资料交付草稿和预览。",
+      "next": "真实上岗后先读取评论和套餐资料，交付第一份草稿或预览。",
       "lastVerifiedAt": "2026-10-11T00:39:29+08:00",
       "evidenceLevel": "REAL_LOCAL_LIFECYCLE_VALIDATED_UX_PREVIEW_IN_PROGRESS",
       "evidenceSummary": "真实本地数据库生命周期通过；角色走查又发现门店目录权限不匹配。该测试边界不能证明真实负责人上岗。界面49项检查及桌面/手机预览通过，未生产验收。",
@@ -150,10 +150,10 @@
       "name": "菜品 / 套餐上架",
       "group": "餐饮运营",
       "status": "local",
-      "currentnode": "按Owner决定移除默认上岗人工审核",
-      "doing": "已有实现和验证保留。正在让小碑通过自动检查后直接进入必要范围确认与启用。",
+      "currentnode": "默认无人工审核路径已进入本地验证",
+      "doing": "评论与套餐员工沿自动准入准备；业务动作仍按策略决定是否需要具体例外审批。",
       "blocker": "真实负责人上岗所需门店目录只允许运营读取，角色权限不匹配。页面现已停止显示未核实的上岗操作。生产发布边界也待复核。",
-      "next": "完成无人工审核的真实上岗验证，再从真实评论与套餐资料交付草稿和预览。",
+      "next": "真实上岗后先读取评论和套餐资料，交付第一份草稿或预览。",
       "lastVerifiedAt": "2026-10-11T00:39:29+08:00",
       "evidenceLevel": "REAL_LOCAL_LIFECYCLE_VALIDATED_UX_PREVIEW_IN_PROGRESS",
       "evidenceSummary": "真实本地数据库生命周期通过；角色走查又发现门店目录权限不匹配。该测试边界不能证明真实负责人上岗。界面49项检查及桌面/手机预览通过，未生产验收。",
@@ -276,14 +276,14 @@
       "name": "业务运营与系统运营的P0流程",
       "group": "员工发布与运营",
       "status": "live",
-      "currentnode": "默认无人工审核：前后端实现中",
-      "doing": "删除独立审核阶段和批准/拒绝操作；让真实自动检查与必要范围确认直接衔接开始工作。",
-      "blocker": "数据库准入、启用校验和页面仍在同步修改，未生产发布。",
-      "next": "验证无人审、无伪造批准记录的正常上岗，以及检查失败、权限错误、刷新与重试。",
-      "lastVerifiedAt": "2026-10-11T01:25:19+08:00",
-      "evidenceLevel": "OWNER_CONFIRMED_IMPLEMENTING",
-      "evidenceSummary": "登录上下文、普通运营入口、授权错误交接和部分准备重试四项代码修复已通过独立复审；不能据此认为原审核流程有产品价值。",
-      "sourceRevision": "2d1251ce"
+      "currentnode": "默认无人工审核：本地后端准入与页面路径通过验证，等待独立复审",
+      "doing": "自动准入不写人工批准记录；负责人只确认必要门店读取范围。父页面已去掉旧审核升级引导，ACTIVE/READY刷新恢复修复已提交。",
+      "blocker": "正式L3审阅、迁移与生产真实读回未完成；本地身份、门店和Brain为合成/Recording。",
+      "next": "完成独立delta复审后，在目标base薄组合，真实企业登录读取员工状态并交办第一件工作。",
+      "lastVerifiedAt": "2026-10-11T02:40:34+08:00",
+      "evidenceLevel": "LOCAL_VALIDATED_OWNER_DIRECTION_IMPLEMENTED",
+      "evidenceSummary": "默认自动准入后真实本地ACTIVE读回：Employee人工决定0、派生evaluation_runs0；Web桌面/手机走查与55 focused tests通过。不是生产或客户验收。",
+      "sourceRevision": "5b3debd4"
     }
   ],
   "links": {
@@ -306,8 +306,8 @@
       "goal": "员工默认无需人工审核，通过自动检查并确认必要范围后开始工作",
       "acceptance": "保留上下文；每阶段主操作明确；缺项可恢复；接手入口清楚；刷新读回真实状态；最后有可用对话入口",
       "productionComplete": false,
-      "blocker": "前后端原有人工审核依赖正在移除；现有真实评测、租户权限和访问范围检查保留",
-      "review": "Owner已在本会话明确确认默认去掉人工审核；实现中，尚未生产验收",
+      "blocker": "正式L3审阅、目标base薄组合、生产迁移与真实员工读回仍未完成",
+      "review": "Owner已确认默认去掉人工审核；后端自动准入与本地正向读回通过，Web父页面刷新修复已完成待独立复审",
       "ownerQuestion": {
         "source": "直接用户对话",
         "question": "这个审核在这个阶段的意义和价值是什么，谁能审，页面有什么上下文支持通过判断？",
@@ -315,12 +315,12 @@
         "ownerDecision": null
       },
       "ownerDecision": {
-        "source": "直接用户对话，待同一GitHub Ledger归档",
+        "source": "直接用户对话并归档GitHub issue3",
         "decision": "ACCEPT",
         "moduleId": "operations-onboarding",
         "proposalRevision": 3,
-        "quote": "默认直接去掉审核，除非这个员工用了某些必须要审核的能力或者依赖等等特殊情况；当前阶段没必要，后面真的需要再补。",
-        "recordedAt": "2026-10-11T01:25:19+08:00"
+        "implementationStatus": "LOCAL_VALIDATED_BACKEND_WEB_REVIEW_PENDING",
+        "recordedAt": "2026-10-11T02:40:34+08:00"
       }
     }
   }
