@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "revision": 86,
+  "revision": 87,
   "experienceReviewRevision": 80,
-  "updatedAt": "2026-10-10T19:00:13+08:00",
+  "updatedAt": "2026-10-10T19:17:47+08:00",
   "baselineLastVerifiedAt": "2026-10-10T13:50:58+08:00",
   "headline": "首单等待正常发布；共享能力已有新证据，完整客户验收仍未通过",
   "customerAcceptance": {
@@ -90,14 +90,14 @@
       "name": "真实评论、常规自动回复与例外",
       "group": "餐饮运营",
       "status": "local",
-      "currentnode": "正常准备入口已在真实数据库验证，封存待人工审阅",
-      "doing": "正在补齐现有页面里的审阅后上岗步骤，解决运营员工没有可用启用入口的问题。",
-      "blocker": "18:37线上只读核对：运营员工仍未上岗，没有运行实例或未撤销授权；正常发布与真实评论／套餐业务验收待完成。",
-      "next": "完成当前运营员工的审阅和页面上岗，再从对话读取真实评论、生成回复草稿及套餐预览。",
-      "lastVerifiedAt": "2026-10-10",
-      "evidenceLevel": "REAL_PG_PENDING_REVIEW",
+      "currentnode": "运营员工独立发布稿已通过代码复查，完整上岗验收待完成",
+      "doing": "现有页面已补齐评测后审阅与上岗步骤；候选作者不能自审，需另一位有权限的人确认。真实应用角色的审核读取也已验证。",
+      "blocker": "发布稿尚未部署；当前线上员工未上岗。完整生产审阅、上岗及真实评论／套餐预览仍待验收。",
+      "next": "通过正常发布与当前数据库验证后，让企业管理员在页面审阅并上岗，再从员工对话使用。",
+      "lastVerifiedAt": "2026-10-10T19:17:47+08:00",
+      "evidenceLevel": "DRAFT_RELEASE_INDEPENDENT_REVIEW_PASSED",
       "evidenceSummary": "248个真实PostgreSQL检查通过；不是运营员工激活或真实平台动作。",
-      "sourceRevision": "ea85d64a",
+      "sourceRevision": "9da55173",
       "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证",
       "productionObservation": {
         "at": "2026-10-10T18:37:39+08:00",
@@ -105,19 +105,20 @@
         "activeBrainCount": 0,
         "unrevokedGrantCount": 0,
         "currentHumanAuthority": "UNKNOWN"
-      }
+      },
+      "reviewUrl": "https://github.com/iddunk/AstraStaff/pull/798"
     },
     {
       "id": "reviewpolicy",
       "name": "自动回复规则与暂停",
       "group": "餐饮运营",
       "status": "local",
-      "currentnode": "正常发布与启用",
-      "doing": "正在接通已有能力草稿的正常发布动作，让运营员工能启用。",
-      "blocker": "18:37线上只读核对：运营员工仍未上岗，没有运行实例或未撤销授权；正常发布与真实评论／套餐业务验收待完成。",
-      "next": "完成独立发布材料和正常审阅启用，再从员工对话验真实评论草稿及套餐预览。",
-      "lastVerifiedAt": "2026-10-10T13:50:58+08:00",
-      "evidenceLevel": "BASELINE_LAST_VERIFIED",
+      "currentnode": "运营员工独立发布稿已通过代码复查，完整上岗验收待完成",
+      "doing": "现有页面已补齐评测后审阅与上岗步骤；候选作者不能自审，需另一位有权限的人确认。真实应用角色的审核读取也已验证。",
+      "blocker": "发布稿尚未部署；当前线上员工未上岗。完整生产审阅、上岗及真实评论／套餐预览仍待验收。",
+      "next": "通过正常发布与当前数据库验证后，让企业管理员在页面审阅并上岗，再从员工对话使用。",
+      "lastVerifiedAt": "2026-10-10T19:17:47+08:00",
+      "evidenceLevel": "DRAFT_RELEASE_INDEPENDENT_REVIEW_PASSED",
       "evidenceSummary": "保留13:50核验记录，本次未重新检查生产。",
       "productionObservation": {
         "at": "2026-10-10T18:37:39+08:00",
@@ -125,7 +126,9 @@
         "activeBrainCount": 0,
         "unrevokedGrantCount": 0,
         "currentHumanAuthority": "UNKNOWN"
-      }
+      },
+      "sourceRevision": "9da55173",
+      "reviewUrl": "https://github.com/iddunk/AstraStaff/pull/798"
     },
     {
       "id": "approval",
@@ -145,14 +148,14 @@
       "name": "菜品 / 套餐上架",
       "group": "餐饮运营",
       "status": "local",
-      "currentnode": "正常准备入口与计划已在真实数据库验证，待正常发布",
-      "doing": "正在补齐现有页面里的审阅后上岗步骤，解决运营员工没有可用启用入口的问题。",
-      "blocker": "18:37线上只读核对：运营员工仍未上岗，没有运行实例或未撤销授权；正常发布与真实评论／套餐业务验收待完成。",
-      "next": "完成当前运营员工的审阅和页面上岗，再从对话读取真实评论、生成回复草稿及套餐预览。",
-      "lastVerifiedAt": "2026-10-10",
-      "evidenceLevel": "REAL_PG_PENDING_REVIEW",
+      "currentnode": "运营员工独立发布稿已通过代码复查，完整上岗验收待完成",
+      "doing": "现有页面已补齐评测后审阅与上岗步骤；候选作者不能自审，需另一位有权限的人确认。真实应用角色的审核读取也已验证。",
+      "blocker": "发布稿尚未部署；当前线上员工未上岗。完整生产审阅、上岗及真实评论／套餐预览仍待验收。",
+      "next": "通过正常发布与当前数据库验证后，让企业管理员在页面审阅并上岗，再从员工对话使用。",
+      "lastVerifiedAt": "2026-10-10T19:17:47+08:00",
+      "evidenceLevel": "DRAFT_RELEASE_INDEPENDENT_REVIEW_PASSED",
       "evidenceSummary": "与评论准备共用248项数据库证据，不重复累计。",
-      "sourceRevision": "ea85d64a",
+      "sourceRevision": "9da55173",
       "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证",
       "productionObservation": {
         "at": "2026-10-10T18:37:39+08:00",
@@ -160,7 +163,8 @@
         "activeBrainCount": 0,
         "unrevokedGrantCount": 0,
         "currentHumanAuthority": "UNKNOWN"
-      }
+      },
+      "reviewUrl": "https://github.com/iddunk/AstraStaff/pull/798"
     },
     {
       "id": "routines",
@@ -234,15 +238,16 @@
       "name": "钉钉扫码接入",
       "group": "共享能力",
       "status": "local",
-      "currentnode": "正式迁移与绑定数据库验证通过，待生产接入和真人收发",
-      "doing": "已验证重复扫码只生效一次、旧回调不覆盖新扫码、权限撤销立即失效和记录持久读回。",
-      "blocker": "尚需正式发布、官方企业配置、真人扫码和真实私聊回执。测试中的钉钉平台与欢迎发送器为模拟。",
-      "next": "按正式发布流程接通回调，再由本人扫码并验证同一员工收发消息。",
-      "lastVerifiedAt": "2026-10-10T18:57:37+08:00",
-      "evidenceLevel": "LOCAL_REAL_DATABASE_GATE_PASSED",
+      "currentnode": "独立发布评审稿已创建，正在复核正式启用配置",
+      "doing": "扫码绑定和持久记录验证已通过；正式发布前新增配置校验已接入实际部署路径，避免扫完后才发现缺少配置。",
+      "blocker": "待最终评审、正式迁移与官方配置；真人扫码和真实私聊回执未完成。",
+      "next": "发布经审阅版本并完成正式配置后，由本人扫码验证同一员工收发。",
+      "lastVerifiedAt": "2026-10-10T19:17:47+08:00",
+      "evidenceLevel": "DRAFT_RELEASE_REVIEW",
       "evidenceSummary": "空测试库执行158份正式迁移，完整SQL流程通过；没有生产迁移或真实平台成功声明。",
-      "sourceRevision": "d65b6d21",
-      "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证"
+      "sourceRevision": "2b7d0fc0",
+      "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证",
+      "reviewUrl": "https://github.com/iddunk/AstraStaff/pull/797"
     },
     {
       "id": "capabilitypublication",
@@ -279,9 +284,9 @@
   "execution": {
     "coordinator": "shared-product-manager",
     "parallelOwners": {
-      "dingtalk": "正式数据库门槛通过，独立生产发布候选准备",
+      "dingtalk": "PR797独立发布稿，正式配置增量复核",
       "memory-office-routine": "当前源码新候选已通过固定评测，正常发布与首次保存待验",
-      "operations": "补齐现有审阅和页面上岗链路",
+      "operations": "PR798独立发布稿，代码复查通过，正常数据库与上岗验收待完成",
       "douyin": "独立报表已整合，真实取数与下载待验"
     },
     "enterpriseLogin": "SESSION_EXPIRED_CURRENT_UI_REQUIRES_LOGIN",

@@ -1,6 +1,6 @@
 ---
 title: AstraStaff 产品控制塔
-subtitle: Control v4.2 · 看方向、架构、落地与偏航风险 · 全局第86版 · 首单生产事实最后核验2026-10-10 13:50
+subtitle: Control v4.2 · 看方向、架构、落地与偏航风险 · 全局第87版 · 首单生产事实最后核验2026-10-10 13:50
 template: sheet
 theme: blueprint
 lang: zh

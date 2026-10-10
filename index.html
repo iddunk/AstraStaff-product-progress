@@ -699,7 +699,7 @@ html[data-theme="paper"] .am-md p, html[data-theme="paper"] .am-md li, html[data
 html[data-theme="paper"] .am-md p { margin-bottom: 12px; }
 html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 </style>
-</head>
+<style>[data-am="reply"],.am-comment-btn,.am-comment,.am-reply{display:none!important}</style></head>
 <body>
 <div class="am-toolbar" data-am-root-lang="zh-CN" data-am-root-theme="shadcn" data-am-root-mode="light" data-am-root-style="80">
 <label class="am-pick">主题<select data-am="theme"><option value="blueprint">图纸</option><option value="shadcn" selected>卡片</option><option value="paper">纸张</option></select></label>
@@ -708,7 +708,7 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <button class="am-btn" type="button" data-am="copy" data-done="已复制 ✓">复制源稿</button>
 </div>
 <main class="am-sheet">
-<header class="am-head"><h1>交付排期与剩余工作</h1><p class="am-sub">2026年10月10日交接更新 · 全局第86版 · 首单最后核验13:50</p></header>
+<header class="am-head"><h1>交付排期与剩余工作</h1><p class="am-sub">2026年10月10日交接更新 · 全局第87版 · 首单最后核验13:50</p></header>
 <div class="am-frame">
 <div class="am-ruler am-ruler--top" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div class="am-ruler am-ruler--bottom" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div class="am-ruler am-ruler--left" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div><div class="am-ruler am-ruler--right" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div>
 <div class="am-grid" style="--cols: 2">
@@ -815,23 +815,26 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <section class="am-panel am-span-wide" id="panel-D" style="grid-column: span 2" data-span="2">
 <header class="am-panel-head"><span class="am-panel-id">D</span><h2>运营员工：评论与套餐线</h2></header>
 <div class="am-panel-body"><div class="am-md"><h3>真实评论、常规自动回复与例外</h3>
-<p>正常准备入口已在真实数据库验证，封存待人工审阅。</p>
-<p>正在补齐现有页面里的审阅后上岗步骤，解决运营员工没有可用启用入口的问题。</p>
-<p><strong>尚缺：</strong> 18:37线上只读核对：运营员工仍未上岗，没有运行实例或未撤销授权；正常发布与真实评论／套餐业务验收待完成。</p>
-<p><strong>下一可见成果：</strong> 完成当前运营员工的审阅和页面上岗，再从对话读取真实评论、生成回复草稿及套餐预览。</p>
+<p>运营员工独立发布稿已通过代码复查，完整上岗验收待完成。</p>
+<p>现有页面已补齐评测后审阅与上岗步骤；候选作者不能自审，需另一位有权限的人确认。真实应用角色的审核读取也已验证。</p>
+<p><strong>尚缺：</strong> 发布稿尚未部署；当前线上员工未上岗。完整生产审阅、上岗及真实评论／套餐预览仍待验收。</p>
+<p><strong>下一可见成果：</strong> 通过正常发布与当前数据库验证后，让企业管理员在页面审阅并上岗，再从员工对话使用。</p>
 <p><em>今日交接证据；仍受下列验收边界限制。</em></p>
+<p><a href="https://github.com/iddunk/AstraStaff/pull/798">查看当前发布评审稿</a></p>
 <h3>自动回复规则与暂停</h3>
-<p>正常发布与启用。</p>
-<p>正在接通已有能力草稿的正常发布动作，让运营员工能启用。</p>
-<p><strong>尚缺：</strong> 18:37线上只读核对：运营员工仍未上岗，没有运行实例或未撤销授权；正常发布与真实评论／套餐业务验收待完成。</p>
-<p><strong>下一可见成果：</strong> 完成独立发布材料和正常审阅启用，再从员工对话验真实评论草稿及套餐预览。</p>
-<p><em>13:50最后核验，本次未重验。</em></p>
-<h3>菜品 / 套餐上架</h3>
-<p>正常准备入口与计划已在真实数据库验证，待正常发布。</p>
-<p>正在补齐现有页面里的审阅后上岗步骤，解决运营员工没有可用启用入口的问题。</p>
-<p><strong>尚缺：</strong> 18:37线上只读核对：运营员工仍未上岗，没有运行实例或未撤销授权；正常发布与真实评论／套餐业务验收待完成。</p>
-<p><strong>下一可见成果：</strong> 完成当前运营员工的审阅和页面上岗，再从对话读取真实评论、生成回复草稿及套餐预览。</p>
+<p>运营员工独立发布稿已通过代码复查，完整上岗验收待完成。</p>
+<p>现有页面已补齐评测后审阅与上岗步骤；候选作者不能自审，需另一位有权限的人确认。真实应用角色的审核读取也已验证。</p>
+<p><strong>尚缺：</strong> 发布稿尚未部署；当前线上员工未上岗。完整生产审阅、上岗及真实评论／套餐预览仍待验收。</p>
+<p><strong>下一可见成果：</strong> 通过正常发布与当前数据库验证后，让企业管理员在页面审阅并上岗，再从员工对话使用。</p>
 <p><em>今日交接证据；仍受下列验收边界限制。</em></p>
+<p><a href="https://github.com/iddunk/AstraStaff/pull/798">查看当前发布评审稿</a></p>
+<h3>菜品 / 套餐上架</h3>
+<p>运营员工独立发布稿已通过代码复查，完整上岗验收待完成。</p>
+<p>现有页面已补齐评测后审阅与上岗步骤；候选作者不能自审，需另一位有权限的人确认。真实应用角色的审核读取也已验证。</p>
+<p><strong>尚缺：</strong> 发布稿尚未部署；当前线上员工未上岗。完整生产审阅、上岗及真实评论／套餐预览仍待验收。</p>
+<p><strong>下一可见成果：</strong> 通过正常发布与当前数据库验证后，让企业管理员在页面审阅并上岗，再从员工对话使用。</p>
+<p><em>今日交接证据；仍受下列验收边界限制。</em></p>
+<p><a href="https://github.com/iddunk/AstraStaff/pull/798">查看当前发布评审稿</a></p>
 <h3>例外审阅、选定批量与发布授权</h3>
 <p>执行与逐条读回。</p>
 <p>执行桥正核对审批内容与平台实际动作。</p>
@@ -881,11 +884,12 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <p><strong>下一可见成果：</strong> 从正常入口核对完整员工页的桌面与手机体验。</p>
 <p><em>13:50最后核验，本次未重验。</em></p>
 <h3>钉钉扫码接入</h3>
-<p>正式迁移与绑定数据库验证通过，待生产接入和真人收发。</p>
-<p>已验证重复扫码只生效一次、旧回调不覆盖新扫码、权限撤销立即失效和记录持久读回。</p>
-<p><strong>尚缺：</strong> 尚需正式发布、官方企业配置、真人扫码和真实私聊回执。测试中的钉钉平台与欢迎发送器为模拟。</p>
-<p><strong>下一可见成果：</strong> 按正式发布流程接通回调，再由本人扫码并验证同一员工收发消息。</p>
+<p>独立发布评审稿已创建，正在复核正式启用配置。</p>
+<p>扫码绑定和持久记录验证已通过；正式发布前新增配置校验已接入实际部署路径，避免扫完后才发现缺少配置。</p>
+<p><strong>尚缺：</strong> 待最终评审、正式迁移与官方配置；真人扫码和真实私聊回执未完成。</p>
+<p><strong>下一可见成果：</strong> 发布经审阅版本并完成正式配置后，由本人扫码验证同一员工收发。</p>
 <p><em>今日交接证据；仍受下列验收边界限制。</em></p>
+<p><a href="https://github.com/iddunk/AstraStaff/pull/797">查看当前发布评审稿</a></p>
 <h3>能力评测、人工审阅与发布</h3>
 <p>metrics1.0.1 + Office1.0.8 + Skill0.2.0：材料待复核 → 真实评测／审阅／发布。</p>
 <p>生产候选读取已恢复；停止继续修读取链，转入首单三项能力的正常发布。</p>
@@ -1015,7 +1019,7 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <p><strong>运营：</strong> 正常发布后，先验真实评论草稿和套餐预览，再按经营规则与授权验证真实动作。</p>
 <p><strong>GitHub Owner反馈：</strong> 真实操作已验证：Owner 使用 GitHub 登录，在本页保存“首次成果引导：接受建议”；记录 #2 已自动归档，Codex 已读取并写回“团队已收到”。</p>
 <p>这条产品方向已确认；不代表对应员工体验已上线，也不改变餐饮两条线的客户验收状态。</p>
-<p>体验共创仍为第80版。全局产品状态为第86版。提交反馈不会把候选变成上线，也不会把未核验事实改为完成。</p>
+<p>体验共创仍为第80版。全局产品状态为第87版。提交反馈不会把候选变成上线，也不会把未核验事实改为完成。</p>
 <p><a href="./control-tower.html">产品控制塔：Control、架构与落地状态</a></p>
 <p><a href="./product-experience-review.html">生产真实体验共创：截图、用户故事与产品定调</a></p>
 </div></div>
@@ -1023,10 +1027,10 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 </div>
 </div>
 </main>
-<footer class="am-colophon">Generated by <a href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">Answer me with HTML</a> 0.4.15 · 2026-10-10 19:00</footer>
+<footer class="am-colophon">Generated by <a href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">Answer me with HTML</a> 0.4.15 · 2026-10-10 19:17</footer>
 <textarea id="am-source" hidden readonly aria-hidden="true">---
 title: 交付排期与剩余工作
-subtitle: 2026年10月10日交接更新 · 全局第86版 · 首单最后核验13:50
+subtitle: 2026年10月10日交接更新 · 全局第87版 · 首单最后核验13:50
 template: sheet
 theme: shadcn
 lang: zh
@@ -1113,39 +1117,45 @@ mode: light
 
 ### 真实评论、常规自动回复与例外
 
-正常准备入口已在真实数据库验证，封存待人工审阅。
+运营员工独立发布稿已通过代码复查，完整上岗验收待完成。
 
-正在补齐现有页面里的审阅后上岗步骤，解决运营员工没有可用启用入口的问题。
+现有页面已补齐评测后审阅与上岗步骤；候选作者不能自审，需另一位有权限的人确认。真实应用角色的审核读取也已验证。
 
-**尚缺：** 18:37线上只读核对：运营员工仍未上岗，没有运行实例或未撤销授权；正常发布与真实评论／套餐业务验收待完成。
+**尚缺：** 发布稿尚未部署；当前线上员工未上岗。完整生产审阅、上岗及真实评论／套餐预览仍待验收。
 
-**下一可见成果：** 完成当前运营员工的审阅和页面上岗，再从对话读取真实评论、生成回复草稿及套餐预览。
+**下一可见成果：** 通过正常发布与当前数据库验证后，让企业管理员在页面审阅并上岗，再从员工对话使用。
 
 *今日交接证据；仍受下列验收边界限制。*
+
+[查看当前发布评审稿](https://github.com/iddunk/AstraStaff/pull/798)
 
 ### 自动回复规则与暂停
 
-正常发布与启用。
+运营员工独立发布稿已通过代码复查，完整上岗验收待完成。
 
-正在接通已有能力草稿的正常发布动作，让运营员工能启用。
+现有页面已补齐评测后审阅与上岗步骤；候选作者不能自审，需另一位有权限的人确认。真实应用角色的审核读取也已验证。
 
-**尚缺：** 18:37线上只读核对：运营员工仍未上岗，没有运行实例或未撤销授权；正常发布与真实评论／套餐业务验收待完成。
+**尚缺：** 发布稿尚未部署；当前线上员工未上岗。完整生产审阅、上岗及真实评论／套餐预览仍待验收。
 
-**下一可见成果：** 完成独立发布材料和正常审阅启用，再从员工对话验真实评论草稿及套餐预览。
+**下一可见成果：** 通过正常发布与当前数据库验证后，让企业管理员在页面审阅并上岗，再从员工对话使用。
 
-*13:50最后核验，本次未重验。*
+*今日交接证据；仍受下列验收边界限制。*
+
+[查看当前发布评审稿](https://github.com/iddunk/AstraStaff/pull/798)
 
 ### 菜品 / 套餐上架
 
-正常准备入口与计划已在真实数据库验证，待正常发布。
+运营员工独立发布稿已通过代码复查，完整上岗验收待完成。
 
-正在补齐现有页面里的审阅后上岗步骤，解决运营员工没有可用启用入口的问题。
+现有页面已补齐评测后审阅与上岗步骤；候选作者不能自审，需另一位有权限的人确认。真实应用角色的审核读取也已验证。
 
-**尚缺：** 18:37线上只读核对：运营员工仍未上岗，没有运行实例或未撤销授权；正常发布与真实评论／套餐业务验收待完成。
+**尚缺：** 发布稿尚未部署；当前线上员工未上岗。完整生产审阅、上岗及真实评论／套餐预览仍待验收。
 
-**下一可见成果：** 完成当前运营员工的审阅和页面上岗，再从对话读取真实评论、生成回复草稿及套餐预览。
+**下一可见成果：** 通过正常发布与当前数据库验证后，让企业管理员在页面审阅并上岗，再从员工对话使用。
 
 *今日交接证据；仍受下列验收边界限制。*
+
+[查看当前发布评审稿](https://github.com/iddunk/AstraStaff/pull/798)
 
 ### 例外审阅、选定批量与发布授权
 
@@ -1239,15 +1249,17 @@ mode: light
 
 ### 钉钉扫码接入
 
-正式迁移与绑定数据库验证通过，待生产接入和真人收发。
+独立发布评审稿已创建，正在复核正式启用配置。
 
-已验证重复扫码只生效一次、旧回调不覆盖新扫码、权限撤销立即失效和记录持久读回。
+扫码绑定和持久记录验证已通过；正式发布前新增配置校验已接入实际部署路径，避免扫完后才发现缺少配置。
 
-**尚缺：** 尚需正式发布、官方企业配置、真人扫码和真实私聊回执。测试中的钉钉平台与欢迎发送器为模拟。
+**尚缺：** 待最终评审、正式迁移与官方配置；真人扫码和真实私聊回执未完成。
 
-**下一可见成果：** 按正式发布流程接通回调，再由本人扫码并验证同一员工收发消息。
+**下一可见成果：** 发布经审阅版本并完成正式配置后，由本人扫码验证同一员工收发。
 
 *今日交接证据；仍受下列验收边界限制。*
+
+[查看当前发布评审稿](https://github.com/iddunk/AstraStaff/pull/797)
 
 ### 能力评测、人工审阅与发布
 
@@ -1319,7 +1331,7 @@ metrics1.0.1 + Office1.0.8 + Skill0.2.0：材料待复核 → 真实评测／审
 
 这条产品方向已确认；不代表对应员工体验已上线，也不改变餐饮两条线的客户验收状态。
 
-体验共创仍为第80版。全局产品状态为第86版。提交反馈不会把候选变成上线，也不会把未核验事实改为完成。
+体验共创仍为第80版。全局产品状态为第87版。提交反馈不会把候选变成上线，也不会把未核验事实改为完成。
 
 [产品控制塔：Control、架构与落地状态](./control-tower.html)
 

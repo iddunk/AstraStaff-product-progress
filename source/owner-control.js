@@ -133,7 +133,7 @@
     area.append(editor,state.error,state.meta,state.history); (panel.querySelector('.am-panel-body') || panel).append(area); states.set(module.moduleId,state); paint(state);
   }
   // Local-only answer-me-with-html Reply controls are not an alternative decision truth.
-  for (const control of document.querySelectorAll('[data-action="reply"],#am-reply-btn')) control.hidden = true;
+  for (const control of document.querySelectorAll('[data-action="reply"],#am-reply-btn,[data-am="reply"],.am-comment-btn,.am-comment,.am-reply')) control.hidden = true;
   checkGateway();authenticate().then(refresh); setInterval(()=>{if(!document.hidden){refresh();if(!identity)checkGateway();}},60000);
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)refresh();});
   window.addEventListener('focus',refresh);

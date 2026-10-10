@@ -133,6 +133,8 @@ def module_copy(modules: list[dict], ids: list[str]) -> str:
         m = lookup[module_id]
         verified = '13:50最后核验，本次未重验' if m['evidenceLevel'] == 'BASELINE_LAST_VERIFIED' else '今日交接证据；仍受下列验收边界限制'
         blocks.append(f"### {m['name']}\n\n{m['currentnode']}。\n\n{m['doing']}\n\n**尚缺：** {m['blocker']}\n\n**下一可见成果：** {m['next']}\n\n*{verified}。*\n")
+        if m.get('reviewUrl'):
+            blocks[-1] += '\n[查看当前发布评审稿](' + m['reviewUrl'] + ')\n'
     return '\n'.join(blocks)
 
 def bootstrap_sources(repo: Path, legacy: Path) -> None:
@@ -254,12 +256,14 @@ def render(repo: Path, cli: Path) -> None:
         if result.returncode:
             raise RuntimeError(f'ANSWER_HTML_RENDER_FAILED:{output_name}')
         html = read_utf8(next_output)
+        html = html.replace('</head>', '<style>[data-am="reply"],.am-comment-btn,.am-comment,.am-reply{display:none!important}</style></head>', 1)
         assert 'am-source' in html and '<html' in html
         assert re.findall(r'<section[^>]+id="panel-([A-H])"', html) == list('ABCDEFGH')
         # Bundled CLI has a harmless file:// storage-policy comment.
         if re.search(r'(?:(?<![A-Za-z0-9])[A-Za-z]:[/\\]|(?:href|src)=["\'](?:file:|https?://(?:127\.0\.0\.1|localhost))|Bearer\s|gh[pousr]_|github_pat_|tenantId|deploymentId|credentialReference|appSecret)', html, re.I):
             raise ValueError(f'PUBLIC_RENDER_PRIVATE_FIELD_OR_PATH:{output_name}')
         try:
+            write_utf8(next_output, html)
             next_output.replace(repo / output_name)
         except PermissionError:
             # A viewer can retain a non-delete-sharing handle on Windows.
