@@ -23,7 +23,7 @@
   function el(tag, cls, text) { const n = document.createElement(tag); if (cls) n.className = cls; if (text !== undefined) n.textContent = text; return n; }
   function persist() { try { localStorage.setItem(storageKey, JSON.stringify(drafts)); storageError = false; } catch { storageError = true; } }
   function latest(id) { return snapshot?.current?.find(item => item.module_id === id) || null; }
-  function history(id) { return (snapshot?.history || snapshot?.entries || []).filter(item => item.module_id === id); }
+  function history(id) { return (snapshot?.history || snapshot?.entries || []).filter(item => item.module_id === id && item.outcome !== 'VALIDATION'); }
   function validDraft(draft, id) { return draft && typeof draft.client_request_id === 'string' && draft.module_id === id && typeof draft.comment === 'string' && draft.comment.length <= 2000 && (draft.decision === null || choices.has(draft.decision)); }
   function startDraft(state) {
     const id = state.module.moduleId;

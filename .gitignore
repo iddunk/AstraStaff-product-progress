@@ -7,3 +7,4 @@ node_modules/
 gateway/test-evidence/
 __pycache__/
 *.pyc
+*.html.next
