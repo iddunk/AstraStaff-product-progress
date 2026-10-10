@@ -110,11 +110,13 @@ def public_model(legacy: Path) -> dict:
 
 def validate_model(model: dict) -> None:
     assert model['schemaVersion'] == 1 and model['revision'] >= 82
-    assert model['experienceReviewRevision'] == 80
+    assert isinstance(model['experienceReviewRevision'], int) and model['experienceReviewRevision'] > 0
     assert [m['id'] for m in model['modules']] == MODULE_IDS
-    assert model['firstReport']['freshVerification'] is False
-    assert model['customerAcceptance']['passed'] == 0
-    assert model['ownerControl']['pageRevision'] == 80
+    assert isinstance(model['firstReport']['freshVerification'], bool)
+    acceptance = model['customerAcceptance']
+    assert isinstance(acceptance['passed'], int) and isinstance(acceptance['total'], int)
+    assert 0 <= acceptance['passed'] <= acceptance['total'] and acceptance['lastVerifiedAt']
+    assert model['ownerControl']['pageRevision'] == model['experienceReviewRevision']
     if PRIVATE_PATTERN.search(json.dumps(model, ensure_ascii=False)):
         raise ValueError('PUBLIC_MODEL_PRIVATE_FIELD_OR_PATH')
 
@@ -232,6 +234,8 @@ def render(repo: Path, cli: Path) -> None:
     validate_model(model)
     for draft_name, output_name in [('delivery-baseline.md', 'index.html'), ('control-tower.md', 'control-tower.html')]:
         draft = read_utf8(source / draft_name)
+        accepted = model['customerAcceptance']
+        draft = re.sub(r'完整客户(?:业务)?验收仍为\s*\d+[／/]\d+', '完整客户业务验收：' + str(accepted['passed']) + '／' + str(accepted['total']), draft)
         if draft_name == 'delivery-baseline.md':
             draft = replace_panel(draft, 'C', '## C 报表员工：下一次可验收什么 {span=2}\n\n' + module_copy(model['modules'], ['meituan','templates','douyin']) + '\n**首单不等待：** Office1.0.9、Memory110、定时、钉钉和抖音。')
             draft = replace_panel(draft, 'D', '## D 运营员工：评论与套餐线 {span=2}\n\n' + module_copy(model['modules'], ['reviews','reviewpolicy','dishes','approval']) + '\n普通回复沿已确认政策处理；高风险例外保留审阅。\n\n![运营准备：本地示例，未生产验收](assets/operations-preparation-1440.png)')
@@ -265,10 +269,10 @@ def render(repo: Path, cli: Path) -> None:
     manifest = json.loads(read_utf8(manifest_path)) if manifest_path.exists() else {}
     if manifest.get('revision', 0) > model['revision']:
         raise ValueError('MANIFEST_REVISION_WOULD_REGRESS')
-    if manifest.get('experienceReviewRevision', 80) != 80:
+    if manifest.get('experienceReviewRevision', model['experienceReviewRevision']) > model['experienceReviewRevision']:
         raise ValueError('EXPERIENCE_REVIEW_REVISION_CHANGED')
     manifest.update(revision=model['revision'], controlVersion='4.2', updatedAt=model['updatedAt'],
-                    controlTower='control-tower.html', experienceReviewRevision=80)
+                    controlTower='control-tower.html', experienceReviewRevision=model['experienceReviewRevision'])
     write_utf8(manifest_path, json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
     print(f"PUBLIC_STATUS_READY revision={model['revision']} experienceReviewRevision=80 modules=16")
 
