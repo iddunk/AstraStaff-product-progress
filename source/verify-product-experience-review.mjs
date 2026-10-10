@@ -167,7 +167,7 @@ try {
       await page.waitForURL(config.gatewayUrl + '/setup/start');
       assert.deepEqual(navigations, [config.gatewayUrl + '/setup/start']);
     } else {
-      await page.locator('.owner-access-bar').filter({ hasText: '登录服务暂不可用' }).waitFor();
+      await page.locator('.owner-access-bar').filter({ hasText: '暂时无法检查登录状态' }).waitFor();
       assert.equal(await page.locator('.owner-login').isDisabled(), false);
       assert.equal(await page.locator('.owner-login').innerText(), '重新检查登录服务');
       await page.locator('.owner-login').click();
