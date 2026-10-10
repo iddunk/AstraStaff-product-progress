@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "revision": 87,
+  "revision": 88,
   "experienceReviewRevision": 80,
-  "updatedAt": "2026-10-10T19:17:47+08:00",
+  "updatedAt": "2026-10-10T19:21:41+08:00",
   "baselineLastVerifiedAt": "2026-10-10T13:50:58+08:00",
   "headline": "首单等待正常发布；共享能力已有新证据，完整客户验收仍未通过",
   "customerAcceptance": {
@@ -238,14 +238,14 @@
       "name": "钉钉扫码接入",
       "group": "共享能力",
       "status": "local",
-      "currentnode": "独立发布评审稿已创建，正在复核正式启用配置",
-      "doing": "扫码绑定和持久记录验证已通过；正式发布前新增配置校验已接入实际部署路径，避免扫完后才发现缺少配置。",
-      "blocker": "待最终评审、正式迁移与官方配置；真人扫码和真实私聊回执未完成。",
-      "next": "发布经审阅版本并完成正式配置后，由本人扫码验证同一员工收发。",
-      "lastVerifiedAt": "2026-10-10T19:17:47+08:00",
-      "evidenceLevel": "DRAFT_RELEASE_REVIEW",
-      "evidenceSummary": "空测试库执行158份正式迁移，完整SQL流程通过；没有生产迁移或真实平台成功声明。",
-      "sourceRevision": "2b7d0fc0",
+      "currentnode": "独立发布稿工程复核通过，待正式配置与手机验收",
+      "doing": "扫码与数据库行为已验证；正式启用缺配置会在部署前被拒绝，不会等扫完码才发现无法工作。",
+      "blocker": "仍需正式架构／发布批准、迁移核对、官方企业配置、真人扫码和真实欢迎回执。",
+      "next": "完成正式配置与发布批准后，在员工连接里扫码并核对同一员工真实收发。",
+      "lastVerifiedAt": "2026-10-10T19:21:41+08:00",
+      "evidenceLevel": "DRAFT_RELEASE_ENGINEERING_REVIEW_PASSED",
+      "evidenceSummary": "独立工程复核通过；新增6项实际发布校验测试与13项Linux配置探针通过。正式Architecture Authority批准和真实平台验收单列。",
+      "sourceRevision": "972b9684",
       "verificationBoundary": "今日交接与已运行证据；本次未重新运行产品验证",
       "reviewUrl": "https://github.com/iddunk/AstraStaff/pull/797"
     },
@@ -284,7 +284,7 @@
   "execution": {
     "coordinator": "shared-product-manager",
     "parallelOwners": {
-      "dingtalk": "PR797独立发布稿，正式配置增量复核",
+      "dingtalk": "PR797工程复核通过，正式批准与配置／真人验收待完成",
       "memory-office-routine": "当前源码新候选已通过固定评测，正常发布与首次保存待验",
       "operations": "PR798独立发布稿，代码复查通过，正常数据库与上岗验收待完成",
       "douyin": "独立报表已整合，真实取数与下载待验"
