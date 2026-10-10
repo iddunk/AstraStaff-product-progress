@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "repository": "iddunk/AstraStaff-product-progress",
+  "kind": "PROCESSING",
+  "action": "created",
+  "issue_number": 3,
+  "entity_id": 6100416085,
+  "author": "iddunk",
+  "actor": "iddunk",
+  "created_at": "2026-10-10T17:46:49Z",
+  "occurred_at": "2026-10-10T17:46:49Z",
+  "body_sha256": "71e1b7271c46236251b63758484288bed1e5b8e42cec849aa4bda0fe82cf694b",
+  "event_id": "github-2fec8816f589fa51d6f26bebee0975b395cbb7945d3bca6d8b88ea4d90bbf488",
+  "payload": {
+    "decision_id": "github-issue:3",
+    "status": "ACKNOWLEDGED",
+    "comment": "共享产品经理已读取Owner直接决定，并开始前后端实现：默认上岗去掉人工审核，不预建例外审批。页面已删除审核阶段、理由输入及批准/拒绝动作；后端正在验证不依赖人工批准记录的真实准入与启用。必要自动检查、当前权限和范围确认保留。此回执不代表生产或客户验收完成。",
+    "evidence_url": "https://iddunk.github.io/AstraStaff-product-progress/product-experience-review.html#panel-F"
+  },
+  "config_snapshot": {
+    "page": "product-experience-review",
+    "page_revision": 83
+  },
+  "sequence": 5
+}
