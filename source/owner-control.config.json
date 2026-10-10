@@ -6,7 +6,7 @@
     "iddunk"
   ],
   "pageId": "product-experience-review",
-  "pageRevision": 82,
+  "pageRevision": 83,
   "ledgerUrl": "https://raw.githubusercontent.com/iddunk/AstraStaff-product-progress/gh-pages/ledger/decisions.json",
   "modules": [
     {
@@ -103,9 +103,9 @@
     {
       "panelId": "F",
       "moduleId": "operations-onboarding",
-      "title": "员工启用与版本验收的分工",
-      "recommendation": "已发布标准员工由客户确认工作范围后启用；新版本由平台运营按真实业务样例验收；技术风险交系统运营；业务例外才找有决策权的人审批。",
-      "proposalRevision": 2
+      "title": "默认上岗无需人工审核",
+      "recommendation": "默认移除人工审核。员工通过自动检查、确认必要工作范围与访问授权后直接启用；当前不预建例外审批，明确必须审核的能力或依赖单独处理。",
+      "proposalRevision": 3
     }
   ],
   "gatewayUrl": "https://chenqitengsheng.com/owner-review-api"
