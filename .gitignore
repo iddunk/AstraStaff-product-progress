@@ -5,3 +5,5 @@
 node_modules/
 .test-tmp/
 gateway/test-evidence/
+__pycache__/
+*.pyc

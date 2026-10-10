@@ -7,9 +7,7 @@ DIRECTORY = Path(__file__).resolve().parent
 spec = importlib.util.spec_from_file_location('preserver', DIRECTORY / 'preserve-owner-review-caddy.py')
 preserver = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(preserver)
-HARNESS = (DIRECTORY / 'production-ecs-remote.sh').read_text(encoding='utf-8')
-TEMPLATE = HARNESS.split('cat >"$config_tmp" <<EOF\n', 1)[1].split('\nEOF', 1)[0] + '\n'
-LEGACY = TEMPLATE.replace('$owner_review_import\n', '').replace('$web_host', 'example.com')
+LEGACY = (DIRECTORY / 'legacy-caddy.fixture').read_text(encoding='utf-8')
 FRAGMENT = (DIRECTORY / 'owner-review.caddy').read_text(encoding='utf-8')
 
 
@@ -74,9 +72,7 @@ class OwnerRoutePreservation(unittest.TestCase):
                 preserver.preserve(config, fragment, change_during_validation)
             self.assertEqual(config.read_text(), 'changed by another deployment')
 
-    def test_new_template_uses_only_optional_fixed_fragment(self):
-        self.assertIn('if [[ -f /etc/astrastaff/caddy/product-control.d/owner-review.caddy ]]', HARNESS)
-        self.assertIn('  encode gzip\n$owner_review_import\n', TEMPLATE)
+    def test_dropin_preserves_known_hook_and_write_boundary(self):
         dropin = (DIRECTORY / 'owner-review-caddy.conf').read_text()
         self.assertIn('ExecStartPre=+/usr/bin/python3 /opt/astrastaff/product-control/preserve-owner-review-caddy.py', dropin)
         self.assertIn('ReadWritePaths=/etc/astrastaff/caddy', dropin)

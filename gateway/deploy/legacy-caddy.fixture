@@ -1,0 +1,20 @@
+{
+  admin off
+}
+example.com {
+  encode gzip
+  @control path /api/v1/webhooks/dingtalk /api/v1/channel-artifact-access
+  handle @control {
+    reverse_proxy 127.0.0.1:4000
+  }
+  handle_path /browser-login/* {
+    reverse_proxy 127.0.0.1:3011
+  }
+  @keycloak path /realms/* /resources/*
+  handle @keycloak {
+    reverse_proxy 127.0.0.1:8081
+  }
+  handle {
+    reverse_proxy 127.0.0.1:3000
+  }
+}
