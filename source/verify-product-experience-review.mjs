@@ -150,8 +150,9 @@ try {
       navigations.push(target); return route.fulfill({ status: 200, contentType: 'text/html', body: '<p>Setup destination</p>' });
     });
     await context.addInitScript(({ config, initial, mode }) => {
-      window.fetch = async input => {
+      window.fetch = async (input,init={}) => {
         if (String(input) === config.gatewayUrl + '/health') {
+          if(new Headers(init.headers).has('content-type') || new Headers(init.headers).has('authorization')) throw new Error('Public health must remain a simple request');
           if (mode === 'UNAVAILABLE') throw new Error('Gateway offline');
           return new Response(JSON.stringify({ status: 'SETUP_REQUIRED', setup_url: 'https://attacker.example/not-trusted' }), { status: 200 });
         }
@@ -167,7 +168,9 @@ try {
       assert.deepEqual(navigations, [config.gatewayUrl + '/setup/start']);
     } else {
       await page.locator('.owner-access-bar').filter({ hasText: '登录服务暂不可用' }).waitFor();
-      assert.equal(await page.locator('.owner-login').isDisabled(), true);
+      assert.equal(await page.locator('.owner-login').isDisabled(), false);
+      assert.equal(await page.locator('.owner-login').innerText(), '重新检查登录服务');
+      await page.locator('.owner-login').click();
       assert.equal(await page.locator('.owner-current').innerText(), '当前意见：保持现状');
     }
     rows.push({ scenario: mode, status: 'PASS', checks: [mode === 'SETUP_REQUIRED' ? 'fixed setup URL ignores arbitrary provider URL' : 'health failure preserves public ledger reading'] });

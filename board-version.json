@@ -1,8 +1,9 @@
 {
-  "revision": 80,
+  "revision": 81,
   "controlVersion": "4.2",
-  "updatedAt": "2026-10-10T16:02:10+08:00",
+  "updatedAt": "2026-10-10T17:46:00+08:00",
   "controlTower": "control-tower.html",
   "experienceReviewRevision": 80,
-  "ownerDecisionLedger": "ledger/decisions.json"
+  "ownerDecisionLedger": "ledger/decisions.json",
+  "ownerFeedbackClientRevision": 2
 }
