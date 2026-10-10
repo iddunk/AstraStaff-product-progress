@@ -74,7 +74,7 @@ class OwnerRoutePreservation(unittest.TestCase):
 
     def test_dropin_preserves_known_hook_and_write_boundary(self):
         dropin = (DIRECTORY / 'owner-review-caddy.conf').read_text()
-        self.assertIn('ExecStartPre=+/usr/bin/python3 /opt/astrastaff/product-control/preserve-owner-review-caddy.py', dropin)
+        self.assertIn('ExecStartPre=-+/usr/bin/python3 /opt/astrastaff/product-control/preserve-owner-review-caddy.py', dropin)
         self.assertIn('ReadWritePaths=/etc/astrastaff/caddy', dropin)
 
 
