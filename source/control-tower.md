@@ -1,6 +1,6 @@
 ---
 title: AstraStaff 产品控制塔
-subtitle: Control v4.2 · 全局第109版 · 模块按各自核验时间更新
+subtitle: Control v4.2 · 全局第110版 · 模块按各自核验时间更新
 template: sheet
 theme: blueprint
 lang: zh
@@ -102,7 +102,7 @@ Work -> *Outcome: 可验证业务结果
 | 运营员工 | 管理员确认门店后上岗，得到真实评论或套餐预览 | 管理员与发布修复已合入；运营候选尚未部署 |
 | 记忆与模板 | 本人明确选定报告并发送保存、替换或忘记请求 | e093引导限定L2 PASS、LOCAL140保留；三项消费契约与初次路径仍NOT_READY |
 | 长期职责 | 聊天或页面改时间，再問时回答最新安排 | 正常发布接线L2通过；0169/0177源码批准，生产延后，自动Due仍缺权限和真实模型用量 |
-| 钉钉 | 本人扫码并在手机与同一员工往返消息 | 两项明确CHANGES_NEEDED：TEMP/schema-shadow防护与manual/auto准入证明兼容 |
+| 钉钉 | 本人扫码并在手机与同一员工往返消息 | 首项TEMP shadow源码批准、LOCAL app证明通过；生产应用延后，auto0182兼容与validator加固仍待完整源码 |
 | 抖音 | 确认门店期间后下载独立报表 | 两项LOCAL候选镜像限定复核通过；06ed非生产6f，正式组合、真实取数下载未验收 |
 
 [首单与各模块的最新详细状态](./index.html)
@@ -131,7 +131,7 @@ Work -> *Outcome: 可验证业务结果
 - 定时：PR821正常发布接线修复L2通过；0169/0177仅源码批准，生产延后。108仅管理职责，自动Due权限、迁移核验、真实模型/用量与成果仍待齐。
 - 运营上岗：同租户管理员确认、审核和验收决定保留；候选发布与真实评论/套餐业务单独验收。
 - 抖音：两项实际LOCAL镜像完成离线读回并独立限定PASS。06ed基底不等于生产6f lineage；正式组合、CLI recipe限制、配置/epoch及真实提供方下载仍需核验。
-- 钉钉：两项具体实现CHANGES_NEEDED尚未修正，本轮其他边界接受不代替它的修复。
+- 钉钉：首项same-authority TEMP shadow候选源码获SOURCE_APPROVE，独立L2和真实LOCAL app角色证明保留。生产应用DEFER；现有唯一负责人继续自动准入兼容、可信schema/ACL加固及tenantchecked桥，旧迁移不可变。
 - GitHub Owner反馈：真实操作已验证：Owner 使用 GitHub 登录，在本页保存“首次成果引导：接受建议”；记录 #2 已自动归档，Codex 已读取并写回“团队已收到”。 这条产品方向已确认；不代表对应员工体验已上线，也不改变餐饮两条线的客户验收状态。
 
 [查看全部16个模块的同一公开状态](./source/product-state.json)
