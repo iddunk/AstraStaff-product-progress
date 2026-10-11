@@ -1,6 +1,6 @@
 ---
 title: 交付排期与剩余工作
-subtitle: 2026年10月11日 · 全局第111版 · 各模块保留真实核验时间
+subtitle: 2026年10月11日 · 全局第112版 · 各模块保留真实核验时间
 template: sheet
 theme: shadcn
 lang: zh
@@ -217,17 +217,17 @@ PR821 038ae0ec / source02909eed完成正常发布接线修复并独立L2复核�
 
 ### 钉钉扫码接入
 
-首项TEMP shadow精确源码修复获批准；生产应用延后，自动准入兼容继续实现。
+首项shadow修复已正式编号0184并合入候选；生产未应用，第二阶段仍在实现。
 
-同authority隔离候选99d0d521／PR824 final29416完成独立限定L2 PASS，根直接读SQL与旧0175并核对hash。真实LOCAL应用角色非superuser、非bypassRLS：旧伪TEMP返回1，新候选返回0，真实public记录返回1。返回形状、原身份与会话条件及exact-one语义保持。
+PR824首项精确源码正常合入钉钉候选。0184仅机械编号和短证据两文件，执行SQL1528字节与受审候选逐字节相同；163份旧迁移保持。PR825受审92e8源码正常合并77a24b01，候选树与受审HEAD相同，父PR797仍OPEN/DRAFT。
 
-**尚缺：** PRODUCTION_APPLICATION_DEFER：追加迁移尚未正常编号或应用，完整组合及正式权限读回待齐。auto0182准入兼容、共享validator可信schema/ACL加固和tenant-checked proof bridge仍待完整精确源码及正负验证。
+**尚缺：** 生产尚未应用0184。第二项auto0182兼容、validator与bridge仍由唯一负责人实现。完整源码和正式运行前置未齐，不能把两项缺陷都算关闭。
 
-**下一可见成果：** 既有钉钉唯一负责人继续已批准的最小自动准入兼容与validator／bridge实现。保留0175/0176/0182字节和真实manual证明，完整源码复核后正常编号与串行发布。
+**下一可见成果：** 唯一钉钉源码负责人完成第二阶段与精确验证。最终组合复核后，按首单安全点和最小Routine优先顺序进入根持有的串行发布窗口，再正常应用与核验。
 
 *今日交接证据；仍受下列验收边界限制。*
 
-[查看当前发布评审稿](https://github.com/iddunk/AstraStaff/pull/824)
+[查看当前发布评审稿](https://github.com/iddunk/AstraStaff/pull/825)
 
 ### 能力评测、人工审阅与发布
 
