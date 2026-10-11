@@ -1,22 +1,24 @@
 {
   "schemaVersion": 1,
-  "revision": 100,
+  "revision": 101,
   "experienceReviewRevision": 86,
-  "updatedAt": "2026-10-11T14:33:56+08:00",
+  "updatedAt": "2026-10-11T14:56:47+08:00",
   "baselineLastVerifiedAt": "2026-10-11T13:35:53+08:00",
-  "headline": "首单三能力已发布，员工候选已登记；修复镜像已构建，继续最小发布与真实评测",
+  "headline": "首单执行器配置已恢复；员工评测字段修复待发布，客户验收仍为0/2",
   "customerAcceptance": {
     "passed": 0,
     "total": 2,
     "lastVerifiedAt": "2026-10-11T13:35:53+08:00"
   },
   "firstReport": {
-    "lastVerifiedAt": "2026-10-11T13:54:00+08:00",
-    "freshVerification": false,
-    "summary": "10月11日交接确认：首单三能力已PUBLISHED，Employee1.0.2唯一候选已登记但未启用。63a94bba最小Control镜像已构建，镜像内tsx运行验证通过；发布助手的验证命令引号错误使该次发布在部署前退出，生产仍保持交接所列版本。",
-    "next": "先重新读取生产并完成Control单服务发布，再走正常页面执行Employee1.0.2评测。评测封存后才进入人工审核；之后按正常生命周期解除BUSY并切换同一员工。",
-    "verificationBoundary": "本轮同步用户10月11日handoff；交接未给出镜像验证的精确时刻。本轮尚未重读生产，13:54为此前已记录核验时间。不得把镜像构建或交接记录算作本轮部署成功。",
-    "handoffAsOf": "2026-10-11"
+    "lastVerifiedAt": "2026-10-11T14:56:47+08:00",
+    "freshVerification": true,
+    "summary": "线上tsx可以运行。执行器批准配置已修复，Control保留原3e镜像并恢复健康，其余16个容器保持原状。当前直接阻塞是员工评测调用多传了字段，触发输入拒绝并显示503；同一证据投影为契约六字段后，真实查询返回200及139项计划。",
+    "next": "完成调用端六字段投影的最小Control/Web发布，再从正常页面执行Employee1.0.2评测并封存。保留原人工release，随后按正常生命周期切换同一员工，再验真实原模板月报、下载和自然修改。",
+    "verificationBoundary": "本轮已核对真实云端回执；时间为证据核对时刻，配置恢复发生在约14:52—14:55。服务健康与计划查询成功不等于Employee评测封存、启用或真实月报交付。",
+    "evidenceTimeBasis": "PROVIDER_RECEIPT_REVIEWED_THIS_ROUND",
+    "runtimeConfig": "RECOVERY_PASS_ORIGINAL_IMAGE_PRESERVED",
+    "employeeEvaluation": "BLOCKED_CALLER_CANONICAL_FREEZE_FIELD_PROJECTION"
   },
   "ownerControl": {
     "pageRevision": 86,
@@ -34,14 +36,14 @@
       "name": "美团＋点评取数与原模板",
       "group": "餐饮报表",
       "status": "active",
-      "currentnode": "三能力已发布 → 1.0.2候选已登记 → 镜像内运行验证通过 → 最小发布 → 员工评测",
-      "doing": "沿当前Control生产基线准备63a94bba单服务发布。交接确认镜像内tsx验证通过；上次助手仅在部署前的验证命令引号处失败。",
-      "blocker": "首单当前等待重新读取生产、修正发布助手并完成Control单服务发布。员工尚未评测、审核或启用。Owner当前无需操作。",
-      "next": "发布后由正常版本页面重新核对评测条件并执行Employee1.0.2评测；有真实封存材料后再请求所需人工审核。",
-      "lastVerifiedAt": "2026-10-11T13:54:00+08:00",
-      "evidenceLevel": "HANDOFF_IMAGE_PROOF_PENDING_FRESH_DEPLOY",
-      "evidenceSummary": "用户10月11日交接：63a94bba镜像构建与TSX_RUNTIME_OK通过；上次部署未发生。首单能力139/116/50项评测属于三项能力，不能复用为Employee评测。",
-      "verificationBoundary": "本轮同步用户10月11日handoff；交接未给出镜像验证的精确时刻。本轮尚未重读生产，13:54为此前已记录核验时间。不得把镜像构建或交接记录算作本轮部署成功。"
+      "currentnode": "三能力已发布 → 执行器配置已恢复 → 调用端字段修复 → Employee评测 → 同一员工启用",
+      "doing": "已用原Control镜像完成最小配置修复。真实只读核查证明：员工评测传入完整冻结对象会被拒绝；只传契约六字段即可得到139项计划。正在完成调用端最小修复和正常发布。",
+      "blocker": "正式Employee评测仍受调用端多余字段阻塞，页面显示503。员工1.0.2尚未评测封存、人工release或启用。Owner当前无需操作。",
+      "next": "从正常页面完成Employee1.0.2真实评测并读回封存材料；保留所需人工release，再切换同一员工并验原模板月报与下载修改。",
+      "lastVerifiedAt": "2026-10-11T14:56:47+08:00",
+      "evidenceLevel": "PRODUCTION_CONFIG_RECOVERED_CALLER_FIX_PENDING_RELEASE",
+      "evidenceSummary": "配置恢复云端回执PASS，原Control镜像保留，其余16容器原状；完整冻结对象409 APPROVED_RUNNER_INPUT_INVALID，六字段真实查询200/139。仍没有Employee评测封存或客户首单成功。",
+      "verificationBoundary": "本轮已核对真实云端回执；时间为证据核对时刻，配置恢复发生在约14:52—14:55。服务健康与计划查询成功不等于Employee评测封存、启用或真实月报交付。"
     },
     {
       "id": "douyin",
@@ -96,7 +98,7 @@
       "status": "local",
       "currentnode": "默认上岗路径已修正并合入，生产启用尚未完成",
       "doing": "已补齐确认门店后直接启用、刷新恢复和权限失效处理；原发布组合遗漏已纠正。负责人不再承担普通技术审核。",
-      "blocker": "自动准入和门店摘要的授权实现需架构负责人核对；之后完成生产启用与第一份真实业务预览。普通测试和发布无需Owner审批。",
+      "blocker": "自动准入和最小门店摘要两项边界已获明确批准；仍待修正生产组合、正常发布启用和真实业务预览。0.5仅只读/预览，不包含实际回复或上架。",
       "next": "从员工入口确认负责门店，启用后读取真实评论或套餐资料，并交出可核对的预览。",
       "lastVerifiedAt": "2026-10-11T14:25:14+08:00",
       "evidenceLevel": "CORRECTION_MERGED_PRODUCTION_NOT_ACCEPTED",
@@ -110,7 +112,10 @@
         "unrevokedGrantCount": 0,
         "currentHumanAuthority": "UNKNOWN"
       },
-      "reviewUrl": "https://github.com/iddunk/AstraStaff/pull/808"
+      "reviewUrl": "https://github.com/iddunk/AstraStaff/pull/808",
+      "authorityApprovalStatus": "EXACT_BOUNDARIES_APPROVED_PRODUCTION_NOT_ACCEPTED",
+      "authorityApprovalReviewRevision": "a2a3a2f5be797757f078857395153d741ed23cc3",
+      "authorityApprovalVerifiedAt": "2026-10-11T14:56:47+08:00"
     },
     {
       "id": "reviewpolicy",
@@ -119,7 +124,7 @@
       "status": "local",
       "currentnode": "默认上岗路径已修正并合入，生产启用尚未完成",
       "doing": "已补齐确认门店后直接启用、刷新恢复和权限失效处理；原发布组合遗漏已纠正。负责人不再承担普通技术审核。",
-      "blocker": "自动准入和门店摘要的授权实现需架构负责人核对；之后完成生产启用与第一份真实业务预览。普通测试和发布无需Owner审批。",
+      "blocker": "自动准入和最小门店摘要两项边界已获明确批准；仍待修正生产组合、正常发布启用和真实业务预览。0.5仅只读/预览，不包含实际回复或上架。",
       "next": "从员工入口确认负责门店，启用后读取真实评论或套餐资料，并交出可核对的预览。",
       "lastVerifiedAt": "2026-10-11T14:25:14+08:00",
       "evidenceLevel": "CORRECTION_MERGED_PRODUCTION_NOT_ACCEPTED",
@@ -133,7 +138,10 @@
       },
       "sourceRevision": "fe7f967c",
       "reviewUrl": "https://github.com/iddunk/AstraStaff/pull/808",
-      "verificationBoundary": "代码与本地证据；不代表生产启用、评论回复或套餐上架。"
+      "verificationBoundary": "代码与本地证据；不代表生产启用、评论回复或套餐上架。",
+      "authorityApprovalStatus": "EXACT_BOUNDARIES_APPROVED_PRODUCTION_NOT_ACCEPTED",
+      "authorityApprovalReviewRevision": "a2a3a2f5be797757f078857395153d741ed23cc3",
+      "authorityApprovalVerifiedAt": "2026-10-11T14:56:47+08:00"
     },
     {
       "id": "approval",
@@ -155,7 +163,7 @@
       "status": "local",
       "currentnode": "默认上岗路径已修正并合入，生产启用尚未完成",
       "doing": "已补齐确认门店后直接启用、刷新恢复和权限失效处理；原发布组合遗漏已纠正。负责人不再承担普通技术审核。",
-      "blocker": "自动准入和门店摘要的授权实现需架构负责人核对；之后完成生产启用与第一份真实业务预览。普通测试和发布无需Owner审批。",
+      "blocker": "自动准入和最小门店摘要两项边界已获明确批准；仍待修正生产组合、正常发布启用和真实业务预览。0.5仅只读/预览，不包含实际回复或上架。",
       "next": "从员工入口确认负责门店，启用后读取真实评论或套餐资料，并交出可核对的预览。",
       "lastVerifiedAt": "2026-10-11T14:25:14+08:00",
       "evidenceLevel": "CORRECTION_MERGED_PRODUCTION_NOT_ACCEPTED",
@@ -169,7 +177,10 @@
         "unrevokedGrantCount": 0,
         "currentHumanAuthority": "UNKNOWN"
       },
-      "reviewUrl": "https://github.com/iddunk/AstraStaff/pull/808"
+      "reviewUrl": "https://github.com/iddunk/AstraStaff/pull/808",
+      "authorityApprovalStatus": "EXACT_BOUNDARIES_APPROVED_PRODUCTION_NOT_ACCEPTED",
+      "authorityApprovalReviewRevision": "a2a3a2f5be797757f078857395153d741ed23cc3",
+      "authorityApprovalVerifiedAt": "2026-10-11T14:56:47+08:00"
     },
     {
       "id": "routines",
@@ -268,8 +279,8 @@
       "status": "live",
       "currentnode": "首单三项能力已全部PUBLISHED；Employee1.0.2候选已登记",
       "doing": "operations-reporting 0.2.0、office.render-report-template 1.0.8、platform-data-fetch-template-metrics 1.0.1 已完成真实评测、人工审阅与发布；Employee1.0.2登记计划已转AVAILABLE/139。",
-      "blocker": "能力发布本身已无阻塞；现在是Employee评测Web读回503与后续人工审核边界。",
-      "next": "不再重复能力评测或发布；直接修Employee评测读回并产出Employee级PENDING_REVIEW证据。",
+      "blocker": "三能力发布已完成；Employee评测的调用端字段修复尚待正常发布，之后才有Employee封存与人工release。",
+      "next": "保留已发布能力与原seal/manifest；发布调用端六字段修复，走正常页面产出Employee级评测证据。",
       "lastVerifiedAt": "2026-10-11T13:35:53+08:00",
       "evidenceLevel": "PRODUCTION_PUBLISHED",
       "evidenceSummary": "三项首单能力均已真实PUBLISHED；Employee1.0.2候选已登记，后续不得把能力发布再写成前置。"
@@ -281,14 +292,17 @@
       "status": "local",
       "currentnode": "默认上岗路径已修正并合入，生产启用尚未完成",
       "doing": "已补齐确认门店后直接启用、刷新恢复和权限失效处理；原发布组合遗漏已纠正。负责人不再承担普通技术审核。",
-      "blocker": "自动准入和门店摘要的授权实现需架构负责人核对；之后完成生产启用与第一份真实业务预览。普通测试和发布无需Owner审批。",
+      "blocker": "自动准入和最小门店摘要两项边界已获明确批准；仍待修正生产组合、正常发布启用和真实业务预览。0.5仅只读/预览，不包含实际回复或上架。",
       "next": "从员工入口确认负责门店，启用后读取真实评论或套餐资料，并交出可核对的预览。",
       "lastVerifiedAt": "2026-10-11T14:25:14+08:00",
       "evidenceLevel": "CORRECTION_MERGED_PRODUCTION_NOT_ACCEPTED",
       "evidenceSummary": "实际修正版通过独立复核；58项页面检查和56项发布检查通过。生产仍未启用本轮路径，尚无真实评论或上架结果。",
       "sourceRevision": "fe7f967c",
       "reviewUrl": "https://github.com/iddunk/AstraStaff/pull/808",
-      "verificationBoundary": "代码与本地证据；不代表生产启用、评论回复或套餐上架。"
+      "verificationBoundary": "代码与本地证据；不代表生产启用、评论回复或套餐上架。",
+      "authorityApprovalStatus": "EXACT_BOUNDARIES_APPROVED_PRODUCTION_NOT_ACCEPTED",
+      "authorityApprovalReviewRevision": "a2a3a2f5be797757f078857395153d741ed23cc3",
+      "authorityApprovalVerifiedAt": "2026-10-11T14:56:47+08:00"
     }
   ],
   "links": {
@@ -311,8 +325,8 @@
       "goal": "员工默认无需人工审核，通过自动检查并确认必要范围后开始工作",
       "acceptance": "保留上下文；每阶段主操作明确；缺项可恢复；接手入口清楚；刷新读回真实状态；最后有可用对话入口",
       "productionComplete": false,
-      "blocker": "授权实现架构确认、生产启用和第一份真实业务结果。",
-      "review": "修正后的实际版本已独立复核并合入；正常上岗不再等待产品Owner审核。",
+      "blocker": "本轮两项架构边界已获明确批准；仍待生产组合修复、正常发布启用和第一份真实业务结果。",
+      "review": "fe7f967c的自动准入与最小门店摘要已完成精确审阅并获用户批准；批准记录a2a3a2f5。生产与客户验收仍独立。",
       "ownerQuestion": {
         "source": "直接用户对话",
         "question": "这个审核在这个阶段的意义和价值是什么，谁能审，页面有什么上下文支持通过判断？",
@@ -326,6 +340,15 @@
         "proposalRevision": 3,
         "implementationStatus": "CORRECTION_MERGED_PRODUCTION_NOT_ACCEPTED",
         "recordedAt": "2026-10-11T02:40:34+08:00"
+      },
+      "architectureApproval": {
+        "status": "EXACT_BOUNDARIES_APPROVED_PRODUCTION_NOT_ACCEPTED",
+        "sourceRevision": "fe7f967cb2b1ba288978041b93423f90bd27b2a8",
+        "reviewRevision": "a2a3a2f5be797757f078857395153d741ed23cc3",
+        "approvedAtApproximate": "2026-10-11 14:48 Asia/Shanghai",
+        "scope": "真实通过的不可变Employee评测自动准入；同租户Owner/Admin读取Store的id、displayName、status以确认范围。",
+        "retainedBoundary": "月报原人工release、高风险动作审批和当前人资源授权保留；不增加商家回复或上架权限。",
+        "productionComplete": false
       }
     }
   }
