@@ -1,6 +1,6 @@
 ---
 title: 交付排期与剩余工作
-subtitle: 2026年10月11日 · 全局第114版 · 各模块保留真实核验时间
+subtitle: 2026年10月11日 · 全局第115版 · 各模块保留真实核验时间
 template: sheet
 theme: shadcn
 lang: zh
@@ -65,13 +65,13 @@ mode: light
 
 ### 抖音与多渠道报表
 
-正常受限接线精确源码已批准；正式LOCAL打包进入实际6f基底检查。
+实际6f基底＋cbd源码＋已验证资产的正式LOCAL原生镜像包完成。
 
-Exactcbd42f0f／72c正常opt-in接线保留当前0e／3d1祖先，根采纳独立APPROVE_SOURCE。实际数组消费配置、私有worker路由及回滚清理已在源码与LOCAL证明核对；native14源码、Dockerfiles和实际asset包保持。新LOCAL固定评测116通过，与旧113和月报170分别记录。
+正式LOCAL owner/runtime两镜像基于恢复核对的实际6f基底和cbd完整源码归档构建。924c资产复用，release/source/archive/created标签已核。一次离线batch验证owner27资产＋7源码、runtime5资产＋7源码、syntax与runtime nativeCLI flag通过；无挂载、networknone，未启动默认服务或提供方。
 
-**尚缺：** 实际当前6f基底可用性、完整镜像provenance、CLI launch recipe缺失限制、运行epoch和私有配置待核验。真实same-Human提供方取数与下载未验收；静态105的旧102基线仍需actual104证据重建后才能启用。
+**尚缺：** 完整Control／Web／Spreadsheet-worker镜像、实际Linux runner pin与全运行包仍未验证。当前epoch、私有配置和短时许可实际运行、same-Human取数下载待验；105仍需实际104重基线。CLI精确初始launch recipe缺失限制保持，生产不就绪。
 
-**下一可见成果：** 根打包负责人按受审cbd源码、实际6f基底和既有assets准备正式LOCAL组合。完成镜像来源与配置／epoch核验；源码唯一负责人再用真实104基线准备候选，生产窗口不转移。
+**下一可见成果：** 打包负责人完成选定应用镜像、Linux runner pin和完整运行包。再核对当前epoch／配置与实际104基线，按根串行窗口验证许可、真实取数和下载；不得以LOCAL包代替上线。
 
 *今日交接证据；仍受下列验收边界限制。*
 

@@ -1,6 +1,6 @@
 ---
 title: AstraStaff 产品控制塔
-subtitle: Control v4.2 · 全局第114版 · 模块按各自核验时间更新
+subtitle: Control v4.2 · 全局第115版 · 模块按各自核验时间更新
 template: sheet
 theme: blueprint
 lang: zh
@@ -103,7 +103,7 @@ Work -> *Outcome: 可验证业务结果
 | 记忆与模板 | 本人选定已验证报表，在同一对话确认发送保存／替换 | Memory前两consumer源码关闭；actual104 recipe/CAS/私人评测及初次SQL仍NOT_READY，旧UX/LOCAL140保留历史 |
 | 长期职责 | 聊天或页面改时间，再問时回答最新安排 | 正常发布接线L2通过；0169/0177源码批准，生产延后，自动Due仍缺权限和真实模型用量 |
 | 钉钉 | 本人扫码并在手机与同一员工往返消息 | 两项精确SOURCE门槛通过；0184已候选合并，第二项最终组合／服务证明／编号待齐，生产DEFER |
-| 抖音 | 确认门店期间后下载独立报表 | 正常opt-in源码cbd获批准、LOCAL116保留；实际6f基底、完整镜像来源／epoch及104重基线和真实下载未验收 |
+| 抖音 | 确认门店期间后下载独立报表 | 正式LOCAL原生包实际6f＋cbd＋assets验证完成；完整应用包／runnerpin、epoch配置／104重基线及真实下载未验收 |
 
 [首单与各模块的最新详细状态](./index.html)
 
@@ -130,7 +130,7 @@ Work -> *Outcome: 可验证业务结果
 - 记忆与原模板：精确2fd两consumer与Artifact110实际DI获限定源码批准，11/11 Git导入匹配；第三actual104增量/CAS/私人评测与初次SQL未获批准。作者40测试仅报告，旧140历史不冒充本次执行或生产。
 - 定时：PR821正常发布接线修复L2通过；0169/0177仅源码批准，生产延后。108仅管理职责，自动Due权限、迁移核验、真实模型/用量与成果仍待齐。
 - 运营上岗：同租户管理员确认、审核和验收决定保留；候选发布与真实评论/套餐业务单独验收。
-- 抖音：cbd正常受限接线获源码批准，新LOCAL116与旧113/月报170分开。根可做正式LOCAL打包输入与actual6f基底检查；完整provenance、CLI recipe限制、epoch／私有配置、104重基线及真实提供方下载仍是门槛。
+- 抖音：actual6f基底恢复核验，正式LOCAL原生镜像e441/39d和native包129c离线通过。源码／完整归档／资产标签已核，旧06ed仅历史。完整运行包与Linuxpin、CLIrecipe限制、epoch配置、实际104基线及真实提供方下载仍待验证。
 - 钉钉：第二项7eabbe03四文件候选获限定APPROVE_SOURCE，LOCAL真实封存克隆与SQL／self-binding application证明保持。首项0184已合入候选；最终正常祖先、服务证明和编号待齐，activate／OAuth／提供方／生产验收延后。
 - GitHub Owner反馈：真实操作已验证：Owner 使用 GitHub 登录，在本页保存“首次成果引导：接受建议”；记录 #2 已自动归档，Codex 已读取并写回“团队已收到”。 这条产品方向已确认；不代表对应员工体验已上线，也不改变餐饮两条线的客户验收状态。
 
