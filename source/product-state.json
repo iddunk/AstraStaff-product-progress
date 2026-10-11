@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "revision": 97,
+  "revision": 98,
   "experienceReviewRevision": 85,
-  "updatedAt": "2026-10-11T13:38:52+08:00",
+  "updatedAt": "2026-10-11T13:54:00+08:00",
   "baselineLastVerifiedAt": "2026-10-11T13:35:53+08:00",
-  "headline": "首单三项能力已发布、Employee1.0.2候选已登记；当前卡在评测读回503与版本BUSY",
+  "headline": "Employee1.0.2评测503根因已定位并修复合并；正在最小发布Control运行依赖",
   "customerAcceptance": {
     "passed": 0,
     "total": 2,
     "lastVerifiedAt": "2026-10-11T13:35:53+08:00"
   },
   "firstReport": {
-    "lastVerifiedAt": "2026-10-11T13:35:53+08:00",
+    "lastVerifiedAt": "2026-10-11T13:54:00+08:00",
     "freshVerification": true,
-    "summary": "13:35生产重验：首单三项能力均已正常发布；Employee1.0.2候选已登记，登记计划AVAILABLE且绑定139项；员工仍1.0.1 ACTIVE、版本切换BUSY。Control评测计划实际200，但Web评测入口仍返回503，当前阻塞已收敛为评测读回断层。",
-    "next": "先修复Web评测计划读回，随后执行Employee1.0.2的139项正常评测；取得PENDING_REVIEW证据后再请求Owner明确审核。审核通过后收口BUSY、切换1.0.2，并立即跑真实月份原模板月报。"
+    "summary": "评测链已穿透到approved regression runner；生产失败码确定为APPROVED_RUNNER_STARTUP_FAILED。根因是Control生产镜像缺少runner动态加载TypeScript所需的tsx运行依赖。PR #807已合并，现按当前生产Control 3e5a1244基线只叠加该3文件修复，避免带入并行产品线。",
+    "next": "最小发布Control后，生产复验Web评测plan必须从503恢复为AVAILABLE/139；随后立即执行139项Employee评测并形成PENDING_REVIEW。"
   },
   "ownerControl": {
     "pageRevision": 85,
@@ -32,13 +32,13 @@
       "name": "美团＋点评取数与原模板",
       "group": "餐饮报表",
       "status": "active",
-      "currentnode": "三能力已发布 → Employee1.0.2候选已登记 → 修评测读回 → 审核升级 → 真实月报",
-      "doing": "生产三项首单能力均已PUBLISHED；Employee1.0.2候选已唯一登记为inactive，登记计划AVAILABLE且绑定139项。Control评测计划实际200，但Web BFF仍返回503，正在修复这条读回断层。",
-      "blocker": "当前明确阻塞是Web评测计划503；员工仍1.0.1 ACTIVE，版本页BUSY且升级目标为空。已不是“三能力未发布”。",
-      "next": "修复Web评测读回后立即跑Employee1.0.2的139项评测；形成PENDING_REVIEW后请求Owner审核，审核后安全收口BUSY并升级1.0.2，再跑真实月份原模板下载和同会话修改。",
-      "lastVerifiedAt": "2026-10-11T13:35:53+08:00",
-      "evidenceLevel": "PRODUCTION_FRESH_VERIFIED_EMPLOYEE_EVAL_BLOCKED",
-      "evidenceSummary": "生产重验：三能力PUBLISHED；1.0.2登记计划AVAILABLE/139；当前1.0.1 ACTIVE、BUSY、targets为空；Control评测plan 200而Web入口503。"
+      "currentnode": "三能力已发布 → 1.0.2候选已登记 → runner依赖修复已合并 → 最小发布 → 139项评测",
+      "doing": "503已定位为approved regression runner生产启动失败：Control镜像未携带tsx运行依赖。PR #807已合并；正在以当前生产Control为基线做单服务最小发布。",
+      "blocker": "当前阻塞已从“未知503”收敛为“修复已合并、等待Control最小发布和生产复验”。Owner无需操作。",
+      "next": "发布后先验Web评测plan=AVAILABLE/139，再立即执行Employee1.0.2评测。",
+      "lastVerifiedAt": "2026-10-11T13:54:00+08:00",
+      "evidenceLevel": "FIX_MERGED_PENDING_MINIMAL_DEPLOY",
+      "evidenceSummary": "runner入口和worker均动态import TypeScript；生产Control内tsx不可解析；现有runtime测试5/5 PASS，PR #807已合并。"
     },
     {
       "id": "douyin",

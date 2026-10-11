@@ -35,10 +35,10 @@ mode: light
 | 生产服务 | Control API 3e5a1244… healthy；Web 5a985870… healthy | ok 服务在线 | 不做无关重部署，继续首单主链 |
 | 完整客户验收 | 仍为0／2 | no 未完成 | Employee1.0.2升级后立即跑真实月份原模板下载＋同会话修改 |
 
-**当前结论：** 首单没有在原地打转。三能力发布和Employee候选登记已经跨过去；现在唯一的第一阻塞是“Control评测plan 200、Web评测入口503”的产品断层。
+**当前结论：** 503根因已定位：approved regression runner在生产Control内启动失败，因为`tsx`被放在devDependencies而生产镜像没有该运行依赖。PR #807已合并，正在做只更新Control的最小发布；Owner无需操作。
 
 **下一次页面必须看到：**
-- Web评测plan恢复正常并显示AVAILABLE/139；
+- Control最小发布完成，Web评测plan从503恢复为AVAILABLE/139；
 - Employee1.0.2真实评测执行，形成PENDING_REVIEW证据；
 - 到人工审核边界时，明确向Owner发出“需要你审核”的请求，而不是默默等待；
 - 审核后再处理BUSY并切换1.0.2；随后直接跑真实客户月报。
@@ -49,13 +49,13 @@ mode: light
 
 ### 美团＋点评取数与原模板
 
-三能力已发布 → Employee1.0.2候选已登记 → 修评测读回 → 审核升级 → 真实月报。
+三能力已发布 → 1.0.2候选已登记 → runner依赖修复已合并 → 最小发布 → 139项评测。
 
-生产三项首单能力均已PUBLISHED；Employee1.0.2候选已唯一登记为inactive，登记计划AVAILABLE且绑定139项。Control评测计划实际200，但Web BFF仍返回503，正在修复这条读回断层。
+503已定位为approved regression runner生产启动失败：Control镜像未携带tsx运行依赖。PR #807已合并；正在以当前生产Control为基线做单服务最小发布。
 
-**尚缺：** 当前明确阻塞是Web评测计划503；员工仍1.0.1 ACTIVE，版本页BUSY且升级目标为空。已不是“三能力未发布”。
+**尚缺：** 当前阻塞已从“未知503”收敛为“修复已合并、等待Control最小发布和生产复验”。Owner无需操作。
 
-**下一可见成果：** 修复Web评测读回后立即跑Employee1.0.2的139项评测；形成PENDING_REVIEW后请求Owner审核，审核后安全收口BUSY并升级1.0.2，再跑真实月份原模板下载和同会话修改。
+**下一可见成果：** 发布后先验Web评测plan=AVAILABLE/139，再立即执行Employee1.0.2评测。
 
 *今日交接证据；仍受下列验收边界限制。*
 
