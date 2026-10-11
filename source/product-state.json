@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 99,
+  "revision": 100,
   "experienceReviewRevision": 86,
-  "updatedAt": "2026-10-11T14:25:14+08:00",
+  "updatedAt": "2026-10-11T14:33:56+08:00",
   "baselineLastVerifiedAt": "2026-10-11T13:35:53+08:00",
-  "headline": "首单沿独立主线推进；小碑默认上岗组合已修正，记忆与定时正在收口真实对话",
+  "headline": "首单三能力已发布，员工候选已登记；修复镜像已构建，继续最小发布与真实评测",
   "customerAcceptance": {
     "passed": 0,
     "total": 2,
@@ -12,9 +12,11 @@
   },
   "firstReport": {
     "lastVerifiedAt": "2026-10-11T13:54:00+08:00",
-    "freshVerification": true,
-    "summary": "评测链已穿透到approved regression runner；生产失败码确定为APPROVED_RUNNER_STARTUP_FAILED。根因是Control生产镜像缺少runner动态加载TypeScript所需的tsx运行依赖。PR #807已合并，现按当前生产Control 3e5a1244基线只叠加该3文件修复，避免带入并行产品线。",
-    "next": "最小发布Control后，生产复验Web评测plan必须从503恢复为AVAILABLE/139；随后立即执行139项Employee评测并形成PENDING_REVIEW。"
+    "freshVerification": false,
+    "summary": "10月11日交接确认：首单三能力已PUBLISHED，Employee1.0.2唯一候选已登记但未启用。63a94bba最小Control镜像已构建，镜像内tsx运行验证通过；发布助手的验证命令引号错误使该次发布在部署前退出，生产仍保持交接所列版本。",
+    "next": "先重新读取生产并完成Control单服务发布，再走正常页面执行Employee1.0.2评测。评测封存后才进入人工审核；之后按正常生命周期解除BUSY并切换同一员工。",
+    "verificationBoundary": "本轮同步用户10月11日handoff；交接未给出镜像验证的精确时刻。本轮尚未重读生产，13:54为此前已记录核验时间。不得把镜像构建或交接记录算作本轮部署成功。",
+    "handoffAsOf": "2026-10-11"
   },
   "ownerControl": {
     "pageRevision": 86,
@@ -32,13 +34,14 @@
       "name": "美团＋点评取数与原模板",
       "group": "餐饮报表",
       "status": "active",
-      "currentnode": "三能力已发布 → 1.0.2候选已登记 → runner依赖修复已合并 → 最小发布 → 139项评测",
-      "doing": "503已定位为approved regression runner生产启动失败：Control镜像未携带tsx运行依赖。PR #807已合并；正在以当前生产Control为基线做单服务最小发布。",
-      "blocker": "当前阻塞已从“未知503”收敛为“修复已合并、等待Control最小发布和生产复验”。Owner无需操作。",
-      "next": "发布后先验Web评测plan=AVAILABLE/139，再立即执行Employee1.0.2评测。",
+      "currentnode": "三能力已发布 → 1.0.2候选已登记 → 镜像内运行验证通过 → 最小发布 → 员工评测",
+      "doing": "沿当前Control生产基线准备63a94bba单服务发布。交接确认镜像内tsx验证通过；上次助手仅在部署前的验证命令引号处失败。",
+      "blocker": "首单当前等待重新读取生产、修正发布助手并完成Control单服务发布。员工尚未评测、审核或启用。Owner当前无需操作。",
+      "next": "发布后由正常版本页面重新核对评测条件并执行Employee1.0.2评测；有真实封存材料后再请求所需人工审核。",
       "lastVerifiedAt": "2026-10-11T13:54:00+08:00",
-      "evidenceLevel": "FIX_MERGED_PENDING_MINIMAL_DEPLOY",
-      "evidenceSummary": "runner入口和worker均动态import TypeScript；生产Control内tsx不可解析；现有runtime测试5/5 PASS，PR #807已合并。"
+      "evidenceLevel": "HANDOFF_IMAGE_PROOF_PENDING_FRESH_DEPLOY",
+      "evidenceSummary": "用户10月11日交接：63a94bba镜像构建与TSX_RUNTIME_OK通过；上次部署未发生。首单能力139/116/50项评测属于三项能力，不能复用为Employee评测。",
+      "verificationBoundary": "本轮同步用户10月11日handoff；交接未给出镜像验证的精确时刻。本轮尚未重读生产，13:54为此前已记录核验时间。不得把镜像构建或交接记录算作本轮部署成功。"
     },
     {
       "id": "douyin",
