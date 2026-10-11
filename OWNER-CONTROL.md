@@ -1,5 +1,7 @@
 # GitHub Owner Decision Ledger
 
+> Delivery status publication cadence and Owner visibility are governed by [PROGRESS-PUBLISHING.md](./PROGRESS-PUBLISHING.md).
+
 This is the feedback sidecar for the existing product experience review page. GitHub Issues owns authenticated public submissions, immutable Git files own the decision event archive, and `ledger/decisions.json` projects that archive for the existing page and active agents. No business database or additional product board is added. The standalone GitHub authorization gateway is deployed independently on the existing server; all feedback and decision history stay in this repository.
 
 The preferred submission UX is now the direct API in `gateway/README.md`: the Owner signs in once, then the page posts feedback directly. The Issue JSON below is the underlying provider contract; opening a GitHub issue form is an optional manual fallback, not the main page flow.
