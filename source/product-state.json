@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 95,
+  "revision": 96,
   "experienceReviewRevision": 84,
-  "updatedAt": "2026-10-11T03:06:35+08:00",
+  "updatedAt": "2026-10-11T13:20:43+08:00",
   "baselineLastVerifiedAt": "2026-10-10T13:50:58+08:00",
-  "headline": "默认无人工审核目标基线已薄组合；目标分支L3与真实发布门禁待完成",
+  "headline": "默认无人工审核已完成生产基线薄组合与目标测试；正式L3和发布门禁待完成",
   "customerAcceptance": {
     "passed": 0,
     "total": 2,
@@ -276,14 +276,14 @@
       "name": "业务运营与系统运营的P0流程",
       "group": "员工发布与运营",
       "status": "live",
-      "currentnode": "生产基线薄组合已完成，等待L3与Web目标组合复核",
-      "doing": "自动准入与最小门店摘要已在production-release基线组成本地目标树2117f3b5；Web无审核路径保持独立复审通过。",
-      "blocker": "目标树尚未合入正式分支；L3 Authority、迁移、真实登录与生产读回未完成。",
-      "next": "完成目标树Control/Web组合复核，再走正常发布和真实小碑第一件工作。",
-      "lastVerifiedAt": "2026-10-11T03:06:35+08:00",
-      "evidenceLevel": "TARGET_BASE_COMPOSED_L3_REQUIRED",
+      "currentnode": "生产基线自动准入+运营Web切片已组合，目标测试通过",
+      "doing": "目标树a2579ff6已组合自动准入、门店摘要、运营入口和默认无审核页面；Web角色走查48项通过，Control focused29项通过。",
+      "blocker": "正式L3 Authority、迁移与运行时发布门禁尚未完成；真实企业登录与小碑业务结果未验收。",
+      "next": "完成目标树exact-head复核后按现有发布流程上线，再验证真实负责人范围确认和第一件工作。",
+      "lastVerifiedAt": "2026-10-11T13:20:43+08:00",
+      "evidenceLevel": "TARGET_BASE_COMPOSED_LOCAL_TESTED_L3_REQUIRED",
       "evidenceSummary": "默认自动准入后真实本地ACTIVE读回：Employee人工决定0、派生evaluation_runs0；Web桌面/手机走查与55 focused tests通过。不是生产或客户验收。",
-      "sourceRevision": "2117f3b5"
+      "sourceRevision": "a2579ff6"
     }
   ],
   "links": {
@@ -306,8 +306,8 @@
       "goal": "员工默认无需人工审核，通过自动检查并确认必要范围后开始工作",
       "acceptance": "保留上下文；每阶段主操作明确；缺项可恢复；接手入口清楚；刷新读回真实状态；最后有可用对话入口",
       "productionComplete": false,
-      "blocker": "正式L3审阅、目标base薄组合、生产迁移与真实员工读回仍未完成",
-      "review": "Owner已确认默认去掉人工审核；后端自动准入与本地正向读回通过，Web父页面刷新修复已完成待独立复审",
+      "blocker": "正式L3 Authority、迁移、运行时发布与真实企业读回",
+      "review": "默认无人工审核Web独立复审PASS；目标生产基线薄组合a2579ff6本地测试通过，等待L3/正式发布",
       "ownerQuestion": {
         "source": "直接用户对话",
         "question": "这个审核在这个阶段的意义和价值是什么，谁能审，页面有什么上下文支持通过判断？",
