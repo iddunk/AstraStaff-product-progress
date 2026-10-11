@@ -14,7 +14,7 @@
   "firstReport": {
     "lastVerifiedAt": "2026-10-11T18:25:16+08:00",
     "freshVerification": true,
-    "summary": "Control0e评测准入热修已正式上线，完整postflight通过；Web/PPT保持72，Browser保持。通过正常产品入口复用三个冻结草稿完成正式评测：Metrics1.0.2为87/87、Office1.0.10为147/147、Skill0.2.1为170/170，共404/404、0失败。当前等待用户审阅这三份具体证据，尚未批准或发布能力。",
+    "summary": "Control0e评测准入热修已正式上线，完整postflight通过；Web/PPT保持72，Browser保持。三项能力已通过正常入口完成正式评测：Metrics1.0.2为87/87、Office1.0.10为147/147、Skill0.2.1为170/170，共404/404、0失败。当前等待用户审阅这三份具体证据，尚未批准或发布能力。",
     "next": "本人批准三份具体评测证据后，走正常能力发布。再登记与评测1.0.4，审核升级后核对真实月报、下载和修改。",
     "verificationBoundary": "404/404是三项能力的真实生产评测记录，不是客户月报成果。当前仅等待具体评测证据审阅；能力未发布，Employee1.0.4未注册启用。既有1.0.2 ACTIVE，Artifact0、客户验收0/2。",
     "evidenceTimeBasis": "FORMAL0E_POSTFLIGHT_AND_THREE_NORMAL_PRODUCTION_EVALUATION_DETAIL_READBACK",
@@ -102,7 +102,7 @@
       "group": "餐饮报表",
       "status": "active",
       "currentnode": "Control热修正式上线 → 三能力真实评测404/404通过 → 等待本人审阅批准",
-      "doing": "Control0e评测准入热修已正式上线，完整postflight通过；Web/PPT保持72，Browser保持。通过正常产品入口复用三个冻结草稿完成正式评测：Metrics1.0.2为87/87、Office1.0.10为147/147、Skill0.2.1为170/170，共404/404、0失败。当前等待用户审阅这三份具体证据，尚未批准或发布能力。",
+      "doing": "Control0e评测准入热修已正式上线，完整postflight通过；Web/PPT保持72，Browser保持。三项能力已通过正常入口完成正式评测：Metrics1.0.2为87/87、Office1.0.10为147/147、Skill0.2.1为170/170，共404/404、0失败。当前等待用户审阅这三份具体证据，尚未批准或发布能力。",
       "blocker": "三份具体评测证据已完成并待用户批准。能力尚未发布，1.0.4尚未登记启用；真实月份来源、原模板成果、下载和自然修改未验收。",
       "next": "本人批准三份具体评测证据后，走正常能力发布。再登记与评测1.0.4，审核升级后核对真实月报、下载和修改。",
       "lastVerifiedAt": "2026-10-11T18:25:16+08:00",
