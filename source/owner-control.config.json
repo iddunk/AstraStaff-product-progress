@@ -6,14 +6,14 @@
     "iddunk"
   ],
   "pageId": "product-experience-review",
-  "pageRevision": 86,
+  "pageRevision": 87,
   "ledgerUrl": "https://raw.githubusercontent.com/iddunk/AstraStaff-product-progress/gh-pages/ledger/decisions.json",
   "modules": [
     {
       "panelId": "A",
       "moduleId": "product-direction",
       "title": "产品整体方向",
-      "recommendation": "继续围绕长期数字员工交付可验证成果，先解决状态与真实能力不一致。",
+      "recommendation": "继续围绕长期数字员工交付真实业务结果；候选、生产和客户验收严格分层。",
       "proposalRevision": 1
     },
     {
@@ -41,7 +41,7 @@
       "panelId": "E",
       "moduleId": "employee-work",
       "title": "工作与需要你",
-      "recommendation": "客户工作只展示业务进展和真实需要决定的事项，内部诊断进入运营。",
+      "recommendation": "“需要你”只放真实业务选择和高风险授权；内部诊断、发布、评测不进入客户待办。",
       "proposalRevision": 1
     },
     {
@@ -62,7 +62,7 @@
       "panelId": "G",
       "moduleId": "report-employee",
       "title": "经营报表员工",
-      "recommendation": "任意可查询月份取数、使用原模板交付并支持自然修改；各扩展线独立推进。",
+      "recommendation": "只验一句话交办→真实取数→原模板下载→同一对话修改；评测与发布不代替客户结果。",
       "proposalRevision": 1
     },
     {
@@ -76,7 +76,7 @@
       "panelId": "G",
       "moduleId": "control-alignment",
       "title": "Control 一致性",
-      "recommendation": "验收 Employee → Responsibility → Work → Outcome，区分本地通过、生产上线和客户验收。",
+      "recommendation": "保持 Employee → Responsibility → Work → Outcome；正常发布与版本切换不抛给Owner审批。",
       "proposalRevision": 1
     },
     {

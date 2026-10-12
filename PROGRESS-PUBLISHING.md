@@ -19,3 +19,7 @@ If Owner action is required, surface it in both the Page and the active chat imm
 Production readback beats old notes. Cleared blockers must be removed from the live Page on the same update. Candidate, local test, merge, deploy, evaluation, review and customer acceptance remain distinct states. Customer acceptance is never inferred.
 
 Old worktrees and stale local files are not durable truth. Preserve useful history through Git commits, then remove obsolete paths so future work starts from current committed state.
+
+## Owner readability rule
+
+The live Owner pages are decision surfaces, not engineering ledgers. Keep the first screen in plain language. Separate **candidate code / production deployed / customer accepted**. Do not make normal release, evaluation, migration, SHA or employee patch-version evidence an Owner action. Detailed technical evidence remains in `source/product-state.json`, PRs and Git history.

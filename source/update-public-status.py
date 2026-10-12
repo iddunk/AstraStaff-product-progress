@@ -238,10 +238,8 @@ def render(repo: Path, cli: Path) -> None:
         draft = read_utf8(source / draft_name)
         accepted = model['customerAcceptance']
         draft = re.sub(r'完整客户(?:业务)?验收仍为\s*\d+[／/]\d+', '完整客户业务验收：' + str(accepted['passed']) + '／' + str(accepted['total']), draft)
-        if draft_name == 'delivery-baseline.md':
-            draft = replace_panel(draft, 'C', '## C 报表员工：下一次可验收什么 {span=2}\n\n' + module_copy(model['modules'], ['meituan','templates','douyin']) + '\n**首单不等待：** Office1.0.9、Memory110、定时、钉钉和抖音。')
-            draft = replace_panel(draft, 'D', '## D 运营员工：评论与套餐线 {span=2}\n\n' + module_copy(model['modules'], ['reviews','reviewpolicy','dishes','approval']) + '\n普通回复沿已确认政策处理；高风险例外保留审阅。\n\n![运营准备：本地示例，未生产验收](assets/operations-preparation-1440.png)')
-            draft = replace_panel(draft, 'E', '## E 共享能力与员工体验 {span=2}\n\n' + module_copy(model['modules'], ['memory','routines','employeeux','opsux','model','designsystem','dingtalk','capabilitypublication','opsrolep0']) + '\n![模板偏好确认：本地示例](assets/template-preference-390.png)\n\n![计划模板选择：本地示例](assets/template-schedule-390.png)')
+        # Panels C/D/E are deliberately curated for Owner readability.
+        # Detailed module truth remains in source/product-state.json and Git history.
         # Shared Owner integration facts are rendered from the same model on both pages.
         owner_text = model['ownerControl']['verification'] + '\n\n' + model['ownerControl']['limitation']
         draft = re.sub(r'\*\*GitHub Owner反馈：\*\*[\s\S]*?(?=\n\n体验共创)', '**GitHub Owner反馈：** ' + owner_text, draft)
@@ -257,6 +255,7 @@ def render(repo: Path, cli: Path) -> None:
             raise RuntimeError(f'ANSWER_HTML_RENDER_FAILED:{output_name}')
         html = read_utf8(next_output)
         html = html.replace('</head>', '<style>[data-am="reply"],.am-comment-btn,.am-comment,.am-reply{display:none!important}</style></head>', 1)
+        html = html.replace('</head>', '<style id="owner-mobile-readability">@media(max-width:520px){.am-kv{grid-template-columns:minmax(0,1fr)!important}.am-kv-cell{border-right:0!important}.am-panel{min-width:0!important}.am-md table,.am-table-wrap{display:block!important;max-width:100%!important;overflow-x:auto!important}.am-head{padding-right:0!important}}</style></head>', 1)
         assert 'am-source' in html and '<html' in html
         assert re.findall(r'<section[^>]+id="panel-([A-H])"', html) == list('ABCDEFGH')
         # Bundled CLI has a harmless file:// storage-policy comment.
@@ -278,7 +277,7 @@ def render(repo: Path, cli: Path) -> None:
     manifest.update(revision=model['revision'], controlVersion='4.2', updatedAt=model['updatedAt'],
                     controlTower='control-tower.html', experienceReviewRevision=model['experienceReviewRevision'])
     write_utf8(manifest_path, json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
-    print(f"PUBLIC_STATUS_READY revision={model['revision']} experienceReviewRevision=80 modules=16")
+    print(f"PUBLIC_STATUS_READY revision={model['revision']} experienceReviewRevision={model['experienceReviewRevision']} modules=16")
 
 def main() -> None:
     parser = argparse.ArgumentParser()

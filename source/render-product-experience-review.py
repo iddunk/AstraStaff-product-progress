@@ -20,6 +20,7 @@ css=(root/'owner-control.css').read_text(encoding='utf-8');js=(root/'owner-contr
 assert '</style' not in css.lower() and '</script' not in js.lower()
 payload=json.dumps(config,ensure_ascii=False,separators=(',',':')).replace('<',r'\u003c')
 html=html.replace('</head>','<style id="owner-control-style">\n'+css+'</style>\n</head>',1)
+html=html.replace('</head>','<style id="owner-mobile-readability">@media(max-width:520px){.am-kv{grid-template-columns:minmax(0,1fr)!important}.am-kv-cell{border-right:0!important}.am-panel{min-width:0!important}.am-md table,.am-table-wrap{display:block!important;max-width:100%!important;overflow-x:auto!important}.am-head{padding-right:0!important}.owner-control{min-width:0!important}.owner-decisions{grid-template-columns:minmax(0,1fr)!important}.owner-actions{flex-wrap:wrap!important}}</style>\n</head>',1)
 html=html.replace('</body>','<script type="application/json" id="owner-control-config">'+payload+'</script>\n<script id="owner-control-client">\n'+js+'</script>\n</body>',1)
 assert 'owner-control-sync.js' not in html and 'owner_token' not in html and '/api/owner-control' not in html
 out.write_text(html,encoding='utf-8',newline='\n')
