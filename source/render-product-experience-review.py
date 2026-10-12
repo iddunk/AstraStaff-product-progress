@@ -15,6 +15,11 @@ result=subprocess.run(['node',str(cli),'render','-','-o',str(out),'--no-open'],i
 print(result.stdout,end='');print(result.stderr,end='')
 if result.returncode:raise SystemExit(result.returncode)
 html=out.read_text(encoding='utf-8')
+def _progress(match):
+    pct=max(0,min(100,int(match.group(1))))
+    return f'<span class="owner-progress" aria-label="进度 {pct}%"><span class="owner-progress-track"><span class="owner-progress-fill" style="width:{pct}%"></span></span><strong>{pct}%</strong></span>'
+html=re.sub(r'[█]+[░]+\s*(\d{1,3})%',_progress,html)
+html=html.replace('</head>','<style id="owner-progress-style">.owner-progress{display:inline-grid;grid-template-columns:minmax(88px,1fr) auto;align-items:center;gap:9px;min-width:150px;max-width:260px;width:100%}.owner-progress-track{display:block;height:10px;background:var(--line-2,#ddd);border-radius:999px;overflow:hidden}.owner-progress-fill{display:block;height:100%;background:var(--accent,currentColor);border-radius:999px}.owner-progress strong{font-size:13px;white-space:nowrap}</style></head>',1)
 for panel_id in {m['panelId'] for m in config['modules']}:assert f'id="panel-{panel_id}"' in html
 css=(root/'owner-control.css').read_text(encoding='utf-8');js=(root/'owner-control.js').read_text(encoding='utf-8')
 assert '</style' not in css.lower() and '</script' not in js.lower()

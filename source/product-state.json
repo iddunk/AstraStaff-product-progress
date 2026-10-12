@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 116,
-  "experienceReviewRevision": 87,
-  "updatedAt": "2026-10-12T11:30:00+08:00",
+  "revision": 117,
+  "experienceReviewRevision": 88,
+  "updatedAt": "2026-10-12T12:50:00+08:00",
   "baselineLastVerifiedAt": "2026-10-11T13:35:53+08:00",
-  "headline": "主线没偏；生产继续健康推进，首份真实月报仍待完整E2E，客户验收0/2",
+  "headline": "老板控制盘：整体约62%，首单约64%，当前节点是一句话稳定进入员工执行",
   "customerAcceptance": {
     "passed": 0,
     "total": 2,
@@ -95,7 +95,7 @@
     "employeeCandidateReviewStatus": "PENDING_HUMAN_REVIEW"
   },
   "ownerControl": {
-    "pageRevision": 87,
+    "pageRevision": 88,
     "status": "REAL_OWNER_FEEDBACK_ROUNDTRIP_VERIFIED",
     "verification": "真实操作已验证：Owner 使用 GitHub 登录，在本页保存“首次成果引导：接受建议”；记录 #2 已自动归档，Codex 已读取并写回“团队已收到”。",
     "limitation": "这条产品方向已确认；不代表对应员工体验已上线，也不改变餐饮两条线的客户验收状态。",
@@ -571,6 +571,84 @@
       "客户验收仍0/2",
       "候选代码快于公开状态",
       "执行事实源与集成边界需要继续收敛"
+    ]
+  },
+  "ownerDashboard": {
+    "method": "KEY_PRODUCT_NODES_WEIGHTED_NOT_ENGINEERING_EFFORT",
+    "overallPercent": 62,
+    "customerAcceptance": {
+      "passed": 0,
+      "total": 2
+    },
+    "currentMainNode": "REPORT_EMPLOYEE_STARTS_RELIABLY_FROM_NATURAL_CONVERSATION",
+    "lines": [
+      {
+        "id": "report",
+        "name": "首单经营月报",
+        "percent": 64,
+        "current": "一句话真正启动员工",
+        "next": "真实来源完整跑到下载"
+      },
+      {
+        "id": "memory",
+        "name": "模板 / 记忆复用",
+        "percent": 70,
+        "current": "真实商家新月份复用",
+        "next": "无需重传模板"
+      },
+      {
+        "id": "routine",
+        "name": "Routine 主动汇报",
+        "percent": 55,
+        "current": "正式生产发布",
+        "next": "到点自动产出"
+      },
+      {
+        "id": "dingtalk",
+        "name": "钉钉找同一员工",
+        "percent": 80,
+        "current": "真实双向消息",
+        "next": "钉钉交办并拿同一成果"
+      },
+      {
+        "id": "operations",
+        "name": "餐饮运营员工",
+        "percent": 40,
+        "current": "正式上岗",
+        "next": "真实评论 / 套餐预览"
+      },
+      {
+        "id": "douyin",
+        "name": "抖音报表",
+        "percent": 35,
+        "current": "生产运行",
+        "next": "真实平台下载"
+      },
+      {
+        "id": "platform",
+        "name": "平台底座",
+        "percent": 85,
+        "current": "真实业务压测",
+        "next": "第二客户复制"
+      }
+    ],
+    "latestFacts": [
+      {
+        "at": "2026-10-12T12:04:21+08:00",
+        "fact": "报表修复生产发布 PASS"
+      },
+      {
+        "at": "2026-10-12T11:43:00+08:00",
+        "fact": "保存格式生产消费与下载局部证明 PASS；独立期间测试数据，非商家来源"
+      },
+      {
+        "at": "2026-10-12T12:13:00+08:00",
+        "fact": "钉钉当前员工连接/欢迎消息生产证明；下一节点真实双向交办"
+      },
+      {
+        "at": "2026-10-12T12:44:47+08:00",
+        "fact": "员工启动上下文无损压缩候选约53k→39k，真实生产对话待验证"
+      }
     ]
   }
 }

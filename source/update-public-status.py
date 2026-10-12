@@ -230,6 +230,16 @@ Owner仍须首次创建应用、选定仓库安装与正常OAuth；真实反馈�
         write_utf8(source / name, text)
     write_utf8(source / 'product-state.json', json.dumps(model, ensure_ascii=False, indent=2) + '\n')
 
+def enhance_owner_progress(html: str) -> str:
+    def repl(match: re.Match[str]) -> str:
+        pct = max(0, min(100, int(match.group(1))))
+        return (f'<span class="owner-progress" aria-label="进度 {pct}%">'
+                f'<span class="owner-progress-track"><span class="owner-progress-fill" style="width:{pct}%"></span></span>'
+                f'<strong>{pct}%</strong></span>')
+    html = re.sub(r'[█]+[░]+\s*(\d{1,3})%', repl, html)
+    css = '<style id="owner-progress-style">.owner-progress{display:inline-grid;grid-template-columns:minmax(88px,1fr) auto;align-items:center;gap:9px;min-width:150px;max-width:260px;width:100%}.owner-progress-track{display:block;height:10px;background:var(--line-2,#ddd);border-radius:999px;overflow:hidden}.owner-progress-fill{display:block;height:100%;background:var(--accent,currentColor);border-radius:999px}.owner-progress strong{font-size:13px;white-space:nowrap}</style>'
+    return html.replace('</head>', css + '</head>', 1)
+
 def render(repo: Path, cli: Path) -> None:
     source = repo / 'source'
     model = json.loads(read_utf8(source / 'product-state.json'))
@@ -254,6 +264,7 @@ def render(repo: Path, cli: Path) -> None:
         if result.returncode:
             raise RuntimeError(f'ANSWER_HTML_RENDER_FAILED:{output_name}')
         html = read_utf8(next_output)
+        html = enhance_owner_progress(html)
         html = html.replace('</head>', '<style>[data-am="reply"],.am-comment-btn,.am-comment,.am-reply{display:none!important}</style></head>', 1)
         html = html.replace('</head>', '<style id="owner-mobile-readability">@media(max-width:520px){.am-kv{grid-template-columns:minmax(0,1fr)!important}.am-kv-cell{border-right:0!important}.am-panel{min-width:0!important}.am-md table,.am-table-wrap{display:block!important;max-width:100%!important;overflow-x:auto!important}.am-head{padding-right:0!important}}</style></head>', 1)
         assert 'am-source' in html and '<html' in html
