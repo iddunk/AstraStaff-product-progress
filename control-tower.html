@@ -708,7 +708,7 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <button class="am-btn" type="button" data-am="copy" data-done="已复制 ✓">复制源稿</button>
 </div>
 <main class="am-sheet">
-<header class="am-head"><h1>AstraStaff 产品控制塔</h1><p class="am-sub">2026年10月12日 12:50 · 看有没有走偏 · Control v4.2</p></header>
+<header class="am-head"><h1>AstraStaff 产品控制塔</h1><p class="am-sub">2026年10月13日 · 看有没有走偏 · Control v4.3</p></header>
 <div class="am-frame">
 <div class="am-ruler am-ruler--top" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div class="am-ruler am-ruler--bottom" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div class="am-ruler am-ruler--left" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div><div class="am-ruler am-ruler--right" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div>
 <div class="am-grid" style="--cols: 2">
@@ -719,7 +719,7 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <dl class="am-kv" style="--kv-cols: 4"><div class="am-kv-cell"><dt>Control</dt><dd>🟢 正常</dd></div><div class="am-kv-cell"><dt>实现方向</dt><dd>🟢 正常</dd></div><div class="am-kv-cell"><dt>整体落地</dt><dd><span class="owner-progress" aria-label="进度 62%"><span class="owner-progress-track"><span class="owner-progress-fill" style="width:62%"></span></span><strong>62%</strong></span></dd></div><div class="am-kv-cell"><dt>首单月报</dt><dd><span class="owner-progress" aria-label="进度 64%"><span class="owner-progress-track"><span class="owner-progress-fill" style="width:64%"></span></span><strong>64%</strong></span></dd></div><div class="am-kv-cell"><dt>客户验收</dt><dd>🔴 0/2</dd></div><div class="am-kv-cell"><dt>当前主节点</dt><dd>🟡 员工启动</dd></div><div class="am-kv-cell"><dt>最大风险</dt><dd>🟡 能力多于完整结果</dd></div><div class="am-kv-cell"><dt>Owner要纠偏</dt><dd>✅ 暂无</dd></div></dl></div>
 </section>
 <section class="am-panel am-span-wide" id="panel-B" style="grid-column: span 2" data-span="2">
-<header class="am-panel-head"><span class="am-panel-id">B</span><h2>六条 Control，只看有没有踩线</h2></header>
+<header class="am-panel-head"><span class="am-panel-id">B</span><h2>核心 Control，只看有没有踩线</h2></header>
 <div class="am-panel-body"><div class="am-md"><div class="am-table-wrap"><table>
 <thead>
 <tr>
@@ -757,6 +757,16 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <td><strong>Policy &gt; approval spam</strong></td>
 <td>🟢</td>
 <td>默认上岗去人工审核；例外才找人</td>
+</tr>
+<tr>
+<td><strong>Runtime context authority</strong></td>
+<td>🟢</td>
+<td>System/Employee/Skill 是规则；业务事实、用户原话、文件与 Tool 结果都不能自授权限或完成状态</td>
+</tr>
+<tr>
+<td><strong>Least-context Tools / Skills</strong></td>
+<td>🟡 P0/P1</td>
+<td>只给当前职责真正需要的 Skill/Tool；禁止隐式 broad runtime defaults 和全量 Schema 重复注入</td>
 </tr>
 </tbody></table></div>
 <p><strong>红线：</strong> 正常发布、评测、Employee 小版本切换都不应该重新变成 Owner 日常审批。</p>
@@ -815,6 +825,12 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <td>🟢</td>
 <td>生产真实运行</td>
 </tr>
+<tr>
+<td>Agent Runtime P0/P1</td>
+<td>🟡 P0 待实现</td>
+<td>🟢</td>
+<td>先做 Toolset/Memory fail-closed + 上下文/Token观测；再做最小 Tool/Skill 投影与增量续轮</td>
+</tr>
 </tbody></table></div>
 <p><strong>结论：</strong> 六条线都还在产品目标上。并行不是偏航；只有“旁线变成首单前置”才算偏航。</p>
 </div></div>
@@ -861,6 +877,11 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <td>🟢 未发生</td>
 <td>继续作为底层特殊机制，而不是用户默认心智</td>
 </tr>
+<tr>
+<td><strong>Runtime 默认工具 / 上下文膨胀</strong></td>
+<td>🟡</td>
+<td>P0 禁隐式 hermes-cli fallback 与本地 Memory；P1 最小 Tool/Skill 投影 + 增量续轮，按真实 token/cache 证据优化</td>
+</tr>
 </tbody></table></div>
 </div></div>
 </section>
@@ -895,7 +916,7 @@ html[data-theme="paper"] .am-md table { font-family: var(--font-sans); }
 <td><strong>完成节点</strong></td>
 </tr>
 </tbody></table></div>
-<p>所以今天 12:44 的上下文压缩候选不会让我写“首单快完成了”；只有它在生产让一句话稳定进入执行，首单才会从当前节点向右移动。</p>
+<p>Agent Runtime P0/P1 属于平台底座治理，不因文档、Prompt 或 Runtime 内部优化直接上调首单/客户进度；只有真实 E2E 和客户 Outcome 才推动业务节点。</p>
 </div></div>
 </section>
 <section class="am-panel am-span-wide" id="panel-H" style="grid-column: span 2" data-span="2">
@@ -951,7 +972,7 @@ Control: 🟢 正常
 Owner要纠偏: ✅ 暂无
 ```
 
-## B 六条 Control，只看有没有踩线 {span=2}
+## B 核心 Control，只看有没有踩线 {span=2}
 | Control | 当前 | 证据化判断 |
 | --- | --- | --- |
 | **Employee first** | 🟢 | 用户仍然找“小账/小碑”，没有回到 Task 首页 |
@@ -960,6 +981,8 @@ Owner要纠偏: ✅ 暂无
 | **Outcome &gt; Artifact** | 🟡 | 文件能力已强，但客户验收仍坚持记 0/2 |
 | **Agent first** | 🟢 | 没把 Temporal/Workflow 重新设为普通工作的默认前置 |
 | **Policy &gt; approval spam** | 🟢 | 默认上岗去人工审核；例外才找人 |
+| **Runtime context authority** | 🟢 | System/Employee/Skill 是规则；业务事实、用户原话、文件与 Tool 结果都不能自授权限或完成状态 |
+| **Least-context Tools / Skills** | 🟡 P0/P1 | 只给当前职责真正需要的 Skill/Tool；禁止隐式 broad runtime defaults 和全量 Schema 重复注入 |
 
 **红线：** 正常发布、评测、Employee 小版本切换都不应该重新变成 Owner 日常审批。
 
@@ -989,6 +1012,7 @@ Work -&gt; *Outcome: 真实业务结果
 | 钉钉 | <span class="owner-progress" aria-label="进度 80%"><span class="owner-progress-track"><span class="owner-progress-fill" style="width:80%"></span></span><strong>80%</strong></span> | 🟢 | 真实双向消息 |
 | 运营员工 | <span class="owner-progress" aria-label="进度 40%"><span class="owner-progress-track"><span class="owner-progress-fill" style="width:40%"></span></span><strong>40%</strong></span> | 🟢 | 正式上岗 |
 | 抖音 | <span class="owner-progress" aria-label="进度 35%"><span class="owner-progress-track"><span class="owner-progress-fill" style="width:35%"></span></span><strong>35%</strong></span> | 🟢 | 生产真实运行 |
+| Agent Runtime P0/P1 | 🟡 P0 待实现 | 🟢 | 先做 Toolset/Memory fail-closed + 上下文/Token观测；再做最小 Tool/Skill 投影与增量续轮 |
 
 **结论：** 六条线都还在产品目标上。并行不是偏航；只有“旁线变成首单前置”才算偏航。
 
@@ -1018,6 +1042,7 @@ Office服务: 🟢 保留已验证版本
 | **Owner 被拉回流水线审批** | 🟢 已纠正 | 只在 Control/范围/高风险授权变化时找 Owner |
 | **旁线阻塞首单** | 🟢 暂未发生 | Memory/Routine/钉钉/抖音继续并行，不设前置 |
 | **Task/Temporal 回到产品中心** | 🟢 未发生 | 继续作为底层特殊机制，而不是用户默认心智 |
+| **Runtime 默认工具 / 上下文膨胀** | 🟡 | P0 禁隐式 hermes-cli fallback 与本地 Memory；P1 最小 Tool/Skill 投影 + 增量续轮，按真实 token/cache 证据优化 |
 
 ## G 判断一次进展到底算不算“真进展” {span=2}
 ```flow LR
