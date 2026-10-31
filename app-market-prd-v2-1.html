@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Astra App Market PRD V2.1 · 任务式体验与应用调试工坊</title>
+<style>
+:root{--bg:#f5f7fc;--paper:#fff;--ink:#1c2945;--dim:#73819c;--line:#e4e9f4;--blue:#4e5dd9;--soft:#f0f2ff;--green:#177552;--orange:#955a13}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font:14px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft Yahei",sans-serif;color:var(--ink)}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.52;cursor:not-allowed}a{color:var(--blue)}.topbar{position:sticky;top:0;z-index:10;background:#ffffffeb;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.top-inner{max-width:1220px;padding:12px 20px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.brand{display:flex;gap:9px;align-items:center;font-weight:850;font-size:20px;letter-spacing:-.7px}.glyph{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;color:white;background:linear-gradient(145deg,#4459d7,#8970e9);box-shadow:0 6px 12px #475cd133;font-size:24px}.brand small{font-size:10px;letter-spacing:1px;color:#8b95ae}.version{font-size:11px;padding:5px 10px;border-radius:20px;background:#eef0ff;color:#4d5ac0;font-weight:650}.nav{display:flex;gap:4px;border-radius:13px;background:#eef1f8;padding:4px}.nav button{border:0;border-radius:10px;padding:9px 12px;background:transparent;color:#65738f;font-weight:700;font-size:12px;white-space:nowrap}.nav button.active{background:#fff;color:var(--blue);box-shadow:0 3px 12px #27325014}main{max-width:1220px;margin:0 auto;padding:32px 20px 75px}.kicker{text-transform:uppercase;font-size:11px;letter-spacing:1.5px;color:#5866c4;font-weight:800}.title{font-size:clamp(28px,4vw,44px);line-height:1.25;letter-spacing:-1.3px;margin:9px 0 13px}.intro{font-size:15px;color:var(--dim);max-width:750px;margin:0 0 24px}.grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:21px;align-items:start}.card,.window{background:var(--paper);border:1px solid var(--line);border-radius:19px;box-shadow:0 10px 28px #2633530b}.card{padding:23px}.window{overflow:hidden}.head{padding:11px 17px;border-bottom:1px solid var(--line);color:#8d98ae;font-size:11px;background:#fbfcff;display:flex;align-items:center;gap:7px}.dot{width:7px;height:7px;border-radius:50%;background:#d0d8e7}.body{padding:19px}.pill{display:inline-flex;align-items:center;border-radius:30px;padding:4px 10px;background:#eef0ff;color:#4253be;font-size:11px;font-weight:750}.pill.warn{background:#fff3de;color:#926018}.pill.ok{background:#e4f8ef;color:#267355}.sub{color:var(--dim);font-size:12px}.btn{border:1px solid #dfe5f2;background:white;border-radius:11px;padding:10px 14px;min-height:41px;color:#4d5b77;font-weight:750;font-size:12px;display:inline-flex;align-items:center;justify-content:center;gap:7px}.btn.primary{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:0 7px 13px #4557da28}.btn.soft{background:#f5f6fc}.btn.green{background:#ebf9f0;border-color:#b7e7cf;color:#197351}.btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #c2c9ff;outline-offset:1px}.row{display:flex;flex-wrap:wrap;gap:9px;align-items:center}.stack{display:grid;gap:11px}.rule{height:1px;background:var(--line);margin:16px 0}.sideitem{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fdfdff;margin-top:10px}.sideitem b{font-size:13px}.sideitem p{font-size:12px;margin:6px 0 0;color:var(--dim)}.notice{padding:12px 13px;border-radius:12px;background:#fff8e9;color:#865f24;border:1px solid #f0e4cb;font-size:12px}.notice.blue{background:#f4f5ff;border-color:#e1e5ff;color:#5060a1}.notice.ok{background:#ebfaf1;border-color:#d4eede;color:#216f4b}.steps{display:flex;gap:6px;flex-wrap:wrap;margin:17px 0}.step{border-radius:10px;padding:7px 10px;background:#f3f5fa;font-weight:700;color:#8a95a9;font-size:11px}.step.active{background:#e9ecff;color:#4051c9}.step.done{background:#e5f7ed;color:#23724e}.hero{border-radius:16px;background:linear-gradient(120deg,#edf1ff,#f5f4ff);padding:20px;display:flex;align-items:center;justify-content:space-between;margin:12px 0 15px}.hero h3{font-size:21px;margin:5px 0;letter-spacing:-.6px}.hero p{font-size:12px;color:#71809f;margin:0}.app{width:100%;display:flex;align-items:center;gap:14px;padding:15px;text-align:left;border:1px solid var(--line);border-radius:15px;background:#fff;cursor:pointer}.app:hover{border-color:#a8b1f0;background:#fbfbff}.appicon{width:51px;height:51px;border-radius:15px;background:#eff0ff;display:grid;place-items:center;font-size:27px;flex:none}.app b{display:block;font-size:14px}.app p{margin:4px 0 0;color:var(--dim);font-size:12px}.app em{display:block;font-size:10px;color:var(--blue);font-style:normal;margin-top:7px}.field{padding:14px;border:1px solid var(--line);border-radius:15px;margin:10px 0}.field b{font-size:13px}.field small{display:block;font-size:11px;color:var(--dim);margin:4px 0 10px}.inp{width:100%;border:1px solid #dfe4f0;border-radius:11px;padding:11px 12px;background:white;color:var(--ink);min-height:41px}.inp.area{min-height:82px;resize:vertical}.file{display:block;text-align:center;background:#f7f8fe;border:1px dashed #a9b4dd;border-radius:11px;padding:16px;color:#5868ad;font-size:12px}.file input{display:block;width:100%;font-size:11px;margin-top:9px}.choice{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid var(--line);border-radius:11px;padding:9px 10px;margin:7px 0;font-size:12px}.choice.on{border-color:#9ba7ee;background:#f3f4ff}.consent{display:flex;gap:9px;color:#586581;font-size:12px;margin:14px 0;align-items:flex-start}.consent input{accent-color:var(--blue);margin-top:4px}.price{border:1px solid #dfe5fc;background:#f4f6ff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;margin:13px 0}.price strong{color:#3f4cc0;font-size:16px}.stage{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid var(--line);border-radius:13px;margin-top:9px}.stage i{width:32px;height:32px;border-radius:10px;background:#edf0ff;display:grid;place-items:center;color:#5b6acc;font-weight:800;font-style:normal}.stage b{font-size:12px}.stage small{display:block;color:var(--dim);font-size:11px}.video{background:linear-gradient(135deg,#1b2543,#6069a6);height:225px;border-radius:16px;color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;gap:10px}.face{width:91px;height:91px;border-radius:50%;border:3px solid #ffffff33;background:#ffffff16;display:grid;place-items:center;font-size:53px}.watermark{position:absolute;top:11px;right:11px;font-size:10px;background:#ffffff33;padding:4px 7px;border-radius:30px}.opbtn{display:flex;gap:12px;width:100%;text-align:left;align-items:center;border:1px solid var(--line);background:#fff;border-radius:14px;padding:12px;margin:8px 0}.opbtn.active{border-color:#929ff1;background:#f4f5ff}.opnum{width:34px;height:34px;display:grid;place-items:center;border-radius:11px;background:#eef0ff;color:#4055cb;font-weight:800}.opbtn b{font-size:13px;display:block}.opbtn small{display:block;font-size:11px;color:var(--dim)}.scenario{width:100%;text-align:left;border:1px solid var(--line);padding:11px 12px;border-radius:11px;background:#fff;font-size:12px;margin:4px 0}.scenario.on{background:#eef1ff;border-color:#8797ed}.gate{border:1px solid var(--line);padding:12px;border-radius:12px;margin:9px 0}.gate b{font-size:12px}.gate p{font-size:12px;color:var(--dim);margin:5px 0}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{border:1px solid var(--line);padding:13px;border-radius:13px}.stat strong{font-size:21px;color:var(--blue);display:block}.stat span{font-size:11px;color:var(--dim)}.story{background:white;border:1px solid var(--line);border-radius:15px;padding:18px;margin-top:11px}.story h3{font-size:15px;margin:7px 0}.story p{font-size:12px;color:var(--dim);margin:5px 0}.rubric{width:100%;border-collapse:collapse;font-size:12px}.rubric td,.rubric th{text-align:left;padding:12px 8px;border-bottom:1px solid var(--line);vertical-align:top}.rubric th{background:#f6f7fe;color:#677493}.footer{border-top:1px solid var(--line);padding-top:18px;margin-top:46px;color:#919bb0;font-size:11px}.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#263353;color:#fff;padding:12px 15px;border-radius:11px;box-shadow:0 8px 30px #1726443b;font-size:12px;z-index:15;display:none;max-width:90%}.toast.show{display:block}
+@media(max-width:880px){.grid{grid-template-columns:1fr}.top-inner{padding:10px 13px;gap:8px}.nav{width:100%;overflow-x:auto;justify-content:space-between}.nav button{flex:1;padding:8px 5px;font-size:11px}.version{margin-left:auto}.card{padding:17px}main{padding:23px 13px 50px}.body{padding:13px}.hero{padding:15px}.hero h3{font-size:18px}.three{grid-template-columns:1fr}.title{font-size:30px}}@media(max-width:380px){.nav button{font-size:10px}.brand{font-size:17px}.version{font-size:10px}}
+
+
+.repair-summary{background:linear-gradient(120deg,#eef1ff,#f9faff);border:1px solid #dfe3fa;border-radius:16px;padding:17px;margin:14px 0}
+.repair-summary strong{display:block;font-size:19px;letter-spacing:-.4px}.repair-summary p{margin:6px 0 0;font-size:12px;color:#62739b}
+.fix-list{display:grid;gap:9px;margin:14px 0}
+.fix-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center}
+.fix-card.active{border-color:#8898eb;background:#f8f9ff}
+.fix-card strong{font-size:13px;display:block}.fix-card p{margin:3px 0 5px;color:var(--dim);font-size:11px}
+.fix-card .btn{padding:8px 12px;min-height:35px}
+.fix-badge{font-size:10px;font-weight:700;color:#996322;background:#fff2da;border-radius:20px;padding:3px 8px;display:inline-block}
+.fix-badge.configured{color:#276d52;background:#e9f8ef}.fix-badge.developer{color:#6d56a3;background:#f2edff}
+.fix-panel{padding:18px;border:1px solid #cdd5fa;background:#f9faff;border-radius:16px;margin:12px 0}
+.fix-panel h3{font-size:16px;margin:4px 0 5px}.fix-panel p{margin:6px 0 12px;color:#60728f;font-size:12px}
+.fix-panel label{display:block;font-size:12px;font-weight:750;margin:10px 0 6px}
+.fix-panel select,.fix-panel input:not([type="checkbox"]),.fix-panel textarea{width:100%;max-width:100%;font:inherit;font-size:13px;border:1px solid #d9e1f3;background:#fff;border-radius:10px;padding:10px;min-height:40px}
+.fix-panel textarea{min-height:90px;resize:vertical}
+.fix-evidence{font-size:11px;background:white;padding:12px;border:1px solid #e2e8f5;border-radius:12px;color:#566680;margin:11px 0}
+.fix-sequence{margin-top:11px;border-top:1px solid var(--line);padding-top:13px}
+.fix-sequence button{margin-top:6px}
+.proof-bullet{font-size:12px;color:#67758f;margin:5px 0}
+@media(max-width:440px){.fix-card{grid-template-columns:1fr}.fix-card .btn{justify-self:start}.fix-panel{padding:13px}}
+
+</style></head>
+<body><header class="topbar"><div class="top-inner"><div class="brand"><span class="glyph">✦</span>Astra <small>APP MARKET</small></div><span class="version">产品体验 PRD V2.1 · 待审核</span><nav class="nav" id="nav"><button data-tab="consumer">消费者体验</button><button data-tab="operator">运营调试工坊</button><button data-tab="stories">用户故事</button><button data-tab="criteria">上架验收</button></nav></div></header>
+<main><div id="view"></div><div class="footer">Astra App Market · V2.1 · 2026-10-31 · 本网页所有生成、价格、工具、录音、评测、订单均为交互模拟，非生产能力声明。不会调用任何生产 API。</div></main><div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script>
+'use strict';
+const APPS={
+  video:{name:'定制照片口播视频',emoji:'🎬',desc:'给一张照片、一段声音、一段话，让人物自然口播',price:'¥19.9 / 次（示例）',fields:[{id:'portrait',type:'image',label:'一张人物照片',hint:'正面清晰；可拍照或从相册选',required:true},{id:'voice',type:'voice',label:'声音',hint:'默认系统音色；定制本人音色需要授权及实际质量检测',required:true},{id:'script',type:'script',label:'口播脚本',hint:'输入内容或让 AI 帮忙起草',required:true}],consent:true},
+  copy:{name:'商品卖点文案',emoji:'✍️',desc:'填入商品事实，生成可修改的卖点文案',price:'¥3.9 / 次（示例）',fields:[{id:'facts',type:'script',label:'商品真实信息',hint:'名称、用途、规格和禁用表述',required:true},{id:'audience',type:'text',label:'目标用户',hint:'选填：例如办公人群',required:false}],consent:false}
+};
+const CASES=[
+['完整流程','照片/声音/脚本 → 平台组件取值 → Tool 执行 → 视频 Artifact → 可下载','未跑通平台真实外部视频工具'],
+['缺少素材','用户缺一项时，只补问缺项并保留已填写内容','需用动态 Skill UI 实测缺项恢复'],
+['授权不足','无肖像/声音使用权时明确拒绝，无实质生成与扣费','真实权限与授权校验尚待对接'],
+['工具失败','超时/低质量可查看原因、重试，权益按规则返还','须真实工具失败演练和记录'],
+['成本交付','上游成本可归集，用户售价可见，成功可下载、失败可返还','权益与 Artifact 商业闭环尚待验收']
+];
+let S={tab:'consumer',app:'video',screen:'list',data:{video:{voice:'system'},copy:{}},consent:false,edit:0,op:0,uploaded:false,case:0,played:false,issue:false};
+const root=document.getElementById('view');
+function esc(x){return String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function button(action,text,cls,extra){return '<button type="button" data-action="'+action+'" class="btn '+(cls||'')+'" '+(extra||'')+'>'+text+'</button>';}
+function message(s){const el=document.getElementById('toast');el.textContent=s;el.classList.add('show');clearTimeout(message.timer);message.timer=setTimeout(()=>el.classList.remove('show'),3000);}
+function render(){document.querySelectorAll('[data-tab]').forEach(n=>n.classList.toggle('active',n.dataset.tab===S.tab));root.innerHTML=S.tab==='consumer'?consumer():S.tab==='operator'?operator():S.tab==='stories'?stories():criteria();}
+function consumer(){
+ const cap=APPS[S.app],v=S.data[S.app],screen=S.screen;
+ let inner='';
+ if(screen==='list'){
+  inner='<div class="hero"><div><span class="kicker">发现好用的数字员工</span><h3>选一件你想完成的事</h3><p>不用先写 Prompt，打开就能做。</p></div><span style="font-size:40px">✨</span></div><div class="stack">'+Object.keys(APPS).map(k=>'<button type="button" class="app" data-action="choose" data-id="'+k+'"><span class="appicon">'+APPS[k].emoji+'</span><span><b>'+APPS[k].name+'</b><p>'+APPS[k].desc+'</p><em>只提供必要素材 → 自动完成 → 可修改</em></span><span style="margin-left:auto">›</span></button>').join('')+'</div>';
+ }else if(screen==='form'){
+  inner='<div class="row">'+button('backList','← 换一个应用','soft')+'</div><div class="hero"><div><span class="kicker">向导式任务组件</span><h3>'+cap.emoji+' '+cap.name+'</h3><p>缺什么补什么，不要求用户学会对话。</p></div></div>';
+  inner+=cap.fields.map(f=>field(f,v)).join('');
+  if(cap.consent)inner+='<label class="consent"><input id="consent" type="checkbox" '+(S.consent?'checked':'')+'><span>我确认有权使用上述照片与声音。若创建个人音色，须按照要求完成本人或权利人授权验证。</span></label>';
+  inner+='<div class="price"><span>确认前显示本次价格和权益（模拟）</span><strong>'+cap.price+'</strong></div><div class="row">'+button('start','确认并开始制作 →','primary')+'</div><p class="sub">演示不调用麦克风、模型、支付或外部视频服务。</p>';
+ }else if(screen==='running'){
+  inner='<div class="hero"><div><span class="kicker">模拟生成中</span><h3>正在完成'+cap.name+'</h3><p>真实进度由 Work Journal / Tool evidence 回读，离开页面也可继续。</p></div>⏳</div>';
+  inner+=['已接收素材（模拟）','平台 Skill 与 Tool 正在工作（演示）','成果待归档','权益将在真实规则下结算'].map((x,i)=>'<div class="stage"><i>'+(i+1)+'</i><div><b>'+x+'</b></div></div>').join('');
+  inner+='<div class="row" style="margin-top:15px">'+button('finish','查看模拟结果 →','primary')+button('edit','修改输入','soft')+'</div>';
+ }else if(screen==='result'){
+  inner='<div class="row">'+button('edit','← 修改素材','soft')+'</div><div class="hero"><div><span class="kicker">成果页</span><h3>输出可以直接修改</h3><p>结果应可回看、可下载、可继续交代修改。</p></div></div>';
+  inner+='<div class="video"><span class="watermark">Demo · 非真实视频</span><div class="face">'+(S.app==='video'?'👩':'📝')+'</div><small>这里应呈现真实成果 Artifact</small></div>';
+  inner+='<div class="field"><b>成果内容与再编辑</b><small>直接编辑，也可以向员工描述想要的变化。</small><textarea id="editedText" class="inp area">'+esc(v.script||v.facts||'')+'</textarea></div><div class="row">'+button('redo','按修改重新制作','primary')+button('download','下载演示说明','soft')+button('restart','再做一次','soft')+'</div><div class="notice" style="margin-top:12px">这是 UI 模拟，不代表已生成视频或已扣费。真实发布必须能验证视频文件、成本、历史与失败返还。</div>';
+ }
+ const order=screen==='list'?0:screen==='result'?2:1;
+ return '<div class="kicker">Astra App Market / consumer</div><h1 class="title">让用户做成事情，<br>而不是教用户提问。</h1><p class="intro">主交互是“应用卡片 → 必需输入 → 成果”，对话负责答疑、补全和修改；不为每个行业硬编码独立表单。</p><div class="grid"><aside class="card"><span class="pill">统一规则 · Capability UI Contract</span><h2 style="font-size:18px;margin:15px 0 5px">任务优先，对话辅助</h2><p class="sub">这套演示从两份能力 Schema 生成不同输入组件，底层仍是 Astra Employee / Skill / Tool / Artifact。</p><div class="steps">'+['选应用','提供素材','拿到成果'].map((x,i)=>'<span class="step '+(order===i?'active':order>i?'done':'')+'">'+(i+1)+' '+x+'</span>').join('')+'</div><div class="sideitem"><b>首次体验：自动生成输入卡片</b><p>口播视频是照片、音色、脚本；其他应用由自身的 Schema 产生字段，不套统一聊天框。</p></div><div class="sideitem"><b>遇到缺输入：只询问当前缺项</b><p>不重复收集资料，素材可复用，输入卡片可来自 Agent 当前分析。</p></div><div class="sideitem"><b>交付后：局部修改 + 语音/文字沟通</b><p>编辑文案后重新生成，也可说“讲得活泼一点”。只有实际视频、文本或表格 Artifact 才算成功。</p></div><div class="notice" style="margin-top:13px">“读一句话拿音色”是目标交互，不保证单句必然足够。录音不合格时智能提示补录，并完成明确授权。</div></aside><section class="window"><div class="head"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span style="margin-left:auto">消费者手机模拟 · 可点击</span></div><div class="body">'+inner+'</div></section></div>';
+}
+function field(f,v){
+ let control='';
+ if(f.type==='image')control='<label class="file">📷 '+(v[f.id]?'已选择：'+esc(v[f.id]):'点此拍照 / 从相册选择')+'<input type="file" accept="image/*" data-upload="'+f.id+'" aria-label="选择人物照片"></label>';
+ else if(f.type==='voice')control='<div class="choice '+(v.voice==='system'?'on':'')+'"><span>🔊 平台标准音色</span>'+button('preset','选择','soft')+'</div><div class="choice '+(v.voice==='sample'?'on':'')+'"><span>🎙️ 我的授权音色</span>'+button('record','模拟录制','soft')+'</div>'+(v.voice==='sample'?'<span class="pill ok">演示音色已选择 · 未真实录音</span>':'')+'<div class="sub" style="margin-top:9px">实际产品在这里请求麦克风权限、验证授权和音频质量，不上传无授权声音。</div>';
+ else if(f.type==='script')control='<textarea data-field="'+f.id+'" class="inp area" placeholder="输入想说的话或商品事实">'+esc(v[f.id]||'')+'</textarea><div class="row" style="margin-top:7px">'+button('suggest','✨ 帮我写一段','soft')+'</div>';
+ else control='<input data-field="'+f.id+'" class="inp" placeholder="选填" value="'+esc(v[f.id]||'')+'">';
+ return '<div class="field"><b>'+f.label+(f.required?' <span style="color:#bf8226">*</span>':'')+'</b><small>'+f.hint+'</small>'+control+'</div>';
+}
+function operator(){
+ const tasks=[
+  {id:'tool',name:'绑定视频生成工具',desc:'平台尝试匹配现有 Tool，缺授权时让运营直接连接',icon:'🔌'},
+  {id:'ui',name:'确认用户输入卡片',desc:'已自动生成照片 / 音色 / 文案组件，可在此调整',icon:'🧩'},
+  {id:'trial',name:'调试完整工作流程',desc:'自动生成用例，在 Astra Runtime 运行并查看真实证据',icon:'🧪'},
+  {id:'artifact',name:'设置成果交付',desc:'确认视频预览、下载、保存与重试行为',icon:'📦'},
+  {id:'pricing',name:'设置价格与失败返还',desc:'明确商品售价、成本上限与失败处理',icon:'💳'}];
+ S.fixState ||= {};
+ S.toolProvider ||= 'connected';
+ S.uiType ||= 'image';
+ S.outputType ||= 'video';
+ S.price ||= '19.9';
+ S.maxCost ||= '8.0';
+ S.refund ||= 'automatic';
+ S.fixLogs ||= [];
+ const state=(id)=>S.fixState[id]||'pending';
+ const badge=(id)=> state(id)==='configured'?'<span class="fix-badge configured">已在演示中配置 · 待真实验证</span>':state(id)==='developer'?'<span class="fix-badge developer">已生成研发支持材料</span>':'<span class="fix-badge">需要处理</span>';
+ const issues='<div class="fix-list">'+tasks.map((t,i)=>'<div class="fix-card '+(S.focusFix===t.id?'active':'')+'"><div><strong>'+t.icon+' '+t.name+'</strong><p>'+t.desc+'</p>'+badge(t.id)+'</div>'+button('openFix',state(t.id)==='configured'?'重新调整':'在这里修复','soft','data-fix="'+t.id+'"')+'</div>').join('')+'</div>';
+ let inner='';
+ if(S.op===0){
+   inner='<span class="pill">01 / 自动理解</span><h2>导入 Skill，系统先完成技术检查</h2><p class="sub">源 Skill 解析、路径安全、Digest、输入输出和依赖推断由平台后台执行。运营不需要看十几个技术检查项。</p><label class="file" style="margin:13px 0">⬆ 选择 Skill 包（原型：本地演示）<input data-upload="skill" type="file" accept=".json,.zip,.md"></label><div class="row">'+button('load','使用口播视频示例 Skill','primary')+'</div>';
+   if(S.uploaded)inner+='<div class="repair-summary"><strong>🎬 已识别：照片口播视频</strong><p>来源：SKILL.md + 所需资产；输入为照片 / 音色 / 脚本，输出为 MP4。平台检查了格式与基础安全，下面还有运行环境依赖要确认。</p></div><div class="stage"><i>✓</i><div><b>组件已预生成</b><small>图片选择、音色授权、文案输入</small></div></div><div class="stage"><i>!</i><div><b>检测到需要平台调试</b><small>视频 Tool、权限、生成结果与费用</small></div></div><div class="row" style="margin-top:14px">'+button('debug','打开修复与调试工坊 →','primary')+'</div>';
+ }else if(S.op===1){
+   inner='<span class="pill">02 / 调试与修复</span><h2>遇到问题，直接在这里解决</h2><p class="sub">系统从 Skill 生成工作流程，优先自动绑定已存在的组件和 Tool。只在缺授权、映射不确定或价格未设置时需要运营确认。</p><div class="repair-summary"><strong>系统先帮你处理能自动完成的事</strong><p>解析源包、识别输入输出、生成基础 UI 与评测用例均应自动完成；运营主要确认账号授权、最终结果和价格。</p><div class="row" style="margin-top:10px">'+button('autoDiagnose','✨ 自动检查并生成修复建议','primary')+'</div></div>'+issues+repairPanel()+'<div class="row" style="margin-top:14px">'+button('review','查看上架准备情况 →','primary')+'</div>';
+ }else{
+   const configured=tasks.filter(t=>state(t.id)==='configured').length;
+   inner='<span class="pill">03 / 上架准备</span><h2>把“未通过”变成可完成的操作</h2><div class="repair-summary"><strong>'+configured+' / '+tasks.length+' 项已在原型中处理</strong><p>这些仅是交互配置状态，不是平台实际通过。真实上架还要跑完完整场景并验证运行证据。</p></div><p class="sub">下面每项都能直接点开解决，不再只显示“未满足资格”。</p>'+issues+repairPanel()+'<div class="notice blue"><b>自动验证与正式上架</b><br>系统完成静态校验后，将使用批准的 Astra Runtime 验证真实工具、授权、Artifact、费用及失败路径；成功才形成不可变发行版本。当前原型不能提供该证据，所以“正式上架”始终锁定。</div><div class="row" style="margin-top:14px">'+button('blocked','正式上架（需真实验收）','primary','disabled')+button('returnDebug','返回完整调试','soft')+'</div>';
+ }
+ function repairPanel(){
+   if(!S.focusFix)return '<div class="notice blue">点任意一项的「在这里修复」，即可直接完成对应操作。平台不支持的能力会自动生成带日志与复现步骤的研发支持材料。</div>';
+   let h='<div class="fix-panel"><span class="pill">产品内处理 / '+(S.op===2?'上架准备':'调试工坊')+'</span>';
+   if(S.focusFix==='tool'){
+     h+='<h3>🔌 视频工具连接</h3><p>平台先自动识别已有 Tool/Connection，并检查授权范围。运营只需要选择账号并验证连通性，不填写内部 Schema。</p><label for="toolProvider">选择平台可用的连接（演示）</label><select id="toolProvider"><option value="connected" '+(S.toolProvider==='connected'?'selected':'')+'>已有视频服务连接 · 示例</option><option value="needsAuth" '+(S.toolProvider==='needsAuth'?'selected':'')+'>需要重新授权的视频账号</option><option value="unsupported" '+(S.toolProvider==='unsupported'?'selected':'')+'>平台没有所需视频 Tool</option></select><div class="fix-evidence">系统自动检查：目标能力、Tool 权限、必填参数、连接可用性、响应格式。视频文件和实际生成成本必须以真实调用为准。</div><div class="row">'+button('testTool','检查连接与权限','primary')+'</div>';
+     if(S.toolCheck)h+='<div class="notice blue" style="margin-top:10px">'+esc(S.toolCheck)+'</div>'+(S.toolProvider==='needsAuth'?'<div class="row" style="margin-top:9px">'+button('authorizeTool','在 Astra 内授权账号（模拟）','primary')+'</div>':'');
+   }else if(S.focusFix==='ui'){
+     h+='<h3>🧩 输入卡片适配</h3><p>从上传的 Skill 流程自动生成照片、音色、脚本输入。运营直接看到消费者界面，可调整不确定的字段。</p><div class="stage"><i>1</i><div><b>人物照片 → 图片上传卡片</b><small>支持拍照、相册、授权提示</small></div></div><div class="stage"><i>2</i><div><b>音色 → 授权录音 / 预设音色</b><small>音色样本不足时按需补录</small></div></div><div class="stage"><i>3</i><div><b>脚本 → 文本输入 / AI 辅助编写</b><small>必填、输出给视频工具</small></div></div><label for="uiType">照片字段组件</label><select id="uiType"><option value="image" '+(S.uiType==='image'?'selected':'')+'>图片上传（推荐）</option><option value="file" '+(S.uiType==='file'?'selected':'')+'>通用文件上传</option></select><div class="row">'+button('previewUI','预览消费者输入页面','soft')+button('saveUI','保存组件映射','primary')+'</div>';
+     if(S.previewUI)h+='<div class="fix-evidence">消费者预览：📷 拍照/相册 → 🎙️ 音色授权 → ✏️ 输入文案 → 价格确认 → 生成。组件根据 Skill Schema 生成，并非硬编码此商品。</div>';
+   }else if(S.focusFix==='trial'){
+     h+='<h3>🧪 运行整条 Skill 流程</h3><p>系统提取每一步、自动生成正常与异常用例。选择一条即可进入交互试运行，失败可回到具体 Tool/输入卡片修复并原位重试。</p><label for="trialCase">选择自动生成的场景</label><select id="trialCase">'+CASES.map((c,i)=>'<option value="'+i+'" '+(S.case===i?'selected':'')+'>'+esc(c[0])+'</option>').join('')+'</select><div class="fix-evidence"><b>评测目标：</b> '+esc(CASES[S.case][1])+'<br><b>还缺：</b> '+esc(CASES[S.case][2])+'</div><div class="row">'+button('runTrial','运行场景（模拟）','primary')+button('viewEvidence','查看运行证据要求','soft')+'</div>';
+     if(S.trialMessage)h+='<div class="notice blue" style="margin-top:10px">'+esc(S.trialMessage)+'</div>';
+     if(S.showEvidence)h+='<div class="fix-evidence"><b>真实证明必须包含：</b> Skill/Tool 版本、授权主体、输入 Digest、逐步执行结果、生成 Artifact、费用与失败码。仅本地 Hermes 成功不能替代 Astra 运行时证据。</div>';
+   }else if(S.focusFix==='artifact'){
+     h+='<h3>📦 交付成果映射</h3><p>系统识别 Skill 的输出；运营确认视频预览和文件交付方式，平台把真实成果保存在 Artifact 中。</p><label for="outputType">输出类型</label><select id="outputType"><option value="video" '+(S.outputType==='video'?'selected':'')+'>MP4 视频：预览 + 下载</option><option value="link" '+(S.outputType==='link'?'selected':'')+'>外部下载链接</option></select><div class="stage"><i>✓</i><div><b>交付规则</b><small>展示生成状态、失败原因、可重试版本与下载按钮</small></div></div><div class="row">'+button('saveArtifact','保存交付规则','primary')+'</div>';
+   }else if(S.focusFix==='pricing'){
+     h+='<h3>💳 配置定价和异常处理</h3><p>上游成本由平台计量，运营只配置售价与策略。实际扣费和退款须经过支付/权益链路验证。</p><label for="salePrice">消费者价格（元/次，演示值）</label><input id="salePrice" type="number" min="0.01" step="0.1" value="'+esc(S.price)+'"><label for="maxCost">预计成本上限（元/次，演示值）</label><input id="maxCost" type="number" min="0.01" step="0.1" value="'+esc(S.maxCost)+'"><label for="refundPolicy">失败时权益处理</label><select id="refundPolicy"><option value="automatic" '+(S.refund==='automatic'?'selected':'')+'>失败未交付 → 自动返还权益</option><option value="manual" '+(S.refund==='manual'?'selected':'')+'>人工复核后返还</option></select><div class="row">'+button('savePrice','保存计费规则','primary')+'</div>';
+   }
+   h+='<div class="fix-sequence"><div class="row">'+button('nextFix','处理下一项 →','soft')+button('needsDev','无法处理？诊断是否缺少平台能力','soft')+'</div></div></div>';
+   if(S.devTicket)h+=devPanel();
+   return h;
+ }
+ function devPanel(){
+   const target=tasks.find(t=>t.id===S.focusFix);
+   const textBody='需求：'+target.name+'\n来源：照片口播 Skill (演示)\n缺失的 Astra 能力：'+target.desc+'\n期望：在 Astra 产品内完成授权、配置、调试、成果与计费\n实际：平台当前无法完成真实调用或验证\n附带：Skill 包 Digest、运行时版本、测试场景、工具错误码、Work Journal ID（真实开发需自动附带）\n优先级：阻断上架';
+   S.devTicketText=textBody;
+   return '<div class="fix-panel" style="background:#fff9ef;border-color:#f0ddbe"><span class="pill warn">确需研发协助</span><h3>研发支持材料已自动整理（演示）</h3><p>运营不需要自己写技术需求，也不必离开产品；正式版应直接创建研发待办并带证据，修复后自动通知回来重试。</p><textarea id="devTicketText" readonly>'+esc(textBody)+'</textarea><div class="row">'+button('downloadTicket','导出支持单示例','primary')+button('closeTicket','返回修复','soft')+'</div></div>';
+ }
+ return '<div class="kicker">Operations / guided repair & validation</div><h1 class="title">让运营在产品里把问题解决，<br>而不是告诉运营哪里没通过。</h1><p class="intro">系统自动识别 Skill 工作流与依赖，优先自动修复；运营只处理需要明确选择或授权的事项。仅缺少平台底层能力时升级研发，附带完整证据。</p><div class="grid"><aside class="card"><h2 style="font-size:18px;margin:0">运营的三步工作</h2><p class="sub">导入 → 调通 → 上架，内部校验不暴露成一堆技术节点。</p>'+['导入一个 Skill','产品内调试和修复','发布前确认'].map((x,i)=>'<button type="button" data-action="opstep" data-index="'+i+'" class="opbtn '+(S.op===i?'active':'')+'"><span class="opnum">'+(i+1)+'</span><span><b>'+x+'</b><small>'+['自动解析 Skill 和静态检查','连接/授权/组件/用例/计费','只展示要处理的问题'][i]+'</small></span>›</button>').join('')+'<div class="notice" style="margin-top:13px">这是产品交互 PRD。点击修复为前端演示，不会真实授权、上架、创建研发工单或生成视频。</div></aside><section class="card">'+inner+'</section></div>';
+}
+function stories(){
+ const arr=[['C01 · 发现应用','从直播/H5进入应用详情，不需懂 Agent。查看效果样例、价格、素材要求和不支持的情况。','首屏可直接进入任务卡片，登录只在必要时出现。'],['C02 · 提交素材','选择照片、声音和脚本；支持 AI 写稿、本人授权音色与素材补录。','缺任何一项只补该项；样本不足不伪称完成。'],['C03 · 预览交付','确认费用后看真实状态；可播放、可下载、可编辑并再次生成。','没有 Artifact、送达凭证与权益对账不算成功。'],['O01 · 导入 Skill','上传 Hermes 标准 Skill 和可声明依赖，由平台生成输入输出契约、Tool 需求及 UI。','自动检查安全/完整性，疑难项才请运营补充。'],['O02 · 真实调试','系统从完整流程生成正常、缺输入、拒绝授权、工具失败、重复提交等场景。','必须在 Astra Runtime、UI 和 Tool 路径执行并存证。'],['O04 · 产品内修复闭环','异常来自平台已有能力时，直接绑定账号、调整组件、修改配置并原地重测。','平台缺失底层能力时自动提交带版本和执行证据的研发支持材料；研发完成后原场景继续重试。'],['O03 · 发行与回滚','从通过验收的候选制作自营商品，再通过现有 V3 发布治理上架。','不可变版本，升级可灰度/回滚，消费者进行中的任务不暗中切换。']];
+ return '<div class="kicker">PRD / user stories</div><h1 class="title">围绕结果定义故事，<br>不是围绕按钮定义功能。</h1><p class="intro">每个用户故事都需要一个真实可验证的 Outcome，以及失败时用户接下来能做什么。</p>'+arr.map(x=>'<div class="story"><span class="pill">'+x[0]+'</span><h3>'+x[1]+'</h3><p>'+x[2]+'</p></div>').join('')+'<div class="notice blue" style="margin-top:14px">统一技术事实：Employee / Conversation / Work Journal / Artifact / Permission / Connection / Ontology；Tool/Runtime/Office 保持可替换 Port。消费应用是数字员工的轻量服务入口，不创建第二套 Agent/Skill Registry。</div>';
+}
+function criteria(){
+ const rows=[['完整能力契约','源 Skill、依赖、Schema、Tool 调用、资源权限、成果规格完整。'],['平台适配与自助修复','动态 Skill UI 与完整真实流程一致；错误可在产品内完成授权、组件和 Tool 绑定、费用调整并原位重试。'],['运行可复现','通过 Astra Runtime 运行，有真实 Tool、Work Journal、Artifact 与版本身份。'],['负例与安全','授权拒绝、工具失败/超时、重复请求、肖像音色授权均真实演练。'],['商业闭环','有公开价格、成本上限、权益扣减/失败返还、订单和交付一致性。'],['发行治理','平台不支持时自动生成携带证据的研发支持任务；评测过门槛后才发行，版本不可变并支持灰度与回滚。']];
+ return '<div class="kicker">Release admission / quality bar</div><h1 class="title">怎样才算可上架？</h1><p class="intro">看一条完整的真实用户工作证据链：输入 → 平台调用 → 成果交付 → 计费/退款。静态检查、模拟成功或本地 Hermes 通过都不能替代真实验收。</p><div class="row" style="margin:0 0 14px">'+button('goFix','直接进入运营修复工作台 →','primary')+'</div><div class="card" style="overflow-x:auto"><table class="rubric"><thead><tr><th>验收维度</th><th>上线标准</th></tr></thead><tbody>'+rows.map(r=>'<tr><td><b>'+r[0]+'</b></td><td>'+r[1]+'</td></tr>').join('')+'</tbody></table></div><div class="card" style="margin-top:16px"><h2 style="margin:0 0 8px;font-size:18px">建议交付顺序</h2><div class="three"><div class="stat"><strong>M0</strong><span>平台 Skill UI / Tool 调试与完整评测集</span></div><div class="stat"><strong>M1</strong><span>一款真实应用的消费者任务向导与 Artifact 交付</span></div><div class="stat"><strong>M2</strong><span>支付、权益、售价与成本、退款闭环</span></div></div><p class="sub">第一款真实商品优先选择 Tool 稳定、成果可核验、成本可控的能力；照片口播视频先用于验证多模态产品体验，不等于视频能力已接通。</p></div>';
+}
+document.addEventListener('click',function(ev){
+const b=ev.target.closest('[data-tab],[data-action]');if(!b)return;
+if(b.dataset.tab){S.tab=b.dataset.tab;history.replaceState(null,'','#'+S.tab);render();scrollTo({top:0});return;}
+const a=b.dataset.action;
+if(a==='choose'){S.app=b.dataset.id;S.screen='form';S.consent=false}
+else if(a==='backList')S.screen='list';
+else if(a==='edit')S.screen='form';
+else if(a==='preset')S.data[S.app].voice='system';
+else if(a==='record'){S.data[S.app].voice='sample';message('仅模拟录音结果，不读取麦克风或上传音色')}
+else if(a==='suggest'){S.data[S.app][S.app==='video'?'script':'facts']=S.app==='video'?'大家好，欢迎来到我的小店。今天为大家介绍这款适合日常使用的新品！':'手工陶瓷杯，容量300毫升，适合日常喝水使用。价格请以商品页为准。'}
+else if(a==='start'){let v=S.data[S.app],f=APPS[S.app].fields.find(x=>x.required&&!v[x.id]);if(f){message('还差一步：'+f.label);return}if(APPS[S.app].consent&&!S.consent){message('请确认人物照片及声音的使用权');return}S.screen='running'}
+else if(a==='finish')S.screen='result';
+else if(a==='redo'){const x=document.getElementById('editedText');S.data[S.app][S.app==='video'?'script':'facts']=x.value;S.edit++;S.screen='running'}
+else if(a==='restart')S.screen='form';
+else if(a==='download'){const t='Astra PRD 模拟成果说明（非真实交付）\n'+APPS[S.app].name+'\n'+JSON.stringify(S.data[S.app],null,2);const u=URL.createObjectURL(new Blob([t],{type:'text/plain;charset=utf-8'}));const link=document.createElement('a');link.href=u;link.download='Astra-PRD-模拟说明.txt';link.click();setTimeout(()=>URL.revokeObjectURL(u),1500);message('已生成演示说明');return}
+else if(a==='opstep')S.op=Number(b.dataset.index);
+else if(a==='load'){S.uploaded=true;message('示例 Skill 已载入，非真实上传')}
+else if(a==='debug')S.op=1;
+else if(a==='case')S.case=Number(b.dataset.index);
+else if(a==='simulate'){S.played=true;message('仅模拟调试界面，不产生真实运行证据')}
+else if(a==='review')S.op=2;
+else if(a==='fixes'){S.op=2;S.focusFix='tool';}
+else if(a==='returnDebug'){S.op=1;S.focusFix='tool';}
+else if(a==='goFix'){S.tab='operator';S.op=2;S.focusFix='tool';history.replaceState(null,'','#operator');scrollTo({top:0});}
+else if(a==='openFix'){S.focusFix=b.dataset.fix;S.devTicket=false;S.toolCheck='';S.trialMessage='';}
+else if(a==='nextFix'){const ids=['tool','ui','trial','artifact','pricing'];S.focusFix=ids[(ids.indexOf(S.focusFix)+1)%ids.length];S.devTicket=false;}
+else if(a==='needsDev'){if(S.focusFix==='tool' && S.toolProvider==='unsupported'){S.devTicket=true;S.fixState ||= {};S.fixState.tool='developer';}else{message('该项已有平台内修复入口，请先完成授权、绑定或调试；仅确认缺少底层能力才升级研发。');return;}}
+else if(a==='closeTicket'){S.devTicket=false;}
+else if(a==='downloadTicket'){const blob=new Blob([S.devTicketText||'研发支持单示例'],{type:'text/plain;charset=utf-8'});const u=URL.createObjectURL(blob);const l=document.createElement('a');l.href=u;l.download='Astra-研发支持单-演示.txt';l.click();setTimeout(()=>URL.revokeObjectURL(u),1500);message('已导出研发支持材料示例（不创建正式工单）');return;}
+else if(a==='autoDiagnose'){S.fixState ||= {};S.fixState.ui='configured';S.autoDiagnosed=true;S.focusFix='tool';message('已模拟生成组件映射与评测场景，接下来处理账号授权和真实执行');}
+else if(a==='authorizeTool'){S.toolProvider='connected';S.toolCheck='演示授权已完成；正式产品须通过 Astra Connection 与权限体系取回真实凭证，再次测试连接。';S.fixState ||= {};S.fixState.tool='configured';}
+else if(a==='testTool'){const v=document.getElementById('toolProvider').value;S.toolProvider=v;if(v==='connected'){S.fixState ||= {};S.fixState.tool='configured';S.toolCheck='模拟连接检查通过；真实环境仍需证明已授权、可调用且工具返回格式正确。';}else if(v==='needsAuth'){S.toolCheck='账号需要重新授权：正式产品将在此打开 Astra Connection 授权组件，完成后回到原场景重试。';}else{S.toolCheck='未发现可用视频 Tool，可直接提交研发支持材料并附完整依赖清单。';S.devTicket=true;S.fixState.tool='developer';}}
+else if(a==='previewUI'){S.previewUI=true;}
+else if(a==='saveUI'){S.uiType=document.getElementById('uiType').value;S.fixState ||= {};S.fixState.ui='configured';message('已保存组件映射（原型）；需真实验证');}
+else if(a==='runTrial'){S.case=Number(document.getElementById('trialCase').value);S.trialMessage='原型已演示调试步骤；真实 Astra Runtime 未执行，因此没有通过证据。请在开发版调用平台 Tool 并保存 Work Journal/Artifact 后复验。';}
+else if(a==='viewEvidence'){S.showEvidence=!S.showEvidence;}
+else if(a==='saveArtifact'){S.outputType=document.getElementById('outputType').value;S.fixState ||= {};S.fixState.artifact='configured';message('已保存成果规则（原型）');}
+else if(a==='savePrice'){const price=Number(document.getElementById('salePrice').value);const cost=Number(document.getElementById('maxCost').value);if(!(price>0&&cost>0&&price>=cost)){message('请设置有效售价与成本上限，售价应不低于成本上限');return;}S.price=String(price);S.maxCost=String(cost);S.refund=document.getElementById('refundPolicy').value;S.fixState ||= {};S.fixState.pricing='configured';message('已保存计费规则（原型）');}
+render();
+});
+document.addEventListener('input',function(ev){if(ev.target.dataset.field)S.data[S.app][ev.target.dataset.field]=ev.target.value;});
+document.addEventListener('change',function(ev){const el=ev.target;if(el.id==='consent'){S.consent=el.checked;return}if(!el.dataset.upload||!el.files?.length)return;const f=el.files[0];if(el.dataset.upload==='skill'){S.uploaded=true;message('仅本地选择：'+f.name+'；不上传服务器')}else{S.data[S.app][el.dataset.upload]=f.name;message('已选择本地图片；不会上传')}render();});
+const start=location.hash.replace('#','');if(['consumer','operator','stories','criteria'].includes(start))S.tab=start;render();
+</script></body></html>
